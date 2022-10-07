@@ -1,0 +1,253 @@
+.HEA
+.TIM to. 24. feb. 2022 kl. 13.47 +0100
+.APP "Eeschema 6.0.1-79c1e3a40b~116~ubuntu21.04.1"
+.TYP FULL
+
+.ADD_COM     R13     "22k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R17     "50k"     "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
+.ADD_COM     R18     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R20     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R16     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R26     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R28     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R23     "22k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     IC1     "AD8599R"     "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+.ADD_COM     BT1     "Battery"     "BH:BatteryHolder_Keystone_2479_3xAAA"
+.ADD_COM     LSP5     "LSP10"     "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+.ADD_COM     IC2     "AD8599R"     "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+.ADD_COM     R2     "22k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R5     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R7     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R11     "22k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R10     "22k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C6     "2u2"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     C4     "2u2"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     R9     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     JP1     "PINHD-1X4"     "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+.ADD_COM     R21     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R14     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C7     "10n"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     C3     "100n"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     C1     "100n"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     R8     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C9     "10n"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     D2     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     R3     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R4     "50k"     "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
+.ADD_COM     LSP2     "LSP10"     "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+.ADD_COM     C2     "100u"     "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+.ADD_COM     D1     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     LED1     "LEDSML0603"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     R6     "1k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     LSP1     "LSP10"     "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+.ADD_COM     Q1     "BCF29SMD"     "Package_TO_SOT_SMD:SOT-23W_Handsoldering"
+.ADD_COM     R1     "220"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     D5     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     C8     "100u"     "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+.ADD_COM     D4     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     LED2     "LEDSML0603"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     JP2     "PINHD-1X4"     "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+.ADD_COM     R19     "1k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R12     "220"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C5     "100n"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     Q2     "BCF29SMD"     "Package_TO_SOT_SMD:SOT-23W_Handsoldering"
+.ADD_COM     R22     "220"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     R27     "1k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     Q3     "BCF29SMD"     "Package_TO_SOT_SMD:SOT-23W_Handsoldering"
+.ADD_COM     LED3     "LEDSML0603"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     D6     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     D3     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+.ADD_COM     R15     "50k"     "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
+.ADD_COM     LSP3     "LSP10"     "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+.ADD_COM     R25     "50k"     "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical"
+.ADD_COM     LSP4     "LSP10"     "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+.ADD_COM     R29     "47k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C10     "1n5"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     R24     "1k"     "Resistor_SMD:R_0402_1005Metric"
+.ADD_COM     C12     "1n5"     "Capacitor_SMD:C_0402_1005Metric"
+.ADD_COM     C11     "100u"     "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+.ADD_COM     D7     "1N4148DO35-7"     "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+
+
+.ADD_TER   BT1   1     "+5V"
+.TER       C5   1
+            IC1   8
+            IC2   8
+            LED1   2
+            LED2   2
+            LED3   2
+            LSP1   1
+            R9   2
+
+.ADD_TER   BT1   2     "GND"
+.TER       C12   2
+            C3   2
+            C5   2
+            C9   2
+            D3   2
+            D5   2
+            D7   2
+            IC1   4
+            IC2   4
+            JP1   2
+            JP1   3
+            JP2   4
+            LSP5   1
+            Q1   2
+            Q2   2
+            Q3   2
+            R16   1
+            R20   2
+            R21   2
+            R28   2
+            R29   2
+            R7   2
+            R8   2
+
+.ADD_TER   C1   1     "Net-(C1-Pad1)"
+.TER       R2   1
+
+.ADD_TER   C1   2     "Net-(C1-Pad2)"
+.TER       C3   1
+            IC1   5
+            R5   2
+            R7   1
+
+.ADD_TER   C10   1     "Net-(C10-Pad1)"
+.TER       R23   1
+
+.ADD_TER   C10   2     "Net-(C10-Pad2)"
+.TER       C12   1
+            IC2   5
+            R26   2
+            R28   1
+
+.ADD_TER   C11   1     "Net-(C11-Pad1)"
+.TER       IC2   7
+            LSP4   1
+            R25   2
+            R25   3
+
+.ADD_TER   C11   2     "Net-(C11-Pad2)"
+.TER       D6   2
+            D7   1
+
+.ADD_TER   C2   1     "Net-(C2-Pad1)"
+.TER       IC1   7
+            LSP2   1
+            R4   2
+
+.ADD_TER   C2   2     "Net-(C2-Pad2)"
+.TER       D2   2
+            D3   1
+
+.ADD_TER   C4   1     "Net-(C4-Pad1)"
+.TER       R10   1
+
+.ADD_TER   C4   2     "Net-(C4-Pad2)"
+.TER       JP1   4
+
+.ADD_TER   C6   1     "Net-(C6-Pad1)"
+.TER       JP1   1
+
+.ADD_TER   C6   2     "Net-(C6-Pad2)"
+.TER       R11   1
+
+.ADD_TER   C7   1     "Net-(C7-Pad1)"
+.TER       R13   1
+
+.ADD_TER   C7   2     "Net-(C7-Pad2)"
+.TER       C9   1
+            IC2   3
+            R18   2
+            R20   1
+
+.ADD_TER   C8   1     "Net-(C8-Pad1)"
+.TER       IC2   1
+            LSP3   1
+            R15   2
+            R15   3
+
+.ADD_TER   C8   2     "Net-(C8-Pad2)"
+.TER       D4   2
+            D5   1
+
+.ADD_TER   D1   1     "Net-(D1-Pad1)"
+.TER       R3   1
+            R5   1
+
+.ADD_TER   D1   2     "Net-(D1-Pad2)"
+.TER       LED1   1
+            R1   1
+
+.ADD_TER   D2   1     "Net-(D2-Pad1)"
+.TER       JP2   1
+            R6   1
+
+.ADD_TER   D4   1     "Net-(D4-Pad1)"
+.TER       JP2   2
+            R19   1
+
+.ADD_TER   D6   1     "Net-(D6-Pad1)"
+.TER       JP2   3
+            R27   1
+
+.ADD_TER   IC1   1     "Net-(IC1-Pad1)"
+.TER       R13   2
+            R17   2
+            R2   2
+            R23   2
+
+.ADD_TER   IC1   2     "Net-(IC1-Pad2)"
+.TER       R10   2
+            R11   2
+            R17   3
+
+.ADD_TER   IC1   3     "Net-(IC1-Pad3)"
+.TER       R16   2
+            R9   1
+
+.ADD_TER   IC1   6     "Net-(IC1-Pad6)"
+.TER       R3   2
+            R4   3
+            R8   1
+
+.ADD_TER   IC2   2     "Net-(IC2-Pad2)"
+.TER       R14   2
+            R15   1
+            R21   1
+
+.ADD_TER   IC2   6     "Net-(IC2-Pad6)"
+.TER       R24   2
+            R25   1
+            R29   1
+
+.ADD_TER   LED2   1     "Net-(LED2-Pad1)"
+.TER       R12   1
+            R14   1
+            R18   1
+
+.ADD_TER   LED3   1     "Net-(LED3-Pad1)"
+.TER       R22   1
+            R24   1
+            R26   1
+
+.ADD_TER   Q1   1     "Net-(Q1-Pad1)"
+.TER       R6   2
+
+.ADD_TER   Q1   3     "Net-(Q1-Pad3)"
+.TER       R1   2
+
+.ADD_TER   Q2   1     "Net-(Q2-Pad1)"
+.TER       R19   2
+
+.ADD_TER   Q2   3     "Net-(Q2-Pad3)"
+.TER       R12   2
+
+.ADD_TER   Q3   1     "Net-(Q3-Pad1)"
+.TER       R27   2
+
+.ADD_TER   Q3   3     "Net-(Q3-Pad3)"
+.TER       R22   2
+
+.END
