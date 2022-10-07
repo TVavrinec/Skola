@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+\definecolor{orange}{RGB}{ 251, 114, 032}
+\definecolor{fialova}{RGB}{ 255, 000, 255} 
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+
+
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+\usepackage{blindtext}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\usepackage{bookmark}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\usepgfplotslibrary{polar}
+\usepgfplotslibrary{external}
+\usepgfplotslibrary{fillbetween}
+
+\begin{document}
+\begin{figure}[H]
+    \vspace{-15mm}
+    \centering
+    \includegraphics[width=\textwidth]{hlavička.png}
+\end{figure}
+
+\section{Úkol}
+\begin{enumerate}
+    \footnotesize
+    \item Změřte voltampérovou, luxampérovou a\;směrovou vyzařovací charakteristiku luminiscenční diody, přenosovou charakteristiku optronu.
+    Z grafu V-A charakteristiky určete součinitel \(n\)\;a\;\;přenosové charakteristiky určete kmitočtový rozsah optronu.
+
+    \item Součástky o nichž pojednává tato úloha jsou polovodičové. 
+    Připomeňte si základní znalosti o\;polovodičích ze střední školy, z\;předmětu Fyzika\;1\;a\;z\;úloh Teplotní závislost odporu polovodičového termistoru \;Hallův jev z Fyzikálního praktika 1.
+\end{enumerate}
+
+\section{Teoretický úvod}
+\footnotesize
+LED (Light Emitting Diode) je zdroj viditelného záření a záření v blízké infračervené oblasti.
+Princip je založen na průchodu proudu skrz PN přechod, ve kterém rekombinují nosiče náboje.
+Nosiče rekombinují ve chvíli, kdy je jejich energie menší než spodní hranice vodivostního pásu, neboli horní hranice zakázaného pásu.
+Při rekombinaci se musí snížit potenciální energie elektronu o šířku zakázaného pásu, proto rekombinující elektron vyzáří foton o této energii.
+Energie fotonu pak přímo odpovídá jeho vlnové délce podle vztahu.
+\begin{equation}
+    E_f=\frac{hc}{\lambda}\;\Rightarrow\;\lambda=\frac{hc}{E_f}
+    \label{energie_fotonu}
+\end{equation}
+Kde \(h\) je Planckova konstanta, \(c\) je rychlost světla a \(\lambda\) je vlnové délka světla.
+Vlnová délka světla, které vyzařuje LED, je proto určena šířkou zakázaného pásu.
+
+Tento systém se dá použít i v opačném směru, mluvíme pak o fotodiodě namísto LED.
+Foton, který dopadne do přechodu, vygeneruje vodivostní pár, který je okamžitě odsát elektrickým polem na přechodu.
+
+\subsection{VA charakteristika}
+VA charakteristika je přibližně popsatelná Schottkyho rovnicí 
+\begin{equation}
+    I_{led}=I_0\cdot(\exp{\frac{eU_{led}}{kTn}}-1)
+    \label{schottkyho_rovnice}
+\end{equation}
+Kde \(I_0\) je saturační proud diody, \(e\) je elementární náboj, \(U_{led}\) je napětí na diodě, \(k\) Boltzmannova konstanta, \(T\) je teplota a \(n\) je číselný součinitel závislý na mechanizmu transportu.
+Pro součinitel \(n\) platí \(1 < n < 2\).
+
+\subsection{Luxampérová charakteristika}
+Luxampérová charakteristika je závislost světelného toku tvořeného diodou \(\Phi\) na proudu diodou \(I_{led}\).
+Světelný tok dopadá na fotodiodu, na které se tak přímoúměrně světelnému toku \(\Phi\) generuje napětí \(U_{det}\).
+Závislost \(U_{det}\) na proudu \(I_{led}\) tak bude mít stejný tvar jako Luxampérová charakteristika a můžeme se tedy pro jednoduchost zaměnit.
+
+\subsection{Směrová vyzařovací charakteristika}
+Směrová vyzařovací charakteristika charakterizuje intenzitu světelného toku v závislosti na úhlu mezi snímačem a horizontální rovinou.
+
+\subsection{Optron}
+Optron je součástka složena z LED a fotodiody nebo fototranzistoru, která slouží např. pro galvanické oddělení. 
+
+\section{Měření}
+\subsection{Voltampérová a luxampérová charakteristika LED}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.35\textwidth}
+        \input{postproces/AV-charakteristika-tab.tex}
+    \end{minipage}
+    \hfill
+	\begin{minipage}[t]{0.63\textwidth}
+        \pgfplotsset{width=105mm,compat=1.9}
+        % \vspace*{-120mm}
+        \input{postproces/AV-charakteristika-graf.tex}
+        \\ \hspace*{5mm}
+        z aproximace je vidět že \(n = 1.75\)
+    \end{minipage}
+\end{figure}
+\newpage
+\subsection{Vyzařovací charakteristika LED}
+\pgfplotsset{width=160mm,compat=1.11}
+\input{postproces/Smerova_vyzarovaci_charakteristika-graf.tex}
+\\ \\
+Aby~bylo~maximum grafu na \(90^\circ\), pootočil jsem měření o \(+20^\circ\), protože zhruba o tento úhel byla charakteristika nakloněna. \\
+Předpokládám totiž, že byla LED v přípravku špatně natočena a ne že by opravdu svítila do strany.
+\\ \\
+\input{postproces/Smerova_vyzarovaci_charakteristika-tab.tex}
+
+\subsection{Přenosová charakteristika optronu}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.2\textwidth}
+        \input{postproces/Luxamperova_charakteristika-tab.tex}
+    \end{minipage}
+    \hfill
+	\begin{minipage}[t]{0.7\textwidth}
+        \pgfplotsset{width=115mm,compat=1.9}
+        \vspace{-78.5mm}
+        \input{postproces/Luxamperova_charakteristika-graf.tex}
+        Při \(100\;Hz\) je na fotodiodě \\
+        \(0.1637\;V \Rightarrow U_{det}(f_k) = \frac{U_{det}(100\;Hz)}{\sqrt{2}}=0.116\;V \Rightarrow f_k \doteq 10\;kHz\)  \\
+        optron je tedy schopen pracovat zhruba do \(13.7\;kHz\). 
+    \end{minipage}
+\end{figure}
+
+\section{Závěr}
+Z grafu VA charakteristiky jsem pomocí aproximace průběhu určil číselný součinitel \(n = 1.75\).
+Při vykreslování vyzařovací charakteristiky jsem měření pootočil, aby maximum bylo na \(90^\circ\).
+To proto, že předpokládám, že LED byla v přípravku špatně natočena a ne že září do strany.
+Do grafu přenosové charakteristiky optronu jsem vyznačil hodnotu \(0.116\;V\), která odpovídá \(\sqrt{U_{det}(100\;Hz)}\) a odlišil jsem oblast přenosu.
+Kritický kmitočet jsem tak stanovil na \(13.7\;kHz\) a zároveň jsem charakteristiku aproximoval funkcí \(U_{det}(f)=0.163\cdot e^{-3.5\cdot10^{-5}\cdot f}+\frac{f-10^4}{8\cdot10^5}+0.0128\)
+
+\end{document}

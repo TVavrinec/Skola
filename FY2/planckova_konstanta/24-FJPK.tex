@@ -1,0 +1,223 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\usepackage{pgfplots}
+\usepackage{blindtext}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+\usepackage{bookmark}
+
+\begin{document}
+\small
+\section{Úkol}
+\begin{enumerate}
+    \item Stanovte Planckovu konstantu z měření vnějšího fotoelektrického jevu.
+    \item Určete výstupní práci použité fotonky.
+\end{enumerate}
+
+\section{Teoretický úvod}
+Světlo se může chovat jako vlna ale také jako částice.
+Jeho vlnovou formu můžeme popsat jeho frekvencí \(f\) nebo vlnovou délkou \(\lambda\), přičemž platí:
+\begin{equation}
+    f=\frac{c}{\lambda}
+    \label{frek}
+\end{equation}
+Světlo ve formě částice pak charakterizujeme jeho energií \(E\) a hybností \(p\) a můžeme ho dát do vztahu s jeho vlnovou formou.
+\begin{equation}
+    E=hf
+    \label{ener}
+\end{equation}
+\begin{equation}
+    p=h\frac{f}{c}=h\frac{1}{\lambda}
+    \label{hibn}
+\end{equation}
+Kde \(h\) je Planckova konstanta s hodnotou \(6.626\cdot10^{-34} J\cdot s\) případně \(4.136\cdot10{-15} eV\cdot s\).
+Používá se také ve tvaru \(\hbar=\frac{h}{2\pi}\), vztah \ref{ener} pak můžeme přepsat na
+\begin{equation}
+    E=\hbar\cdot2\pi\cdot f=\hbar\cdot\omega
+    \label{E=2p}
+\end{equation}
+\subsection{Fotoelektrický jev}
+Fotoelektrický jev je jev při kterém fotony předávají svou energii elektronům v látce, na kterou dopadá.
+Je to jeden z důkazů kvantové povahy světla a můžeme ho rozlišit na vnitřní a vnější.
+
+Vnitřní je typický např. pro polovodiče, ve kterých může foton při dopadu vygenerovat vodivostní pár a tak zvýšit vodivost polovodiče.
+
+Vnější fotoelektrický jev je zase typický pro kovy, ve kterých se díky kovové vazbě mohou elektrony volně pohybovat.
+Pokud dopadající foton dodá elektronu alespoň tzv. výstupní práci \(W\), elektron může opustit materiál a pohybovat se volně prostorem rychlostí, která odpovídá energii fotonu bez výstupní práce.
+Platí tedy
+
+\begin{equation}
+    E_k=hf-W=\frac{hc}{\lambda}
+    \label{E_ki}
+\end{equation}
+Protože elektronu dodává energii foton, jehož energie odpovídá podle vztahu \ref{ener} jeho vlnové délce, je rychlost uvolněného elektronu přímoúměrná vlnové délce dopadajícího světla, zárověň je ale nezávislá na jeho intenzitě.
+Každý materiál má tedy jistou mezní fekvenci \(f_m\) pod kterou fotoelektrický jev nenastane.
+Na intenzitě dopadajícího záření je ale přímoúměrně závislí počet takto uvolněných elektronů (fotoelektronů).
+Tento jev můžeme tedy využít pro konstrukci světelného senzoru, pokud k elektrodě (katoda), na kterou dopadá záření, přiblížíme druhou elektrodu (anoda) uvolněné fotoelektrony budou dopadat na ni.
+Bude se tak tvořit napětí, které další fotoelektrony musejí překonávat a tak se fotoelektrony s nižší energií na katodu nedostanou.
+Po chvíli se tento jev ustálí a vznikne tak brzdné napětí \(U_b\).
+Fotoelektrony musejí krom vystupní práce mít ještě dost energie na překonání bariéry vytvořené brzdným napětím, tato energie odpovídá \(qU_b\) a energie fotonu musí tedy odpovídat 
+\begin{equation}
+    qU_b=E_k=hf-W=\frac{hc}{\lambda}
+    \label{eU_b}
+\end{equation}
+Kde \(q\) je elementární náboj elektronu.
+Můžeme tedy stanovit závislost \(U_b\) na frekvenci respektive vlnové délce dopadajícího záření.
+\begin{equation}
+    U_b=\frac{hf}{q}-\frac{W}{q}=\frac{h}{q}f-\frac{h}{q}f_m=\frac{h}{q}(f-f_m)
+    \label{U_b-}
+\end{equation}
+Planckovu konstantu můžeme úpravou vztahu \ref{U_b-} vyjádřit jako
+\begin{equation}
+    h=\frac{U_mq}{-f_m}
+    \label{plan}
+\end{equation}
+Mezní frekvenci můžene určit úpravou vztahu
+\begin{equation}
+    U_b=\frac{h}{q}(f-f_m)=0 ~~ \Longrightarrow ~~ f_m=f-\frac{U_bq}{h}
+    \label{f_m}
+\end{equation}
+Nakonec výstupní práci vyjádříme ze vztahu \ref{U_b-} při \(f=0\)
+\begin{equation}
+    U_{b0}=\frac{hf}{q}-\frac{W}{q}=\frac{h0}{q}-\frac{W}{q}=-\frac{W}{q}\Rightarrow W=-gU_{b0}
+    \label{V-b0}
+\end{equation}
+
+\section{Měření}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.5\textwidth}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \(\lambda~[nm]\)    & \(U_{vystup}~[V]\)    & zesílení  & \(f~[THz]\)   & \(U_b~[V]\)   \\ \hline
+            366                 & 1.915                 & \(10^0\)  & 819.11        & 1.84          \\ \hline
+            405                 & 1.726                 & \(10^0\)  & 740.23        & 1.65          \\ \hline
+            436                 & 1.491                 & \(10^0\)  & 687.60        & 1.42          \\ \hline
+            546                 & 9.15                  & \(10^1\)  & 549.07        & 0.84          \\ \hline
+            578                 & 8.19                  & \(10^1\)  & 518.67        & 0.74          \\ \hline
+        \end{tabular}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.5\textwidth}
+        \footnotesize
+        \vspace{-17mm}
+        \subsection*{Použité měřící přístroje}
+        \begin{tabular}{llll}
+            Multimetr               & 703   & FINEST    & SAP\:001000282754\_0000 \\ \hline
+            Měřící zesilovač        &       & PHYWE     & 313384                  \\ \hline
+            Speciální žárovka       &       &           &                         \\ \hline
+            Přípravek s fotonkou    &       &           &                         \\ \hline
+            Sada optických filtrů   &       &           &                         \\ \hline    
+        \end{tabular}
+	\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.5\textwidth}
+        \hspace{-10mm}
+        \pgfplotsset{width=120mm,compat=1.9}
+        \tikzset{
+        every pin/.style={fill=yellow!50!white,rectangle,rounded corners=3pt,font=\scriptsize},
+        small dot/.style={fill=black,circle,scale=0.3}
+        % /dotted
+        }
+        \begin{tikzpicture}
+            \begin{axis}[
+                % colorbar,
+                title={Graf závislosti \(U_b\) na frekvenci \(f\)},
+                xlabel={\(f~[THz]\)},
+                ylabel={\(U_b~[V]\)},
+                xmin=0, xmax=850,
+                ymin=-1.8, ymax=2,
+                legend pos=north west,
+            ]
+            \addplot[
+                only marks,
+                color=red,
+                mark=*,
+                ]
+                coordinates {
+                    (819.11, 1.84)
+                    (740.23, 1.65)
+                    (687.60, 1.42)
+                    (549.07, 0.84)
+                    (518.67, 0.74)
+                    };
+                \addlegendentry{měření}
+            \addplot[
+                % tick style={font=/dotted}, %/tikz
+                domain=0:900, 
+                samples=500,
+                color=green,
+                dashed, %dotted
+                ]
+                {(x/242)-1.43};
+                \addlegendentry{extrapolace (\(\frac{1}{242}f-1.43\))}
+            \addplot[
+                % tick style={font=/dotted}, %/tikz
+                domain=0:100, 
+                samples=2,
+                dotted
+                ]
+                coordinates {
+                    (      0, 0)
+                    ( 346.06, 0)
+                    ( 346.06,-2)
+                    };
+                % \addlegendentry{\(\lambda=470~nm\)}
+            \node[small dot,pin=0:{\texttt{\([0~THz;-1.43~V]\)}}] at (axis description cs:0,0.09736842105263162) {};
+            \node[small dot,pin=93:{\texttt{\([346.06~THz;0~V]\)}}] at (axis description cs:0.4071294117647059,0.4736842105263158) {};
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+	\hfill
+    \hspace{30mm}
+	\begin{minipage}[t]{0.35\textwidth}
+        \vspace{-96mm}
+        ze vztahu \ref{plan} určíme Planckovu konstantu \(h\) \\
+        \\
+        \(
+            \scriptsize
+            h=\frac{U_mq}{-f_m}=\frac{-1.43\cdot1.602\cdot10^{-19}}{-346.06\cdot10^{12}}~[J\cdot s]=\\\\=6.619\cdot10^{-34}~[J\cdot s]
+        \)\\
+        \\
+        % ze vstahu \ref{f_m} dále určíme mezní frekvenci \(f_m\)\\
+        % \\
+        % \(
+        %     \scriptsize
+        %     f_m=f-\frac{U_bq}{h}=\\\\=\big(549.07\cdot10^{12}-\frac{0.84\cdot1.602\cdot10^{-19}}{6.619\cdot10^{-34}}\big)~[THz]=\\\\=345.979~[THz]
+        % \)\\
+        % \\
+        nakonec podle vztahu \ref{V-b0} určíme výstupní práci\\
+        \\
+        \(
+            \scriptsize
+            W=-gU_{b0}=\\\\=-1.602\cdot10^{-19}\cdot(-1.43)~[J]=\\\\=2.29\cdot10^{-19}~[J]=1.43~[eV]
+        \)\\
+        \\
+    \end{minipage}
+\end{figure}
+
+\section{Závěr}
+Pět měření jsem vynesl do grafu a na základě takto vzniklých bodů jsem aproximoval závislost brzdného napětí \(U_b\) na frekvenci dopadajícího záření \(f\).
+Pomocí aproximace jsem stanovil brzdné napětí \(U_b\) při nulové frekvenci \(U_{b0}\) a mezní frekvenci \(f_m\).
+Z takto získaných hodnot jsem následně určil Planckovu konstantu \(h = 6.619\cdot10^{-34}~[J\cdot s]\) a výstupní práci použité fotonky \(W = 2.29\cdot10^{-19}~[J]\) neboli \(W =1.43~[eV]\).
+Tabulková hodnota Planckovy konstanty je \(6.626\cdot10^{-34}~[J\cdot s]\) odchylka mého měření je tedy \(7\cdot10^{-37}~[J\cdot s]\), což nezní špatně.
+
+\end{document}
