@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  8 OCT 2022 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  8 OCT 2022 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -319,6 +319,18 @@ h' as default language. on input line 58.
 
 LaTeX Warning: Label `prac_bod_sim_1' multiply defined.
 
+
+LaTeX Warning: Label `prac_bod_sim_1' multiply defined.
+
+
+LaTeX Warning: Label `prac_bod_sim_1' multiply defined.
+
+
+LaTeX Warning: Label `prac_bod_sim_1' multiply defined.
+
+
+LaTeX Warning: Label `prac_bod_sim_1' multiply defined.
+
 )
 \openout1 = `PracovniBodTranzistoru.aux'.
 
@@ -443,37 +455,52 @@ Package pdftex.def Info: vstup-baze-vystup.png  used on input line 79.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./praco
 vni_bod_tranzistoru.png> <./vstup-baze-vystup.png>]
-<PC/BJT/prac_bod_sim_1.png, id=38, 1284.8pt x 1065.9825pt>
-File: PC/BJT/prac_bod_sim_1.png Graphic file (type png)
-<use PC/BJT/prac_bod_sim_1.png>
-Package pdftex.def Info: PC/BJT/prac_bod_sim_1.png  used on input line 95.
-(pdftex.def)             Requested size: 497.92322pt x 413.11275pt.
-<PC/BJT/Tranzient_analyza_3.png, id=39, 249.18094pt x 546.54187pt>
+<PC/BJT/prac_bod.png, id=38, 459.12706pt x 365.60118pt>
+File: PC/BJT/prac_bod.png Graphic file (type png)
+<use PC/BJT/prac_bod.png>
+Package pdftex.def Info: PC/BJT/prac_bod.png  used on input line 98.
+(pdftex.def)             Requested size: 224.06392pt x 178.42091pt.
+<PC/BJT/sim_1.png, id=39, 287.37953pt x 551.3776pt>
+File: PC/BJT/sim_1.png Graphic file (type png)
+<use PC/BJT/sim_1.png>
+Package pdftex.def Info: PC/BJT/sim_1.png  used on input line 106.
+(pdftex.def)             Requested size: 224.06392pt x 429.8961pt.
+<PC/BJT/Tranzient_analyza_3.png, id=40, 249.18094pt x 546.54187pt>
 File: PC/BJT/Tranzient_analyza_3.png Graphic file (type png)
 <use PC/BJT/Tranzient_analyza_3.png>
-Package pdftex.def Info: PC/BJT/Tranzient_analyza_3.png  used on input line 101
+Package pdftex.def Info: PC/BJT/Tranzient_analyza_3.png  used on input line 116
 .
-(pdftex.def)             Requested size: 149.37848pt x 327.6441pt.
- [2 <./PC/BJT/prac_bod_sim_1.png>]
-
-Package wrapfig Warning: Collision between wrapping environments on input line 
-117.
-
-<obvod-z-laborky.png, id=46, 309.155pt x 178.6675pt>
+(pdftex.def)             Requested size: 234.51836pt x 514.39157pt.
+<PC/BJT/Tranzient_analyza_4.png, id=41, 211.54031pt x 548.80031pt>
+File: PC/BJT/Tranzient_analyza_4.png Graphic file (type png)
+<use PC/BJT/Tranzient_analyza_4.png>
+Package pdftex.def Info: PC/BJT/Tranzient_analyza_4.png  used on input line 123
+.
+(pdftex.def)             Requested size: 199.16624pt x 516.71812pt.
+ [2 <./PC/BJT/prac_bod.png> <./PC/BJT/sim_1.png>]
+<PC/BJT/Sirka_pasma.png, id=50, 1435.61343pt x 682.04813pt>
+File: PC/BJT/Sirka_pasma.png Graphic file (type png)
+<use PC/BJT/Sirka_pasma.png>
+Package pdftex.def Info: PC/BJT/Sirka_pasma.png  used on input line 131.
+(pdftex.def)             Requested size: 497.92322pt x 236.55573pt.
+<PC/BJT/Step_sirka_pasma.png, id=51, 1435.61343pt x 682.04813pt>
+File: PC/BJT/Step_sirka_pasma.png Graphic file (type png)
+<use PC/BJT/Step_sirka_pasma.png>
+Package pdftex.def Info: PC/BJT/Step_sirka_pasma.png  used on input line 135.
+(pdftex.def)             Requested size: 497.92322pt x 236.55573pt.
+ [3 <./PC/BJT/Tranzient_analyza_3.png> <./PC/BJT/Tranzient_analyza_4.png>] [4 <
+./PC/BJT/Sirka_pasma.png> <./PC/BJT/Step_sirka_pasma.png>]
+<obvod-z-laborky.png, id=67, 309.155pt x 178.6675pt>
 File: obvod-z-laborky.png Graphic file (type png)
 <use obvod-z-laborky.png>
-Package pdftex.def Info: obvod-z-laborky.png  used on input line 121.
-(pdftex.def)             Requested size: 248.96161pt x 143.88564pt.
+Package pdftex.def Info: obvod-z-laborky.png  used on input line 169.
+(pdftex.def)             Requested size: 199.16624pt x 115.10742pt.
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-4.
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 152--173
+[][]  [] 
+ []
 
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-7.
-
-[3 <./PC/BJT/Tranzient_analyza_3.png> <./obvod-z-laborky.png>]
-(./PracovniBodTranzistoru.aux)
+[5 <./obvod-z-laborky.png>] (./PracovniBodTranzistoru.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -482,23 +509,23 @@ Package rerunfilecheck Info: File `PracovniBodTranzistoru.out' has not changed.
 (rerunfilecheck)             Checksum: 5AA3D982229C340F5197774D7A21F4D7;487.
  ) 
 Here is how much of TeX's memory you used:
- 13113 strings out of 478268
- 257096 string characters out of 5846347
- 535855 words of memory out of 5000000
- 31182 multiletter control sequences out of 15000+600000
+ 13151 strings out of 478268
+ 257897 string characters out of 5846347
+ 535800 words of memory out of 5000000
+ 31209 multiletter control sequences out of 15000+600000
  469864 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,9n,79p,343b,759s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,16n,79p,343b,784s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on PracovniBodTranzistoru.pdf (3 pages, 334084 bytes).
+Output written on PracovniBodTranzistoru.pdf (5 pages, 706328 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 50 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 

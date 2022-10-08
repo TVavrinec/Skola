@@ -92,17 +92,51 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
 
 \section{Počítačové cvičení}
 \begin{figure}[H]
-  \includegraphics[width=\textwidth]{PC/BJT/prac_bod_sim_1.png}
-  % \addlegendentry{test}
-  \caption{\label{prac_bod_sim_1} Stejnosměrné nastavení pracovního bodu a~odezva na základní sinusoví signál}
+	\begin{minipage}[t]{0.45\textwidth}
+    \vspace{-5mm}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/BJT/prac_bod.png}
+      % \addlegendentry{test}
+      \caption{\label{prac_bod_sim_1} Stejnosměrné nastavení pracovního bodu}
+    \end{figure}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/BJT/sim_1.png}
+      % \addlegendentry{test}
+      \caption{\label{prac_bod_sim_1} Odezva na základní sinusoví signál}
+    \end{figure}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
-  \includegraphics[width=0.3\textwidth]{PC/BJT/Tranzient_analyza_3.png}
-  % \addlegendentry{test}
-  \caption{\label{prac_bod_sim_1} Sinusový průběh při pohybu pracovního bodu}
+	\begin{minipage}[t]{0.471\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_3.png}
+      \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(U_{in}\)}
+    \end{figure}
+  \end{minipage}
+  \hfill
+	\begin{minipage}[t]{0.4\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_4.png}
+      \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(R_b\)}
+    \end{figure}
+  \end{minipage}
 \end{figure}
 
+\hfill
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{PC/BJT/Sirka_pasma.png}
+  \caption{\label{prac_bod_sim_1} Šířka pásma při \(C_v = 5 \mu F\)}
+\end{figure}
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{PC/BJT/Step_sirka_pasma.png}
+  \caption{\label{prac_bod_sim_1} Šířka pásma při změně \(C_v\)}
+\end{figure}
+
+\newpage
 
 \section{Laboratorní cvičení}
 % \subsections{zadání}
@@ -114,22 +148,28 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
 % 1 kHz. Zakreslete časové průběhy vstupního napětí, napětí na bázi a na kolektoru, včetně ss
 % posunutí. Změřte amplitudy a vypočtěte z nich střídavá zesílení.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-  % \centering
-  \vspace{-10mm}
-  % \hspace{5mm}
-  \includegraphics[width=0.5\textwidth]{obvod-z-laborky.png}
-  \caption{\label{obvod_z_laborky}}
-\end{wrapfigure}
-Měřili jsme s tranzistorem BC55 u kterého jsme na začátku naměřili \(\beta = 422\)
-Nejprve jsme sestavili obvod a pomocí potenciometru jsme nastavili pracovní bod dle \tab{tab_pracovni_bod}.
-
-\begin{tabular}{|c|c||c|c|}
-  \hline
-  \(U_{cc}\-[V]\) & \(U_{c}\-[V]\)  & \(R_b\)  &	\(R_c\)   \\ \hline
-  12              &                 &          &            \\ \hline
-
-  \label{tab_pracovni_bod}
-\end{tabular}
+\begin{figure}[H]
+	\begin{minipage}[t]{0.6\textwidth}
+    Měřili jsme s tranzistorem BC55 u kterého jsme na začátku naměřili \(\beta = 422\)
+    Nejprve jsme sestavili obvod a pomocí potenciometru jsme nastavili pracovní bod dle \tab{tab_pracovni_bod}.
+    \vspace{5mm}
+    \begin{table}[H]
+      % \centering
+      \begin{tabular}{|c|c|c|c|} 
+        \hline
+         \(U_{cc}\-[V]\) & \(U_{c}\-[V]\)  & \(R_b\-[M\Omega]\) &	\(R_c\-[K\Omega]\) \\ \hline
+         12              & 6               & 2.5                & 2.2                \\ \hline
+      \end{tabular}
+      \caption{\label{tab_pracovni_bod} Nastavení obvodu}
+    \end{table}
+  \end{minipage}
+  \hfill
+	\begin{minipage}[t]{0.4\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{obvod-z-laborky.png}
+      \caption{\label{obvod_z_laborky}}
+    \end{figure}
+  \end{minipage}
+\end{figure}
 
 \end{document}
