@@ -9,6 +9,18 @@
 
 \usepackage{color} % balíček pro obarvování textů
 \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
 \usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
 \hypersetup{
     colorlinks,
@@ -30,19 +42,7 @@
 % \usepackage{amssymb,amsmath}
 % \usepackage{ifxetex,ifluatex}
 % \usepackage{fixltx2e} % provides \textsubscript
-% \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-%   \usepackage[T1]{fontenc}
-%   \usepackage[utf8]{inputenc}
-% \else % if luatex or xelatex
-%   \ifxetex
-%     \usepackage{mathspec}
-%   \else
-%     \usepackage{fontspec}
-%   \fi
-%   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-% \fi
 
-% \usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
 % \usepackage{blindtext}
 
 % \usepackage{subfiles} % Best loaded last in the preamble
@@ -74,7 +74,7 @@
     \item Multimetrem Keysight 34450A změřte efektivní hodnotu výstupních signálů, jejichž zdrojem je generátor Siglent SDG 2042X:
     \begin{itemize}
         \item Obdélníkový průběh, f =1 kHz, Up-p=3 V
-        \item Trojúhelníkový průběh, f =100 Hz, Up-p=5 V 
+        \item Trojúhelníkový průběh, f =100 Hz, Up-p=5 V
     \end{itemize}
     Průběhy signálů zakreslete do sešitu a popište.
     Ověřte výpočtem velikosti efektivních hodnot uvedených signálů, vypočtěte absolutní a relativní chybu měření (správnou hodnotou je hodnota vypočtená) a dosažené výsledky zhodnoťte.
@@ -98,9 +98,9 @@ Voltmetry mohou být rozděleny podle:
         \end{minipage}
         \hfill
         \begin{minipage}[t]{0.24\textwidth}
-            2) podle druhu měřeného napětí: 
+            2) podle druhu měřeného napětí:
             \begin{itemize}
-                \item stejnosměrné 
+                \item stejnosměrné
                 \item střídavé
                 \item impulsní
             \end{itemize}
@@ -145,7 +145,7 @@ Korekční křivku můžeme získat porovnáním měření s přesnějším př�
 \end{wrapfigure}
 Vstupní odpor voltmetru je odpor, který je mezi vstupními vodiči a zemí.
 Dá se jednoduše určit pomocí zdroje napětí a rezistoru se srovnatelným odporem.
-\(R_{vst}=\frac{U_{vst}}{U_{n}-U_{vst}}\)
+\(R_{vst}=\frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n\)
 
 \subsection{Měření AC}
 Běžný frekvenční rozsah se pohybuje od \(100\-kHz\) do \(1\-MHz\).
@@ -157,110 +157,296 @@ Druhá možnost je signál měřit pomocí definice efektivní hodnoty, která j
     \label{proud_kolektoru}
 \end{equation}
 
+\subsection{Chyby měření}
+Absolutní chyba měřícího přístroje se dá spočítat jako:
 
-% Tranzistor je typická nelineární součástka v obvodu popsatelná šesti veličinami, třemi proudy a třemi napětími vyznačenými na \obr{pracovni_bod_tranzistoru} a) (\(I_C I_B I_E U_{CE} U_{BE} U_{BC})\).
-% Tyto veličiny jsou propojeny nelineárními závislostmi které lze chápat jako šestirozměrný objekt, kterým když provede dvourozměrný řez dostaneme např. výstupní charakteristiku (závislost \(I_C\) na \(U_{CE}\)
-% při konstantním proudu \(I_B\)).
-% \vspace{-1mm}
+\begin{figure}[H]
+    \begin{equation}
+        |\Delta_{Px}| = |\Delta_{M}|+|\Delta_{R}| = \frac{|\delta_M\cdot X_M|+|\delta_R\cdot X_R|}{100}
+    \end{equation}
+    \caption{\label{proud_kolektoru}Jednotka veličiny X}
+\end{figure}
+Chyba měření muže vzniknout také sériovím rušením které je způsobeno především ručením se sítě (\(50\-Hz\)), toto rušení integrační AD převodníky z principu potlačují.
+Potlačení rušení se dosahuje integrací v časovém úseku který je celočíselným násobkem periody měřeného napětí, pro (\(50\-Hz\)) je to \(20\-ms\).
 
-% Pokud tranzistory zapojíme do zapojení na \obr{pracovni_bod_tranzistoru} b) při \(U_{in} = 0\) ustálí se jeho veličiny na konkrétním bodě, tento bod označujeme \(Q\) a nazýváme ho stejnosměrný pracovní bod tranzistoru.
-% Aby mohl tranzistor fungovat jako zesilovač správně je nutné aby nastavení pracovního bodu umožňovalo v oběma směry dostatečný rozkmit výstupního signálu v dostatečné míře bez přílišného zkreslení.
-% Pracovní bod se proto obvykle nastavuje tak aby v ustáleném stavu platilo \(U_{out} = \frac{1}{2}V_{cc}\)
+\section{Měření}
+\subsection{Použité přístroje}
+\begin{itemize}
+    \item Multimetr Keysight 34450A
+    \item Multimetr Agilent 34401A
+    \item Stabilizovaný zdroj napětí GW Instek GPD-3303S Generátor Siglent SDG2042X
+    \item Odporová dekáda
+\end{itemize}
 
-% \vspace{1mm}
-% \begin{wrapfigure}{r}{0.5\textwidth}
-%   % \centering
-%   \vspace{-10mm}
-%   \includegraphics[width=0.5\textwidth]{vstup-baze-vystup.png}
-%   \caption{\label{vstup_baze_vystup}}
-% \end{wrapfigure}
-% Abychom mohli na tento zesilovač přivést signál s jiným středním napětím neš jaké je na bázi tranzistoru, přípojíme vstup zesilovače na bázi skrz kapacitu \(C_1\).
-% Tato kapacita musí být dostatečně velká aby se pro signál o požadované frekvenci dala považovat za zkrat.
-% Na \obr{vstup_baze_vystup} je zobrazen možný procházející signál.
+\subsection{Úkol 1}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{table}[H]
+            \vspace{-70mm}
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+                GWInstek GPD-3303S &	Agilan 34401A (etalon) &	Odchilka   \\ \hline
+                \(V\)              &    \(V\)                  &	\(mV\)     \\ \hline
+                 0.0               &    0.0007	               &    0.7        \\ \hline
+                 1.0               &    1.0044	               &    4.4        \\ \hline
+                 2.0               &    2.0042	               &    4.2        \\ \hline
+                 3.0               &    3.0038	               &    3.8        \\ \hline
+                 4.0               &    4.0036	               &    3.6        \\ \hline
+                 5.0               &    5.0034	               &    3.4        \\ \hline
+                 6.0               &    6.0044	               &    4.4        \\ \hline
+                 7.0               &    7.0041	               &    4.1        \\ \hline
+                 8.0               &    8.0036	               &    3.6        \\ \hline
+                 9.0               &    9.0047	               &    4.7        \\ \hline
+                10.0               &    10.0044                &	4.4        \\ \hline
+            \end{tabular}
+            \caption{\label{tab_pracovni_bod} Nastavení obvodu}
+        \end{table}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.4\textwidth}
+        \tikzset{
+        every pin/.style={fill=yellow!50!white,rectangle,rounded corners=3pt,font=\scriptsize},
+        small dot/.style={fill=black,circle,scale=0.3}
+        }
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={korekční křivka voltmetru GWInstek GPD-3303S},
+                xlabel={\(U_{mer}~[V]\)},
+                ylabel={\(\delta_{u}~[mV]\)},
+                xmin=0, xmax=10,
+                ymin=0, ymax=5,
+                legend pos=north west,
+            ]
+            \addplot[
+                color=green,
+                mark=x,
+                ]
+                coordinates {
+                        ( 0.0 ,0.7)
+                        ( 1.0 ,4.4)
+                        ( 2.0 ,4.2)
+                        ( 3.0 ,3.8)
+                        ( 4.0 ,3.6)
+                        ( 5.0 ,3.4)
+                        ( 6.0 ,4.4)
+                        ( 7.0 ,4.1)
+                        ( 8.0 ,3.6)
+                        ( 9.0 ,4.7)
+                        (10.0 ,4.4)
+                    };
+            \addlegendentry{\scriptsize}
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
 
-% Při nastavování pracovního bodu je mimo jiné nezbytné znát následující vztahy
-% \newpage
+\newpage
+\subsection{Úkol 2}
 
-% \section{Počítačové cvičení}
-% \begin{figure}[H]
-% 	\begin{minipage}[t]{0.45\textwidth}
-%     \vspace{-5mm}
-%     \begin{figure}[H]
-%       \includegraphics[width=\textwidth]{PC/BJT/prac_bod.png}
-%       % \addlegendentry{test}
-%       \caption{\label{prac_bod_sim_1} Stejnosměrné nastavení pracovního bodu}
-%     \end{figure}
-%   \end{minipage}
-%   \hfill
-%   \begin{minipage}[t]{0.45\textwidth}
-%     \begin{figure}[H]
-%       \includegraphics[width=\textwidth]{PC/BJT/sim_1.png}
-%       % \addlegendentry{test}
-%       \caption{\label{prac_bod_sim_1} Odezva na základní sinusoví signál}
-%     \end{figure}
-%   \end{minipage}
-% \end{figure}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.3\textwidth}
+        \paragraph{Agilent 34401A}
+        \begin{itemize}
+            \item \(R_n = 100\-k\Omega\) 
+            \item \(U_n = 1.0032\-V\) 
+            \item \(U_{vstup} = 0.9933\-V\) 
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.7\textwidth}
+        \vspace{5mm}
+        \begin{equation}
+            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9933}{1.0032-0.9933}\cdot 100*10^3 = 10.033\-[k\Omega]  
+        \end{equation}
+    \end{minipage}
+\end{figure}
+Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10\-M\Omega \)\\odchylka našeho měření je tady \(33\-k\Omega\)
 
-% \begin{figure}[H]
-% 	\begin{minipage}[t]{0.471\textwidth}
-%     \begin{figure}[H]
-%       \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_3.png}
-%       \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(U_{in}\)}
-%     \end{figure}
-%   \end{minipage}
-%   \hfill
-% 	\begin{minipage}[t]{0.4\textwidth}
-%     \begin{figure}[H]
-%       \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_4.png}
-%       \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(R_b\)}
-%     \end{figure}
-%   \end{minipage}
-% \end{figure}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.3\textwidth}
+        \paragraph{Keysight 34450A}
+        \begin{itemize}
+            \item \(R_n = 100\-k\Omega\) 
+            \item \(U_n = 1.0027\-V\) 
+            \item \(U_{vstup} = 0.9928\-V\) 
+        \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.7\textwidth}
+        \vspace{5mm}
+        \begin{equation}
+            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9928}{1.0027-0.9928}\cdot 100*10^3 = 10.028\-[k\Omega]  
+        \end{equation}
+    \end{minipage}
+\end{figure}
+Podle katalogového listu přístroje Keysight 34450A je jeho vstupní odpor \(10\-M\Omega \)\\odchylka našeho měření je tady \(28\-k\Omega\)
 
-% \hfill
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{PC/BJT/Sirka_pasma.png}
-%   \caption{\label{prac_bod_sim_1} Šířka pásma při \(C_v = 5 \mu F\)}
-% \end{figure}
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{PC/BJT/Step_sirka_pasma.png}
-%   \caption{\label{prac_bod_sim_1} Šířka pásma při změně \(C_v\)}
-% \end{figure}
+\subsection{Úkol 3}
+Pomocí generátoru jsme vytvářeli harmonický signál o amplitudě \(1\-[V]\) kterému jsme měnili frekvenci v rozsahu \(1\-[kHz]\)-\(500\-[kHz]\).\\ 
+\begin{table}[H]
+    \footnotesize
+    \vspace{-6mm}
+    \hspace{-8mm}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+                        & 1 [KHz]  	& 2 [KHz]	& 5 [KHz]	& 10 [KHz]	& 20 [KHz]	& 50 [KHz]	& 100 [KHz]	& 200 [KHz]	& 350 [KHz]	& 500 [KHz] \\ \hline
+    Silent SDG 2042 [V]	& 1	        & 1	        & 1      	& 1   	    & 1   	    & 1   	    & 1   	    & 1	        & 1   	    & 1         \\ \hline
+    Agilan 34401A   [V]	& 1,05932	& 1,0537	& 1,05556	& 1,05977	& 1,05920	& 1,05441	& 1,04235	& 1,0158	& 0,9250	& 0,71208   \\ \hline
+    Keysight 34450A [V]	& 1,0588	& 1,0589	& 1,0591	& 1,0592	& 1,0592	& 1,0576	& 1,0536	& 1,0464	& 1,0341	& 1,0186    \\ \hline
+    \end{tabular}
+    \caption{\label{frekvencni_rozsah} Měření frekvenčního rozsahu}
+    \normalsize
+\end{table}
 
-% \newpage
+\pgfplotsset{width=100mm,compat=1.9}
+\begin{tikzpicture}
+    \begin{semilogyaxis}[
+        title={korekční křivka voltmetru GWInstek GPD-3303S},
+        xlabel={\(U_{mer}~[V]\)},
+        ylabel={\(\delta_{u}~[mV]\)},
+        xmin=0, xmax=510,
+        ymin=0.7, ymax=1.1,
+        legend pos=south west,
+    ]
+    \addplot[
+        color=green,
+        mark=x,
+        ]
+        coordinates {
+                ( 1   ,1.05932)
+                ( 2   ,1.0537)
+                ( 5   ,1.05556)
+                ( 10  ,1.05977)
+                ( 20  ,1.05920)
+                ( 50  ,1.05441)
+                ( 100 ,1.04235)
+                ( 200 ,1.0158)
+                ( 350 ,0.9250)
+                ( 500 ,0.71208)
+            };
+    \addlegendentry{\scriptsize Agilan 34401A}
+    \addplot[
+        color=red,
+        mark=x,
+        ]
+        coordinates {
+                ( 1   ,1.0588)
+                ( 2   ,1.0589)
+                ( 5   ,1.0591)
+                ( 10  ,1.0592)
+                ( 20  ,1.0592)
+                ( 50  ,1.0576)
+                ( 100 ,1.0536)
+                ( 200 ,1.0464)
+                ( 350 ,1.0341)
+                ( 500 ,1.0186)
+            };
+    \addlegendentry{\scriptsize Keysight 34450A}
+    \end{semilogyaxis}
+\end{tikzpicture}
+% Přístroj Keysight 34450A má uvedený frekvenční rozsah do \(300\-[kHz]\)
 
-% \section{Laboratorní cvičení}
-% % \subsections{zadání}
-% % Nejprve sestavte obvod bez vazebního kondenzátoru a zdroje signálu. Změnou odporu Rb
-% % nastavte ss napětí na kolektoru tranzistoru 6 V. Změřte všechna uzlová napětí a z nich dopočtěte
-% % větvové proudy. Porovnejte s výsledky z NC a PC.
-% % Doplňte obvod o Cv a generátor signálu. Proveďte „oživení“ zesilovače pomocí osciloskopu.
-% % Zesilovač nesmíte přebudit výstupní napětí nesmí vykazovat zkreslení. Měřte při kmitočtu
-% % 1 kHz. Zakreslete časové průběhy vstupního napětí, napětí na bázi a na kolektoru, včetně ss
-% % posunutí. Změřte amplitudy a vypočtěte z nich střídavá zesílení.
+\subsection{Úkol 4}
+Multimetrem Keysight 34450A jsme změřili nejprve obdélníkoví (\(U_{pp} = 3\-[V]\);\(f=1\-[kHz]\)) signál a následně trojúhelníkoví (\(U_{pp} = 5\-[V]\);\(f=100\-[Hz]\))
+\begin{itemize}
+    \item obdélníkový signál - \(U_{EF} = 1.4850\-[V]\)
+    \item trojúhelníkoví signál - \(U_{EF} = 1.4411\-[V]\)
+\end{itemize}
 
-% \begin{figure}[H]
-% 	\begin{minipage}[t]{0.6\textwidth}
-%     Měřili jsme s tranzistorem BC55 u kterého jsme na začátku naměřili \(\beta = 422\)
-%     Nejprve jsme sestavili obvod a pomocí potenciometru jsme nastavili pracovní bod dle \tab{tab_pracovni_bod}.
-%     \vspace{5mm}
-%     \begin{table}[H]
-%       % \centering
-%       \begin{tabular}{|c|c|c|c|} 
-%         \hline
-%          \(U_{cc}\-[V]\) & \(U_{c}\-[V]\)  & \(R_b\-[M\Omega]\) &	\(R_c\-[K\Omega]\) \\ \hline
-%          12              & 6               & 2.5                & 2.2                \\ \hline
-%       \end{tabular}
-%       \caption{\label{tab_pracovni_bod} Nastavení obvodu}
-%     \end{table}
-%   \end{minipage}
-%   \hfill
-% 	\begin{minipage}[t]{0.4\textwidth}
-%     \begin{figure}[H]
-%       \includegraphics[width=\textwidth]{obvod-z-laborky.png}
-%       \caption{\label{obvod_z_laborky}}
-%     \end{figure}
-%   \end{minipage}
-% \end{figure}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.7\textwidth}
+        \vspace{-55mm}
+        \hspace{-5mm}
+        Elektivní hodnota obdélníkového signálu (\(U_{pp} = 3\-[V]\);\(f=1\-[kHz]\)) je:
+        \\
+        \(
+            U_{EF} = \sqrt{\frac{1}{T}(\int_{0}^{T}U^2(t)dt} = \\
+            = \sqrt{\frac{1}{\frac{1}{1000\-[Hz]}}\Biggl(\int_{0}^{\frac{\frac{1}{1000\-[Hz]}}{2}}1.5^2dt+\int_{0}^{\frac{\frac{1}{1000\-[Hz]}}{2}}(-1.5)^2dt\Biggl)} = \\\
+            = \sqrt{1000\cdot2\int_{0}^{0.0005}2.25dt} =\\
+            = \sqrt{1000\cdot2\cdot\bigr[2.25t \bigr]_{0}^{0.0005}} = \sqrt{1000\cdot2\cdot0.001125} = 1.5\-[V]
+        \)
+        \\
+        Měření tedy oproti teorii vykazuje odchylku \(15\-[mV]\)
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.4\textwidth}
+        \hspace{-5mm}
+        \pgfplotsset{width=\textwidth,compat=1.9}
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={obdelníkoví signál},
+                xlabel={\(t~[ms]\)},
+                ylabel={\(U~[V]\)},
+                xmin=0, xmax=2.5,
+                ymin=-2, ymax=2,
+                legend pos=south west,
+            ]
+            \addplot[
+                color=green,
+                ]
+                coordinates {
+                        (0   ,-1.5)
+                        (0.5 ,-1.5)
+                        (0.5 , 1.5)
+                        (1   , 1.5)
+                        (1   ,-1.5)
+                        (1.5 ,-1.5)
+                        (1.5 , 1.5)
+                        (2   , 1.5)
+                        (2   ,-1.5)
+                        (2.5 ,-1.5)
+                    };
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[t]{0.7\textwidth}
+        \vspace{-60mm}
+        \hspace{-5mm}
+        Elektivní hodnota trojúhelníkového signálu (\(U_{pp} = 5\-[V]\);\(f=100\-[Hz]\)) je: \\
+        \(
+            U_{EF} = \sqrt{\frac{1}{T}(\int_{0}^{T}U^2(t)dt} = \\
+            = \sqrt{\frac{1}{\frac{1}{100\-[Hz]}}\Biggl(\int_{0}^{\frac{\frac{1}{100\-[Hz]}}{2}} (-2.5+1000t)^2 dt+\int_{\frac{\frac{1}{100\-[Hz]}}{2}}^{\frac{1}{100\-[Hz]}} (7.5-1000t)^2 dt\Biggl)} = \\
+            = \sqrt{100\cdot\Biggl(\int_{0}^{0.005} 6.25-5000t+10^6t^2 dt + \int_{0.005}^{0.01} 56.25-15000t+10^6t^2 dt\Biggl)} = \\
+            = \sqrt{100\cdot\Bigr(\bigr[6.25t-2500t^2+\frac{10^6t^3}{3} \bigr]_{0}^{0.005} + \bigr[56.25t-7500t^2+\frac{10^6t^3}{3}\bigr]_{0.005}^{0.01}\Bigr)} = \\
+            = \sqrt{100\cdot(0.01042+0.01042)} = 1.4436\-[V]
+        \)
+        \\
+        Měření tedy oproti teorii vykazuje odchylku \(2.5\-[mV]\)
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.4\textwidth}
+        \hspace{-5mm}
+        \pgfplotsset{width=\textwidth,compat=1.9}
+        \begin{tikzpicture}
+            \begin{axis}[
+                title={obdelníkoví signál},
+                xlabel={\(t~[ms]\)},
+                ylabel={\(U~[V]\)},
+                xmin=0, xmax=40,
+                ymin=-3, ymax=3,
+                legend pos=south west,
+            ]
+            \addplot[
+                color=green,
+                ]
+                coordinates {
+                        (00   ,-2.5)
+                        (10   , 2.5)
+                        (20   ,-2.5)
+                        (30   , 2.5)
+                        (40   ,-2.5)
+                        (50   , 2.5)
+                    };
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
+
+\subsection{Úkol 5}
+Jako zdroj rušivého signálu smě použili zdroj Siglent SDG2042X 
+
 
 \end{document}
