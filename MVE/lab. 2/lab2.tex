@@ -10,6 +10,7 @@
 \usepackage{color} % balíček pro obarvování textů
 \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
 \usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -38,6 +39,7 @@
 { tab. \ref{#1}}
 
 \begin{document}
+
 \section*{Laboratorní cvičení č. 2 – Měření napětí - stejnosměrné a~střídavé voltmetry}
 
 \textbf{
@@ -130,7 +132,7 @@ Vstupní odpor voltmetru je odpor, který je mezi \\vstupními vodiči.
 Dá se jednoduše určit pomocí zdroje napětí a~rezistoru se srovnatelným odporem.
 \(R_{vst}=\frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n\)
 
-\subsection{Měření AC}
+\subsection*{Měření AC}
 Běžný frekvenční rozsah se pohybuje od \(100\-kHz\) \\do \(1\-MHz\).
 Jeden z~parametrů AC voltmetru je způsob měření efektivní hodnoty.
 Buď měřený signál usměrní, změří jeho střední hodnotu a~převede ji na efektivní, tato metoda je však přesná jen pro harmonický signál (střední hodnota se násobí konstantou, která souvisí s~konkrétním tvarem signálu a~pochopitelně se proto používá nejběžnější tvar).
@@ -140,7 +142,7 @@ Druhá možnost je signál měřit pomocí definice efektivní hodnoty, která j
     \label{proud_kolektoru}
 \end{equation}
 
-\subsection{Chyby měření}
+\subsection*{Chyby měření}
 Absolutní chyba měřícího přístroje se dá spočítat jako:
 
 \begin{figure}[H]
@@ -162,8 +164,8 @@ Potlačení rušení se dosahuje integrací v~časovém úseku, který je celoč
 Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření vyvolaná rušivým napětím.
 
 
-\section{Měření}
-\subsection{Použité přístroje}
+\section*{Měření}
+\subsection*{Použité přístroje}
 \begin{itemize}
     \item Multimetr Keysight 34450A
     \item Multimetr Agilent 34401A
@@ -171,7 +173,7 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
     \item Odporová dekáda
 \end{itemize}
 
-\subsection{Úkol 1}
+\subsection*{Úkol 1}
 \begin{figure}[H]
     \begin{minipage}[t]{0.4\textwidth}
         \begin{table}[H]
@@ -198,6 +200,10 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
     \hfill
     \begin{minipage}[t]{0.4\textwidth}
         \hspace{-10mm}
+        \tikzset{
+        every pin/.style={fill=yellow!50!white,rectangle,rounded corners=3pt,font=\scriptsize},
+        small dot/.style={fill=black,circle,scale=0.3}
+        }
         \begin{tikzpicture}
             \begin{axis}[
                 title={korekční křivka voltmetru GWInstek GPD-3303S},
@@ -254,11 +260,11 @@ Střední odchylku můžeme určit jako:
     \Delta_{str} = \Sigma_{i=1}^{n}\frac{\Delta_{Ui}}{n} = \Sigma_{i=1}^{11}\frac{\Delta_{Ui}}{11} = \frac{0.7 + 4.4 + 4.2 + ... 4.4}{11} = 3.8\-[mV]
 \)
 
-\subsection{Úkol 2}
+\subsection*{Úkol 2}
 
 \begin{figure}[H]
     \begin{minipage}[t]{0.3\textwidth}
-        \subsubsection{Agilent 34401A}
+        \subsubsection*{Agilent 34401A}
         \begin{itemize}
             \item \(R_n = 100\-k\Omega\) 
             \item \(U_n = 1.0032\-V\) 
@@ -277,7 +283,7 @@ Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10
 
 \begin{figure}[H]
     \begin{minipage}[t]{0.3\textwidth}
-        \subsubsection{Keysight 34450A}
+        \subsubsection*{Keysight 34450A}
         \begin{itemize}
             \item \(R_n = 100\-k\Omega\) 
             \item \(U_n = 1.0027\-V\) 
@@ -294,7 +300,7 @@ Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10
 \end{figure}
 Podle katalogového listu přístroje Keysight 34450A je jeho vstupní odpor \(10\-M\Omega \)\\odchylka našeho měření je tady \(28\-k\Omega\)
 
-\subsection{Úkol 3}
+\subsection*{Úkol 3}
 Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\), kterému jsme měnili frekvenci v~rozsahu \(1\-[kHz]\)-\(500\-[kHz]\).\\ 
 \begin{table}[H]
     \footnotesize
@@ -325,6 +331,7 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
         legend pos=south west,
     ]
     \addplot[
+        only marks,
         color=green,
         mark=x,
         ]
@@ -342,6 +349,7 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
             };
     \addlegendentry{\scriptsize Agilan 34401A}
     \addplot[
+        only marks,
         color=red,
         mark=x,
         ]
@@ -366,13 +374,51 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
                 ( 550,1)
             };
     \addlegendentry{\scriptsize Silent SDG 2042}
+
+    \addplot[
+        color=green,
+        ]
+        coordinates {
+                ( 1   ,1.05932)
+                ( 2   ,1.0537)
+                ( 5   ,1.05556)
+                ( 10  ,1.05977)
+                ( 20  ,1.05920)
+                ( 50  ,1.05441)
+                ( 100 ,1.04235)
+                ( 150 ,1.03)
+                ( 200 ,1.0158)
+                ( 245 ,0.995)
+                ( 300 ,0.96)
+                ( 350 ,0.9250)
+                ( 400 ,0.88)
+                ( 450 ,0.81)
+                ( 500 ,0.71208)
+            };
+    \addplot[
+        color=red,
+        ]
+        coordinates {
+                ( 1   ,1.0588)
+                ( 2   ,1.0589)
+                ( 5   ,1.0591)
+                ( 10  ,1.0592)
+                ( 20  ,1.0592)
+                ( 50  ,1.0576)
+                ( 100 ,1.0536)
+                ( 200 ,1.0464)
+                ( 280 ,1.04)
+                ( 350 ,1.0341)
+                ( 430 ,1.026)
+                ( 500 ,1.0186)
+            };
     \end{loglogaxis}
 \end{tikzpicture}
 Katalogový frekvenční rozsah multimetru Agilan 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
 U multimetru Keysight 34450A jsme naměřili odchylku měření menší jak \(0.1\-[V]\) i při frekvence \(500\-[kHz]\).
 
 \newpage
-\subsection{Úkol 4}
+\subsection*{Úkol 4}
 Multimetrem Keysight 34450A jsme změřili nejprve obdélníkový (\(U_{pp} = 3\-[V]\);\(f=1\-[kHz]\)) signál a~následně trojúhelníkový (\(U_{pp} = 5\-[V]\);\(f=100\-[Hz]\))
 \begin{itemize}
     \item obdélníkový signál - \(U_{EF} = 1.4850\-[V]\)
@@ -472,13 +518,13 @@ Multimetrem Keysight 34450A jsme změřili nejprve obdélníkový (\(U_{pp} = 3\
 \end{figure}
 
 \newpage
-\subsection{Úkol 5}
+\subsection*{Úkol 5}
 Jako zdroj rušivého signálu jsme použili zdroj Siglent SDG2042X.
 Signál jsme nastavili \(U_{šš} = 1\-[V]\) a~frekvence v~rozsahu \(f = 45-55\-[Hz]\).
 Poprvé jsme měřili DC s~potlačením rušení na multimetru Agilent 34401A s~nastavením \(4\-digit/slow\) s~krokem \(1\-[Hz]\) a~podruhé \(5\-digit/slow\) s~krokem \(0.5\-[Hz]\).
 Nastavení (Shift + On/Off (tlačítko <) → A: MEAS MENU → 5: RESOLUTION → SLOW 4 Digit), pohyb v~menu je možný šipkami, doprava/doleva, pohyb na stejné úrovni a~nahoru/dolu, zanořování/vynořování z~menu.
 
-\subsubsection{\(4\-digit/slow\)}
+\subsubsection*{\(4\-digit/slow\)}
 \begin{table}[H]
     \footnotesize
     % \vspace{-6mm}
@@ -515,6 +561,7 @@ Příklad výpočtu činitele potlačení
                 legend pos=south west,
             ]
             \addplot[
+                    only marks,
                     color=green,
                     mark = x,
                 ]
@@ -533,6 +580,7 @@ Příklad výpočtu činitele potlačení
                     };
                 \addlegendentry{\scriptsize \(U_{max}\)}
             \addplot[
+                    only marks,
                     color=red,
                     mark = x,
                 ]
@@ -550,6 +598,38 @@ Příklad výpočtu činitele potlačení
                     (55 , -48.95002)
                     };
                 \addlegendentry{\scriptsize \(U_{min}\)}
+            \addplot[
+                    color=green,
+                ]
+                coordinates {
+                    (45 , 50.39674)
+                    (46 , 38.76532)
+                    (47 , 27.48497)
+                    (48 , 16.54395)
+                    (49 , 5.965690)
+                    (50 , -4.21890)
+                    (51 , 5.555070)
+                    (52 , 14.93445)
+                    (53 , 23.88194)
+                    (54 , 32.38476)
+                    (55 , 40.44185)
+                    };
+            \addplot[
+                    color=red,
+                ]
+                coordinates {
+                    (45 , -58.85915)
+                    (46 , -47.24265)
+                    (47 , -35.94526)
+                    (48 , -25.00425)
+                    (49 , -14.42704)
+                    (50 , -4.250880)
+                    (51 , -14.04514)
+                    (52 , -23.42666)
+                    (53 , -32.37520)
+                    (54 , -40.89290)
+                    (55 , -48.95002)
+                    };
             \end{axis}
             \begin{axis}[
                 axis y line*=right,
@@ -561,6 +641,7 @@ Příklad výpočtu činitele potlačení
                 legend pos=south east,
             ]
             \addplot[
+                    only marks,
                     color=blue,
                     mark = x,
                 ]
@@ -578,6 +659,34 @@ Příklad výpočtu činitele potlačení
                     (55   , 14.95)
                     };
                 \addlegendentry{\scriptsize \(K\)}
+            \addplot[
+                    color=blue,
+                ]
+                coordinates {
+                    (45   , 13.21)
+                    (46   , 15.29)
+                    (47   , 17.93)
+                    (48   , 21.60)
+                    (48.5 , 24.3)
+                    (49   , 27.79)
+                    (49.25, 30.8)
+                    (49.5 , 36)
+                    (49.6 , 40)
+                    (49.75, 50)
+                    (49.875, 60)
+                    (50   , 83.88)
+                    (50.125, 60)
+                    (50.25, 50)
+                    (50.4 , 40)
+                    (50.5 , 36)
+                    (50.75, 30.8)
+                    (51   , 28.13)
+                    (51.5 , 24.3)
+                    (52   , 22.30)
+                    (53   , 18.98)
+                    (54   , 16.68)
+                    (55   , 14.95)
+                    };
             \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -588,7 +697,7 @@ Příklad výpočtu činitele potlačení
     \end{minipage}
 \end{figure}
 
-\subsubsection{\(5\-digit/slow\)} 
+\subsubsection*{\(5\-digit/slow\)} 
 
 \begin{figure}[H]
     \begin{table}[H]
@@ -624,6 +733,7 @@ Příklad výpočtu činitele potlačení
                 legend pos=south west,
             ]
             \addplot[
+                    only marks,
                     color=green,
                     mark = x,
                 ]
@@ -652,6 +762,7 @@ Příklad výpočtu činitele potlačení
                     };
                 \addlegendentry{\scriptsize \(U_{min}\)}
             \addplot[
+                    only marks,
                     color=red,
                     mark = x,
                 ]
@@ -679,6 +790,58 @@ Příklad výpočtu činitele potlačení
                     (55   , -4.233960)
                     };
                 \addlegendentry{\scriptsize \(U_{max}\)}
+            \addplot[
+                    color=green,
+                ]
+                coordinates {
+                    (45   , -4.272580)
+                    (45.5 , -9.665100)
+                    (46   , -14.43364)
+                    (46.5 , -18.03363)
+                    (47   , -20.34893)
+                    (47.5 , -21.00985)
+                    (48   , -20.01260)
+                    (48.5 , -17.52565)
+                    (49   , -13.79643)
+                    (49.5 , -9.225550)
+                    (50   , -4.267470)
+                    (50.5 , -9.121300)
+                    (51   , -13.41932)
+                    (51.5 , -16.71928)
+                    (52   , -18.80408)
+                    (52.5 , -19.39767)
+                    (53   , -18.51760)
+                    (53.5 , -16.26441)
+                    (54   , -12.88690)
+                    (54.5 , -8.739080)
+                    (55   , -4.250770)
+                    };
+            \addplot[
+                    color=red,
+                ]
+                coordinates {
+                    (45   , -4.256830)
+                    (45.5 ,  1.151330)
+                    (46   ,  5.907290)
+                    (46.5 ,  9.584040)
+                    (47   ,  11.81288)
+                    (47.5 ,  12.35328)
+                    (48   ,  11.50694)
+                    (48.5 ,  9.011730)
+                    (49   ,  5.270620)
+                    (49.5 ,  0.702420)
+                    (50   , -4.252580)
+                    (50.5 ,  0.230840)
+                    (51   ,  4.907340)
+                    (51.5 ,  8.238250)
+                    (52   ,  10.27816)
+                    (52.5 ,  10.70612)
+                    (53   ,  10.01871)
+                    (53.5 ,  7.785190)
+                    (54   ,  4.414380)
+                    (54.5 ,  0.271600)
+                    (55   , -4.233960)
+                    };
             \end{axis}
             \begin{axis}[
                 axis y line*=right,
@@ -690,6 +853,7 @@ Příklad výpočtu činitele potlačení
                 legend pos=south east,
             ]
             \addplot[
+                    only marks,
                     color=blue,
                     mark = x,
                 ]
@@ -717,6 +881,50 @@ Příklad výpočtu činitele potlačení
                     (55   , 89.47)
                     };
                 \addlegendentry{\scriptsize \(K\)}
+            \addplot[
+                    color=blue,
+                ]
+                coordinates {
+                    (45   , 90.03)
+                    (45.15, 60)
+                    (45.25, 45)
+                    (45.32, 40)
+                    (45.4 , 36)
+                    (45.5 , 33.29)
+                    (46   , 27.81)
+                    (46.5 , 25.16)
+                    (47   , 23.83)
+                    (47.5 , 23.51)
+                    (48   , 24.01)
+                    (48.5 , 25.50)
+                    (49   , 28.37)
+                    (49.25, 30.5)
+                    (49.5 , 34.04)
+                    (49.6 , 37)
+                    (49.68, 40)
+                    (49.75, 45)
+                    (49.85, 60)
+                    (50   , 90.52)
+                    (50.15, 60)
+                    (50.25, 45)
+                    (50.32, 40)
+                    (50.4 , 37)
+                    (50.5 , 34.56)
+                    (50.75, 31)
+                    (51   , 28.72)
+                    (51.5 , 26.04)
+                    (52   , 24.71)
+                    (52.5 , 24.41)
+                    (53   , 24.87)
+                    (53.5 , 26.36)
+                    (54   , 29.28)
+                    (54.5 , 34.88)
+                    (54.6 , 37)
+                    (54.68, 40)
+                    (54.75, 45)
+                    (54.85, 60)
+                    (55   , 89.47)
+                    };
             \end{axis}
         \end{tikzpicture}
     \end{minipage}
@@ -731,25 +939,25 @@ Příklad výpočtu činitele potlačení
 \end{figure}
 
 \newpage
-\subsection{Závěr}
+\subsection*{Závěr}
 
-\subsubsection{Úkol 1}
+\subsubsection*{Úkol 1}
 Změřili jsme Korekční křivku multimetru zdroje GWInstekGPD 3303S.
 Střední odchylka nám vyšla \(3.8\-[mV]\).
 
-\subsubsection{Úkol 2}
+\subsubsection*{Úkol 2}
 Vstupní odpor voltmetru Agilent~34401A  je podle jeho dokumentace \(10\-[M\Omega]\), mi jsme změřili \(10.033\-[M\Omega]\) což znamená odchylku \(33\-[k\Omega]\)
 Vstupní odpor voltmetru Keysight~34450A je podle jeho dokumentace \(10\-[M\Omega]\), mi jsme změřili \(10.028\-[M\Omega]\) což znamená odchylku \(28\-[k\Omega]\)
 
-\subsubsection{Úkol 3}
+\subsubsection*{Úkol 3}
 Katalogový frekvenční rozsah multimetru Agilan 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
 U multimetru Keysight 34450A jsme naměřili odchylku měření menší jak \(0.1\-[V]\) i př frekvence \(500\-[kHz]\).
 
-\subsubsection{Úkol 4}
+\subsubsection*{Úkol 4}
 Obdélníkový signál (\(U_{šš} = 3\-[V]\); \(f = 1000\-[Hz]\)) jsme změřili s odchylkou oproti teorii \(15\-[mV]\) a trojúhelníkový signál (\(U_{šš} = 5\-[V]\); \(f = 100\-[Hz]\)) s odchylkou \(2.5\-[mV]\).
 Z měření plyne, že měření trojúhelníkového průběhu je přesnější než měření obdélníkového průběhu.
 
-\subsubsection{Úkol 5}
+\subsubsection*{Úkol 5}
 Z měření je vidět, jak doba integrace ovlivňuje potlačení rušení, čím delší úsek tím vetší činitel potlačení.
 Měření také potvrzuje, že činitel potlačení nabývá maxima ve chvíli, kdy je doba integrace celočíselným násobkem periody měřeného signálu.
 

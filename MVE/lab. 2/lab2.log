@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  9 OCT 2022 21:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  10 OCT 2022 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -712,9 +712,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen282
 \Gm@dimlist=\toks41
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 40.
+h' as default language. on input line 41.
  (./lab2.aux
 
 LaTeX Warning: Label `proud_kolektoru' multiply defined.
@@ -725,24 +725,24 @@ LaTeX Warning: Label `potlaceni_ruseni' multiply defined.
 )
 \openout1 = `lab2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count314
@@ -771,8 +771,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 40.
-Package hyperref Info: Link coloring ON on input line 40.
+or `english'. on input line 41.
+Package hyperref Info: Link coloring ON on input line 41.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -786,9 +786,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
  (./lab2.out) (./lab2.out)
 \@outlinefile=\write4
 \openout4 = `lab2.out'.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 40.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 40.
+ on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -835,7 +835,7 @@ your preamble.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (3.56937pt too wide) in paragraph at lines 64--65
+Overfull \hbox (3.56937pt too wide) in paragraph at lines 66--67
 []\T1/cmr/m/n/10 U £ís-li-cov-ého mul-ti-metru Ag-i-lent 34401A ve funkci ste-j
 nos-m¥rného volt-metru s nas-tavením ro-zli²ení 4digit/slow
  []
@@ -843,247 +843,239 @@ nos-m¥rného volt-metru s nas-tavením ro-zli²ení 4digit/slow
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<obrazky/korekcni_krivka.png, id=103, 1079.03125pt x 406.51875pt>
+<obrazky/korekcni_krivka.png, id=27, 1079.03125pt x 406.51875pt>
 File: obrazky/korekcni_krivka.png Graphic file (type png)
 <use obrazky/korekcni_krivka.png>
-Package pdftex.def Info: obrazky/korekcni_krivka.png  used on input line 117.
+Package pdftex.def Info: obrazky/korekcni_krivka.png  used on input line 119.
 (pdftex.def)             Requested size: 273.85928pt x 103.17397pt.
 
-Overfull \hbox (24.89767pt too wide) in paragraph at lines 117--118
+Overfull \hbox (24.89767pt too wide) in paragraph at lines 119--120
 [][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 121.
+(Font)              <7> on input line 123.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 121.
+(Font)              <5> on input line 123.
 
-Underfull \hbox (badness 1325) in paragraph at lines 120--122
+Underfull \hbox (badness 1325) in paragraph at lines 122--124
 []\T1/cmr/m/n/10 Pokud chceme zvý²it p°es-nost m¥°ení konkrét-ního
  []
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-124.
+126.
 
-<obrazky/vstup_odpor.png, id=105, 888.31876pt x 386.44376pt>
+<obrazky/vstup_odpor.png, id=29, 888.31876pt x 386.44376pt>
 File: obrazky/vstup_odpor.png Graphic file (type png)
 <use obrazky/vstup_odpor.png>
-Package pdftex.def Info: obrazky/vstup_odpor.png  used on input line 126.
+Package pdftex.def Info: obrazky/vstup_odpor.png  used on input line 128.
 (pdftex.def)             Requested size: 258.9222pt x 112.63779pt.
 
-Overfull \hbox (19.92119pt too wide) in paragraph at lines 126--127
+Overfull \hbox (19.92119pt too wide) in paragraph at lines 128--129
 [][] 
  []
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-9.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
+1.
 
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
-3.
+5.
 
 [2 <./obrazky/korekcni_krivka.png> <./obrazky/vstup_odpor.png>]
-Overfull \hbox (26.37946pt too wide) in paragraph at lines 200--230
-[]  [] 
+Overfull \hbox (28.60114pt too wide) in paragraph at lines 202--236
+[]   [] 
  []
 
 
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 260--275
+Overfull \hbox (2.22166pt too wide) in paragraph at lines 266--281
 [][]  [] 
  []
 
 [3]
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 279--294
+Overfull \hbox (2.22166pt too wide) in paragraph at lines 285--300
 [][]  [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 303.
+(Font)              <8> on input line 309.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 303.
+(Font)              <6> on input line 309.
 
-Overfull \hbox (27.17525pt too wide) in paragraph at lines 302--310
+Overfull \hbox (27.17525pt too wide) in paragraph at lines 308--316
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--318
 
  []
 
 
-Overfull \hbox (11.10147pt too wide) in paragraph at lines 370--373
+Overfull \hbox (11.10147pt too wide) in paragraph at lines 416--419
 [][] \T1/cmr/m/n/10 Kat-
  []
 
 [4]
-Overfull \hbox (52.00943pt too wide) in paragraph at lines 383--428
+Overfull \hbox (52.00943pt too wide) in paragraph at lines 429--474
 [][]  [] 
  []
 
 
-Overfull \hbox (52.00943pt too wide) in paragraph at lines 431--472
+Overfull \hbox (52.00943pt too wide) in paragraph at lines 477--518
 [][]  [] 
  []
 
 [5]
 
-LaTeX Warning: Command \v invalid in math mode on input line 477.
+LaTeX Warning: Command \v invalid in math mode on input line 523.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 477.
+LaTeX Warning: Command \v invalid in math mode on input line 523.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 481.
-
-
-Overfull \hbox (39.22282pt too wide) in paragraph at lines 485--493
+Overfull \hbox (39.22282pt too wide) in paragraph at lines 531--539
 []  [] 
  []
 
 
-Overfull \hbox (35.23497pt too wide) in paragraph at lines 582--583
+Overfull \hbox (35.23497pt too wide) in paragraph at lines 691--692
 [][] 
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 587--588
+Underfull \hbox (badness 1688) in paragraph at lines 696--697
 []\T1/cmr/m/n/10 z grafu je vid¥t, ºe
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 587--588
+Underfull \hbox (badness 2828) in paragraph at lines 696--697
 \T1/cmr/m/n/10 k max-imál-nímu pot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 \T1/cmr/m/n/10 la£ení dochází p°i
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 587--588
+Underfull \hbox (badness 2189) in paragraph at lines 696--697
 \T1/cmr/m/n/10 coº odpovídá kat-a-l-o-
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 587--588
+Underfull \hbox (badness 6995) in paragraph at lines 696--697
 \T1/cmr/m/n/10 gové dob¥ in-te-grace
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 \OT1/cmr/m/n/10 20\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 neboli dob¥
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--589
+Underfull \hbox (badness 10000) in paragraph at lines 543--698
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 591.
-
-
-Overfull \hbox (49.13707pt too wide) in paragraph at lines 597--611
+Overfull \hbox (49.13707pt too wide) in paragraph at lines 706--720
 []  [] 
  []
 
 
-Overfull \hbox (35.23497pt too wide) in paragraph at lines 721--722
+Overfull \hbox (35.23497pt too wide) in paragraph at lines 929--930
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 []\T1/cmr/m/n/10 z grafu je vid¥t,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 ºe k max-imál-nímu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 pot-la£ení dochází
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 p°i t°ech frekvenci
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 726--730
+Underfull \hbox (badness 2189) in paragraph at lines 934--938
 \T1/cmr/m/n/10 coº odpovídá kat-a-l-o-
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 726--730
+Underfull \hbox (badness 6995) in paragraph at lines 934--938
 \T1/cmr/m/n/10 gové dob¥ in-te-grace
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 726--730
+Underfull \hbox (badness 4303) in paragraph at lines 934--938
 \OT1/cmr/m/n/10 200\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr
 /m/n/10 ]$ \T1/cmr/m/n/10 neboli dob¥
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 726--730
+Underfull \hbox (badness 2285) in paragraph at lines 934--938
 \T1/cmr/m/n/10 de-seti pe-riod signálu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \OT1/cmr/m/n/10 45\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 odpovídá
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 pe-ri-oda $\OT1/cmr/m/n/10 22\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2
 2\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 a v dob¥ $\OT1/cmr/m/n/10 200\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\O
 ML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 726--730
+Underfull \hbox (badness 2903) in paragraph at lines 934--938
 \T1/cmr/m/n/10 se tak zopakuje de-
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 726--730
+Underfull \hbox (badness 5847) in paragraph at lines 934--938
 \T1/cmr/m/n/10 v¥tkrát. Frekvenci
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 726--730
+Underfull \hbox (badness 1062) in paragraph at lines 934--938
 \OT1/cmr/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 pak odpovídá
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \T1/cmr/m/n/10 pe-ri-oda $\OT1/cmr/m/n/10 18\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1
 8\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--730
+Underfull \hbox (badness 10000) in paragraph at lines 934--938
 \OT1/cmr/m/n/10 45;\T1/cmr/m/n/10 - \OT1/cmr/m/n/10 50;\T1/cmr/m/n/10 - \OT1/cm
 r/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/m/n/10 
 ]$ \T1/cmr/m/n/10 a to
@@ -1091,18 +1083,18 @@ r/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/m/n/10
 
 [6] [7]
 
-LaTeX Warning: Command \v invalid in math mode on input line 749.
+LaTeX Warning: Command \v invalid in math mode on input line 957.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 749.
+LaTeX Warning: Command \v invalid in math mode on input line 957.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
 
-LaTeX Warning: Command \v invalid in math mode on input line 749.
+LaTeX Warning: Command \v invalid in math mode on input line 957.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 749.
+LaTeX Warning: Command \v invalid in math mode on input line 957.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
@@ -1111,16 +1103,16 @@ Missing character: There is no ² in font cmr7!
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lab2.out' has not changed.
-(rerunfilecheck)             Checksum: 5092BA0F882676777B911E429C3C27F4;2071.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34012 strings out of 478268
- 836149 string characters out of 5846347
- 1244989 words of memory out of 5000000
- 51687 multiletter control sequences out of 15000+600000
+ 34011 strings out of 478268
+ 836152 string characters out of 5846347
+ 1250621 words of memory out of 5000000
+ 51686 multiletter control sequences out of 15000+600000
  477910 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,22n,94p,806b,2474s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,22n,94p,757b,2474s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -1141,10 +1133,10 @@ f-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-
 dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-di
 st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist
 /fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on lab2.pdf (8 pages, 362133 bytes).
+Output written on lab2.pdf (8 pages, 359884 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+ 201 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  49 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
