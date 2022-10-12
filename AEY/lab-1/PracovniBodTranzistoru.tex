@@ -92,36 +92,37 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
 
 \section{Počítačové cvičení}
 \begin{figure}[H]
-	\begin{minipage}[t]{0.45\textwidth}
-    \vspace{-5mm}
+  \begin{minipage}[t]{0.5\textwidth}
+    \subsection{Bipolární tranzistor}
+  \end{minipage}
+  \begin{minipage}[t]{0.5\textwidth}
+    \vspace{-15mm}
     \begin{figure}[H]
       \includegraphics[width=\textwidth]{PC/BJT/prac_bod.png}
       % \addlegendentry{test}
-      \caption{\label{prac_bod_sim_1} Stejnosměrné nastavení pracovního bodu}
+      \caption{\label{prac_bod} Stejnosměrné nastavení pracovního bodu}
     \end{figure}
   \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.45\textwidth}
+  
+  \begin{minipage}[t]{0.33\textwidth}
     \begin{figure}[H]
       \includegraphics[width=\textwidth]{PC/BJT/sim_1.png}
       % \addlegendentry{test}
-      \caption{\label{prac_bod_sim_1} Odezva na základní sinusoví signál}
-    \end{figure}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[H]
-	\begin{minipage}[t]{0.471\textwidth}
-    \begin{figure}[H]
-      \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_3.png}
-      \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(U_{in}\)}
+      \caption{\label{sim_1} Odezva na základní sinusoví signál}
     \end{figure}
   \end{minipage}
   \hfill
-	\begin{minipage}[t]{0.4\textwidth}
+  \begin{minipage}[t]{0.25\textwidth}
     \begin{figure}[H]
       \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_4.png}
-      \caption{\label{prac_bod_sim_1} Sinusový průběh při změně \(R_b\)}
+      \caption{\label{Tranzient_analyz_4} Sinusový průběh při změně \(R_b\)}
+    \end{figure}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.3\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/BJT/Tranzient_analyza_3.png}
+      \caption{\label{Tranzient_analyz_5 } Sinusový průběh při změně \(U_{in}\)}
     \end{figure}
   \end{minipage}
 \end{figure}
@@ -129,15 +130,87 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
 \hfill
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{PC/BJT/Sirka_pasma.png}
-  \caption{\label{prac_bod_sim_1} Šířka pásma při \(C_v = 5 \mu F\)}
+  \caption{\label{sirka_pasma} Šířka pásma při \(C_v = 5\-[\mu F]\)}
 \end{figure}
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{PC/BJT/Step_sirka_pasma.png}
-  \caption{\label{prac_bod_sim_1} Šířka pásma při změně \(C_v\)}
+  \caption{\label{Pohyb_sirky_pasma} Šířka pásma při změně \(C_v = 0.1;1;10\-[\mu F]\)}
 \end{figure}
+Je vidět že zmenšení kapacitoru znamená omezení šířky pásma v dolní části, nikoliv v horní.
 
 \newpage
 
+\begin{figure}[H]
+  \begin{minipage}[t]{0.4\textwidth}
+    \subsection{Unipolární tranzistor}
+  \end{minipage}
+  \begin{minipage}[t]{0.6\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/napeti_a_proudy.png}
+      \caption{\label{UNI_naperi_a_proudy} Stejnosměrné nastavení pracovního bodu}
+    \end{figure}
+  \end{minipage}
+  
+  \begin{minipage}[t]{0.30\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/UNI_Tranzient_1_3_redukovano.png}
+      \caption{\label{UNI_Tranzient_reduk_1} Odezva na základní sinusoví signál}
+    \end{figure}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.33\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/UNI_Tranzient_2_1.png}
+      \caption{\label{NUI_Tranzient_2} Sinusový průběh při změně \(R_b\)}
+    \end{figure}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/posun_prac_podu.png}
+      \caption{\label{Posun_prac_bodu} Sinusový průběh při změně \(U_{in}\)}
+    \end{figure}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	% \begin{minipage}[t]{0.45\textwidth}
+  %   \vspace{-5mm}
+  %   \begin{figure}[H]
+  %     \includegraphics[width=\textwidth]{PC/UNI/napeti_a_proudy.png}
+  %     % \addlegendentry{test}
+  %     \caption{\label{prac_bod_sim_1} Stejnosměrné nastavení pracovního bodu}
+  %   \end{figure}
+  % \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\textwidth}
+    \vspace{-10mm}
+    \begin{figure}[H]
+      % \addlegendentry{test}
+      \caption{\label{prac_bod_sim_1} Odezva na základní sinusoví signál}
+    \end{figure}
+  \end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+	\begin{minipage}[t]{1\textwidth}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/UNI_sirka_pasma_2.png}
+      \caption{\label{sirka_pasma} Šířka pásma při \(C_v = 5\-[\mu F]\)}
+    \end{figure}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{PC/UNI/UNI_sirky_pasma.png}
+      \caption{\label{Pohyb_sirky_pasma} Šířka pásma při změně \(C_v = 0.1;1;10\-[\mu F]\)}
+    \end{figure}
+  \end{minipage}
+  \begin{minipage}[t]{1\textwidth}
+    Je vidět že zmenšení kapacitoru znamená omezení šířky pásma v dolní části, nikoliv v horní.
+    Na rozdíl od bipolárního tranzistoru, kde se zmenšuje šířka pásma ale maximální zesílení zůstává stejné, v tomto zapojení zvýšení kapacity znamená zároveň zvýšení maximálního zesílení.
+  \end{minipage}
+\end{figure}
+
+\newpage
 \section{Laboratorní cvičení}
 % \subsections{zadání}
 % Nejprve sestavte obvod bez vazebního kondenzátoru a zdroje signálu. Změnou odporu Rb
@@ -152,16 +225,17 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
 	\begin{minipage}[t]{0.6\textwidth}
     Měřili jsme s tranzistorem BC55 u kterého jsme na začátku naměřili \(\beta = 422\)
     Nejprve jsme sestavili obvod a pomocí potenciometru jsme nastavili pracovní bod dle \tab{tab_pracovni_bod}.
-    \vspace{5mm}
+    % \vspace{-5mm}
     \begin{table}[H]
       % \centering
-      \begin{tabular}{|c|c|c|c|} 
+      \begin{tabular}{|c|c|c|c|c||c|c|} 
         \hline
-         \(U_{cc}\-[V]\) & \(U_{c}\-[V]\)  & \(R_b\-[M\Omega]\) &	\(R_c\-[K\Omega]\) \\ \hline
-         12              & 6               & 2.5                & 2.2                \\ \hline
+         \(U_{cc}\-[V]\) & \(U_{C}\-[V]\)  & \(R_b\-[M\Omega]\) &	\(R_c\-[K\Omega]\) & \(U_{b}\-[V]\) & \(I_{C}\-[mA]\) & \(I_{b}\-[\mu A]\)  \\ \hline
+         12              & 6.1             & 2.5                & 2.2                & 0.61           & 2.68            & 6.36                \\ \hline
       \end{tabular}
       \caption{\label{tab_pracovni_bod} Nastavení obvodu}
     \end{table}
+   	\(\bullet\) kanál 1 ... \(U_{in}\)  \qquad 	\(\bullet\) kanál 2 ... \(U_{out}\)
   \end{minipage}
   \hfill
 	\begin{minipage}[t]{0.4\textwidth}
@@ -171,5 +245,80 @@ Při nastavování pracovního bodu je mimo jiné nezbytné znát následující
     \end{figure}
   \end{minipage}
 \end{figure}
+
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-20mm}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{LAB/NewFile2.png}
+      \caption{\label{obvod_z_laborky}}
+    \end{figure}
+  \end{minipage}
+  \hfill
+	\begin{minipage}[t]{0.35\textwidth}
+    Dále jsme na  vstup přivedly signál o napětí \(U_{in} = 1\-[V]\) a frekvenci \(f = 1\-[kHz]\). 
+    Díky hodnotě vstupního napětí rovnou vidíme zesílení tohoto zapojení \(A = 7.72\-[-]\).
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-10mm}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{LAB/NewFile4.png}
+      \caption{\label{obvod_z_laborky}}
+    \end{figure}
+  \end{minipage}
+  \hfill
+	\begin{minipage}[t]{0.35\textwidth}
+    Dále jsme přenastavili pracovní bod dle tabulky:
+    \begin{table}[H]
+      % \centering
+      \hspace{-5mm}
+      \small
+      \begin{tabular}{|c|c|c|c|c|} 
+        \hline
+        \(U_{cc}\-[V]\) & \(U_{C}\-[V]\)  & \(R_b\-[M\Omega]\) & \(R_c\-[K\Omega]\) & \(U_{b}\-[V]\)  \\ \hline
+        12              & 7.6             & 3.44               & 2.2                & 0.61            \\ \hline
+        \hline
+        \(I_{C}\-[mA]\) & \(I_{b}\-[\mu A]\) & - & - & - \\\hline
+        2.00            & 4.74               & - & - & - \\\hline
+      \end{tabular}
+      \normalsize
+      \caption{\label{tab_pracovni_bod_rozladeni1} Přenastavení obvodu 1}
+    \end{table}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-10mm}
+    \begin{figure}[H]
+      \includegraphics[width=\textwidth]{LAB/NewFile6.png}
+      \caption{\label{obvod_z_laborky}}
+    \end{figure}
+  \end{minipage}
+  \hfill
+	\begin{minipage}[t]{0.35\textwidth}
+    Dále jsme přenastavili pracovní bod dle tabulky:
+    \begin{table}[H]
+      % \centering
+      \hspace{-5mm}
+      \small
+      \begin{tabular}{|c|c|c|c|c|} 
+        \hline
+        \(U_{cc}\-[V]\) & \(U_{C}\-[V]\)  & \(R_b\-[M\Omega]\) & \(R_c\-[K\Omega]\) & \(U_{b}\-[V]\)  \\ \hline
+        12              & 4.5             & 1.90               & 2.2                & 0.61            \\ \hline
+        \hline
+        \(I_{C}\-[mA]\) & \(I_{b}\-[\mu A]\) & - & - & - \\\hline
+        3.41            & 8.08               & - & - & - \\\hline
+      \end{tabular}
+      \normalsize
+      \caption{\label{tab_pracovni_bod_rozladeni1} Přenastavení obvodu 1}
+    \end{table}
+  \end{minipage}
+\end{figure}
+
 
 \end{document}
