@@ -1,0 +1,186 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+\definecolor{orange}{RGB}{ 251, 114, 032}
+\definecolor{fialova}{RGB}{ 255, 000, 255}
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+\section*{Úloha č. 5: Měření driftové pohyblivosti minoritních nosičů proudu impulsní metodou}
+\begin{itemize}
+    \item Tomáš Vavrinec
+    \item 240893
+    \item měření 7.10.2022
+\end{itemize}
+
+\subsection*{Podmínky měření}
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    Teplota \(24.3\-[^\circ C]\) & vzdušná vlhkost \(48.1\-[\%RH]\) & atm. tlak \(p = 1024.4\-[hPa]\) \\ \hline
+\end{tabular}
+
+\subsection*{Zadání}
+Určete driftovou pohyblivost minoritních nosičů a sledujte její změnu s měnící se intenzitou elektrického pole.
+Graficky znázorněte závislost pohyblivosti minoritních nosičů proudu na intenzitě elektrického pole.
+\begin{figure}[H]
+    \hspace{0.05\textwidth}
+    \begin{minipage}[t]{0.9\textwidth}
+        \begin{figure}[H]
+            \begin{minipage}[t]{0.6\textwidth}
+                Na emitor přiložte impulsy\\
+                Stejnosměrný proud vzorkem nastavujte v rozmezí\\
+                Změřte vzdálenost hrotů (d)\\
+            \end{minipage}
+            \hfill
+            \begin{minipage}[t]{0.4\textwidth}
+                \(t = (5 - 20) [\mu s] \)\\
+                \(I = (5 - 35) [mA] \) min. 10 hodnot\\
+            \end{minipage}
+        \end{figure}
+    \end{minipage}
+    
+    \hspace{0.05\textwidth}
+    \begin{minipage}[t]{0.9\textwidth}
+        \begin{figure}[H]
+            \begin{minipage}[t]{0.6\textwidth}
+                \textbf{ Parametry vzorku a použitých materiálů}\\
+                Rezistivita vzorku křemíku je \\
+                Průřez vzorku je\\
+                Vzdálenost hrotů je nutné změřit\\
+            \end{minipage}
+            \hfill
+            \begin{minipage}[t]{0.4\textwidth}
+                \vspace{1.5mm}
+                \(\rho = 0.464\-[\mu m]\)\\
+                \(S = (1.5 x 5)\-[mm^2]\)\\
+            \end{minipage}
+        \end{figure}
+    \end{minipage}
+\end{figure}
+
+\subsection*{Teoretický úvod}
+Normálně se v krystalu pohybují nosiče náboje nahodile všemi směry, dohromady se tedy proud který tvoří vykompenzuje.
+Po vložení krystalu do elektrického pole \(E\) se k náhodnému pohyby přičte pohyb v opačném směru než ve kterém působí ele. pole.
+Rychlost tohoto pohybu značíme \(V_{drift}\) a definujeme vztahem \(V{drift} = E\cdot \mu_{drift}\) kde \(\mu_{drift}\) je driftová pohyblivost.
+Vzhledem k tomu že předpokládáme dva druhy nosičů, elektrony a díry, uvažujeme i jejich různé pohyblivosti.
+
+Pokud do krystalu kterým protéká proud (je tedy trvale ele. poli) vyšleme pomocí dvou elektrod ojedinělí impulz, můžeme na druhé straně pozorovat tento impulz "rozdvojený".
+Hlavní část impulzu je přenesena majoritními nosiči a sekundární pulz který následuje těsně za hlavním je tvořen nosiči minoritními.
+Ze vzdálenosti těchto dvou pulzu můžeme určit pohyblivost minoritních nosičů podle vztahu \(\mu = \frac{d}{E\cdot t_0}\) kde \(d\) je vzdálenost mezi elektrodami, \(E\) je intenzita ele. pole a \(t_0\) je doba mezi impulzu.
+
+Intenzitu ele. pole můžeme spočítat podle vztahu \(E = \frac{U}{d} = \frac{\rho I}{S}\)
+
+\hspace{-8mm}
+\begin{tabular}{ccc}
+    vzdálenost hrotů \(d = 1.8\-[mm]\) & měrná vodivost vzorku \(\rho = 0.464\-[\Omega m]\) & plochá průřezu vzorku \(S = 7.5\cdot10^{-6}\-[m^2]\) \\
+\end{tabular}
+\vspace{-5mm}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.45\textwidth}
+        \vspace{-100mm}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \(t0 [\mu s]\)	& \(I [mA]\)	& \(E [V/m]\)	& \(\mu [m^2V^{-1}s^{-1}]\) \\ \hline
+            14.62	        &  5	    & 0.31	        & 398.0                     \\ \hline
+            14.68	        &  8	    & 0.50	        & 247.7                     \\ \hline
+            15.00	        & 10	    & 0.62	        & 194.0                     \\ \hline
+            15.08	        & 12	    & 0.74	        & 160.8                     \\ \hline
+            15.24	        & 14	    & 0.87	        & 136.4                     \\ \hline
+            15.44	        & 16	    & 0.99	        & 117.8                     \\ \hline
+            15.64	        & 18	    & 1.11	        & 103.4                     \\ \hline
+            15.82	        & 20	    & 1.24	        &  92.0                     \\ \hline
+            15.92	        & 22	    & 1.36	        &  83.1                     \\ \hline
+            16.12	        & 24	    & 1.48	        &  75.2                     \\ \hline
+            16.32	        & 26	    & 1.61	        &  68.6                     \\ \hline
+            16.44	        & 28	    & 1.73	        &  63.2                     \\ \hline
+            16.50	        & 30	    & 1.86	        &  58.8                     \\ \hline
+            16.52	        & 32	    & 1.98	        &  55.0                     \\ \hline
+            16.85	        & 34	    & 2.10	        &  50.8                     \\ \hline
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{tikzpicture}
+            \begin{axis}[
+                    width=1\textwidth, 
+                    height=100mm,
+                    title={Šířka pásma při změně \(C_v\)},
+                    xlabel={\(f\-[Hz]\)},
+                    ylabel={\(K_u~[-]\)},
+                    xmin=0.3, xmax=2.2,
+                    ymin=0, ymax=450,
+                    legend pos=north east,
+                ]
+                \addplot[
+                  color=red,
+                  mark=x,
+                  ]
+                  coordinates {
+                    (0.31	 , 398.0)
+                    (0.50	 , 247.7)
+                    (0.62	 , 194.0)
+                    (0.74	 , 160.8)
+                    (0.87	 , 136.4)
+                    (0.99	 , 117.8)
+                    (1.11	 , 103.4)
+                    (1.24	 ,  92.0)
+                    (1.36	 ,  83.1)
+                    (1.48	 ,  75.2)
+                    (1.61	 ,  68.6)
+                    (1.73	 ,  63.2)
+                    (1.86	 ,  58.8)
+                    (1.98	 ,  55.0)
+                    (2.10	 ,  50.8)
+                };
+                \addlegendentry{\scriptsize \(C_v = 10\-[nF]\)}
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
+Příklad výpočtu ele. pole \(E\):
+\\
+\(
+    E = \frac{\rho I}{S} = \frac{0.464\cdot5\cdot10^{-3}}{7.5\cdot10^{-6}} = 0.31\-[V/m]
+\)
+\\
+\(\mu \):\\
+\(
+    \mu = \frac{d}{E\cdot t_0} = \frac{1.8\cdot10^{-3}}{0.31\cdot14.62\cdot10^{-6}} = 398.0\-[m^2V^{-1}s^{-1}]
+\)\\
+
+\end{document}
