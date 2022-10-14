@@ -177,10 +177,10 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
 \begin{figure}[H]
     \begin{minipage}[t]{0.4\textwidth}
         \begin{table}[H]
-            \vspace{-75mm}
+            % \vspace{-75mm}
             \begin{tabular}{|c|c|c|c|}
             \hline
-                \(U_{GWI}\)        &	\(U_{AGI}\)            &	\(\Delta_U\)        & \(\delta_U\)       \\ \hline
+                \(U_{GWI}\)        &	\(U_{AGI}\)            &	\(K\)        & \(\delta_U\)       \\ \hline
                 \(V\)              &    \(V\)                  &	\(mV\)              & \(\%\) \\ \hline
                  0.0               &    0.0007	               &    -0.7                & -0.07 \\ \hline
                  1.0               &    1.0044	               &    -4.4                & -0.44 \\ \hline
@@ -198,20 +198,19 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
         \end{table}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.4\textwidth}
-        \hspace{-10mm}
-        \tikzset{
-        every pin/.style={fill=yellow!50!white,rectangle,rounded corners=3pt,font=\scriptsize},
-        small dot/.style={fill=black,circle,scale=0.3}
-        }
+    \begin{minipage}[t]{0.6\textwidth}
+        \vspace{-10mm}
         \begin{tikzpicture}
+            \hspace{-10mm}
             \begin{axis}[
                 title={korekční křivka voltmetru GWInstek GPD-3303S},
                 xlabel={\(U_{mer}~[V]\)},
-                ylabel={\(\delta_{u}~[mV]\)},
+                ylabel={\(K~[mV]\)},
                 xmin=0, xmax=10,
                 ymin=0, ymax=5,
                 legend pos=north west,
+                width=1.1\textwidth, 
+                height=80mm,
             ]
             \addplot[
                 color=green,
@@ -243,7 +242,7 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
 \\
 \vspace{5mm}
 \(
-    Agilan 34401A      ... U_{AGI}
+    Agilent 34401A      ... U_{AGI}
 \)\\
 \vspace{5mm}
 Příklad výpočtu Absolutní odchylka: 
@@ -275,7 +274,7 @@ Střední odchylku můžeme určit jako:
     \begin{minipage}[t]{0.7\textwidth}
         \vspace{10mm}
         \(
-            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9933}{1.0032-0.9933}\cdot 100*10^3 = 10.033\-[k\Omega]  
+            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9933}{1.0032-0.9933}\cdot 100*10^3 = 10.033\-[M\Omega]  
         \)
     \end{minipage}
 \end{figure}
@@ -294,7 +293,7 @@ Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10
     \begin{minipage}[t]{0.7\textwidth}
         \vspace{10mm}
         \(
-            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9928}{1.0027-0.9928}\cdot 100*10^3 = 10.028\-[k\Omega]  
+            R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9928}{1.0027-0.9928}\cdot 100*10^3 = 10.028\-[M\Omega]  
         \)
     \end{minipage}
 \end{figure}
@@ -308,9 +307,9 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
     \hspace{-8mm}
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
     \hline
-                        & 1 [KHz]  	& 2 [KHz]	& 5 [KHz]	& 10 [KHz]	& 20 [KHz]	& 50 [KHz]	& 100 [KHz]	& 200 [KHz]	& 350 [KHz]	& 500 [KHz] \\ \hline
+                        & 1 [kHz]  	& 2 [kHz]	& 5 [kHz]	& 10 [kHz]	& 20 [kHz]	& 50 [kHz]	& 100 [kHz]	& 200 [kHz]	& 350 [kHz]	& 500 [kHz] \\ \hline
     Silent SDG 2042 [V]	& 1	        & 1	        & 1      	& 1   	    & 1   	    & 1   	    & 1   	    & 1	        & 1   	    & 1         \\ \hline
-    Agilan 34401A   [V]	& 1,05932	& 1,0537	& 1,05556	& 1,05977	& 1,05920	& 1,05441	& 1,04235	& 1,0158	& 0,9250	& 0,71208   \\ \hline
+    Agilent 34401A  [V] & 1,05932	& 1,0537	& 1,05556	& 1,05977	& 1,05920	& 1,05441	& 1,04235	& 1,0158	& 0,9250	& 0,71208   \\ \hline
     Keysight 34450A [V]	& 1,0588	& 1,0589	& 1,0591	& 1,0592	& 1,0592	& 1,0576	& 1,0536	& 1,0464	& 1,0341	& 1,0186    \\ \hline
     \end{tabular}
     \caption{\label{frekvencni_rozsah} Měření frekvenčního rozsahu}
@@ -320,7 +319,7 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
 \pgfplotsset{width=100mm,compat=1.9}
 \begin{tikzpicture}
     \hspace{-10mm}
-    \begin{loglogaxis}[
+    \begin{semilogxaxis}[
         title={Odchylka měření v~závislosti na frekvenci měřeného signálu},
         width=0.925\textwidth, 
         height=100mm,
@@ -347,7 +346,7 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
                 ( 350 ,0.9250)
                 ( 500 ,0.71208)
             };
-    \addlegendentry{\scriptsize Agilan 34401A}
+    \addlegendentry{\scriptsize Agilent 34401A}
     \addplot[
         only marks,
         color=red,
@@ -374,7 +373,6 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
                 ( 550,1)
             };
     \addlegendentry{\scriptsize Silent SDG 2042}
-
     \addplot[
         color=green,
         ]
@@ -412,9 +410,9 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
                 ( 430 ,1.026)
                 ( 500 ,1.0186)
             };
-    \end{loglogaxis}
+    \end{semilogxaxis}
 \end{tikzpicture}
-Katalogový frekvenční rozsah multimetru Agilan 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
+Katalogový frekvenční rozsah multimetru Agilent 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
 U multimetru Keysight 34450A jsme naměřili odchylku měření menší jak \(0.1\-[V]\) i při frekvence \(500\-[kHz]\).
 
 \newpage
@@ -950,7 +948,7 @@ Vstupní odpor voltmetru Agilent~34401A  je podle jeho dokumentace \(10\-[M\Omeg
 Vstupní odpor voltmetru Keysight~34450A je podle jeho dokumentace \(10\-[M\Omega]\), mi jsme změřili \(10.028\-[M\Omega]\) což znamená odchylku \(28\-[k\Omega]\)
 
 \subsubsection*{Úkol 3}
-Katalogový frekvenční rozsah multimetru Agilan 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
+Katalogový frekvenční rozsah multimetru Agilent 34401A je \(300\-[kHz]\), ale chyba jeho měření je dle našeho měření menší jak \(0.1\-[V]\) i při frekvenci \(300\-[kHz]\), u vyšších frekvencí pak přesnost rychle padá.
 U multimetru Keysight 34450A jsme naměřili odchylku měření menší jak \(0.1\-[V]\) i př frekvence \(500\-[kHz]\).
 
 \subsubsection*{Úkol 4}
