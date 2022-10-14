@@ -95,55 +95,78 @@ Graficky znázorněte závislost pohyblivosti minoritních nosičů proudu na in
 
 \subsection*{Teoretický úvod}
 Normálně se v krystalu pohybují nosiče náboje nahodile všemi směry, dohromady se tedy proud který tvoří vykompenzuje.
-Po vložení krystalu do elektrického pole \(E\) se k náhodnému pohyby přičte pohyb v opačném směru než ve kterém působí ele. pole.
+Po vložení krystalu do elektrického pole \(E\) se k náhodnému pohyby přičte pohyb v opačném směru než ve kterém působí el.pole.
 Rychlost tohoto pohybu značíme \(V_{drift}\) a definujeme vztahem \(V{drift} = E\cdot \mu_{drift}\) kde \(\mu_{drift}\) je driftová pohyblivost.
-Vzhledem k tomu že předpokládáme dva druhy nosičů, elektrony a díry, uvažujeme i jejich různé pohyblivosti.
+Vzhledem k tomu, že předpokládáme dva druhy nosičů, elektrony a díry, uvažujeme i jejich různé pohyblivosti.
 
-Pokud do krystalu kterým protéká proud (je tedy trvale ele. poli) vyšleme pomocí dvou elektrod ojedinělí impulz, můžeme na druhé straně pozorovat tento impulz "rozdvojený".
-Hlavní část impulzu je přenesena majoritními nosiči a sekundární pulz který následuje těsně za hlavním je tvořen nosiči minoritními.
-Ze vzdálenosti těchto dvou pulzu můžeme určit pohyblivost minoritních nosičů podle vztahu \(\mu = \frac{d}{E\cdot t_0}\) kde \(d\) je vzdálenost mezi elektrodami, \(E\) je intenzita ele. pole a \(t_0\) je doba mezi impulzu.
+Pokud do krystalu, kterým protéká proud (je tedy trvale el.poli) vyšleme pomocí dvou elektrod ojedinělý impulz, můžeme na druhé straně pozorovat tento impulz "rozdvojený".
+Hlavní část impulzu je přenesena majoritními nosiči a sekundární pulz, který následuje těsně za hlavním je tvořen nosiči minoritními.
+Ze vzdálenosti těchto dvou pulzů můžeme určit pohyblivost minoritních nosičů podle vztahu \(\mu = \frac{d}{E\cdot t_0}\) kde \(d\) je vzdálenost mezi elektrodami, \(E\) je intenzita el.pole a \(t_0\) je doba mezi impulzu.
 
-Intenzitu ele. pole můžeme spočítat podle vztahu \(E = \frac{U}{d} = \frac{\rho I}{S}\)
+Intenzitu el.pole můžeme spočítat podle vztahu \(E = \frac{U}{d} = \frac{\rho I}{S}\)
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{pulzi_a_pad.png}
+\end{figure}
+
+\newpage
 \hspace{-8mm}
 \begin{tabular}{ccc}
     vzdálenost hrotů \(d = 1.8\-[mm]\) & měrná vodivost vzorku \(\rho = 0.464\-[\Omega m]\) & plochá průřezu vzorku \(S = 7.5\cdot10^{-6}\-[m^2]\) \\
 \end{tabular}
 \vspace{-5mm}
 \begin{figure}[H]
-    \begin{minipage}[t]{0.45\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}
         \vspace{-100mm}
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            \(t0 [\mu s]\)	& \(I [mA]\)	& \(E [V/m]\)	& \(\mu [m^2V^{-1}s^{-1}]\) \\ \hline
-            14.62	        &  5	    & 0.31	        & 398.0                     \\ \hline
-            14.68	        &  8	    & 0.50	        & 247.7                     \\ \hline
-            15.00	        & 10	    & 0.62	        & 194.0                     \\ \hline
-            15.08	        & 12	    & 0.74	        & 160.8                     \\ \hline
-            15.24	        & 14	    & 0.87	        & 136.4                     \\ \hline
-            15.44	        & 16	    & 0.99	        & 117.8                     \\ \hline
-            15.64	        & 18	    & 1.11	        & 103.4                     \\ \hline
-            15.82	        & 20	    & 1.24	        &  92.0                     \\ \hline
-            15.92	        & 22	    & 1.36	        &  83.1                     \\ \hline
-            16.12	        & 24	    & 1.48	        &  75.2                     \\ \hline
-            16.32	        & 26	    & 1.61	        &  68.6                     \\ \hline
-            16.44	        & 28	    & 1.73	        &  63.2                     \\ \hline
-            16.50	        & 30	    & 1.86	        &  58.8                     \\ \hline
-            16.52	        & 32	    & 1.98	        &  55.0                     \\ \hline
-            16.85	        & 34	    & 2.10	        &  50.8                     \\ \hline
-        \end{tabular}
+        \hspace{0.1\textwidth}
+        \begin{table}[H]
+            \centering
+            \caption{\label{tabulka_mereni} Naměřené a vypočtené hodnoty}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \(t0 [\mu s]\)	& \(I [mA]\)	& \(E [V/m]\)   & \(\mu [m^2V^{-1}s^{-1}]\) \\ \hline
+                14.62	        &  5	        &  309.3        & 0.398                     \\ \hline
+                14.68	        &  8	        &  494.9        & 0.248                     \\ \hline
+                15.00	        & 10	        &  618.7        & 0.194                     \\ \hline
+                15.08	        & 12	        &  742.4        & 0.161                     \\ \hline
+                15.24	        & 14	        &  866.1        & 0.136                     \\ \hline
+                15.44	        & 16	        &  989.9        & 0.118                     \\ \hline
+                15.64	        & 18	        & 1113.6        & 0.103                     \\ \hline
+                15.82	        & 20	        & 1237.3        & 0.092                     \\ \hline
+                15.92	        & 22	        & 1361.1        & 0.083                     \\ \hline
+                16.12	        & 24	        & 1484.8        & 0.075                     \\ \hline
+                16.32	        & 26	        & 1608.5        & 0.069                     \\ \hline
+                16.44	        & 28	        & 1732.3        & 0.063                     \\ \hline
+                16.50	        & 30	        & 1856.0        & 0.059                     \\ \hline
+                16.52	        & 32	        & 1979.7        & 0.055                     \\ \hline
+                16.85	        & 34	        & 2103.4        & 0.051                     \\ \hline
+            \end{tabular}
+        \end{table}
+        % \vspace{5mm}
+        Příklad výpočtu el.pole \(E\) a pohyblivosti \(\mu \):\\
+        \\
+        \(
+            E = \frac{\rho I}{S} = \frac{0.464\cdot5\cdot10^{-3}}{7.5\cdot10^{-6}} = 309.3\-[V/m]
+        \)
+        \\\\
+        \(
+            \mu = \frac{d}{E\cdot t_0} = \frac{1.8\cdot10^{-3}}{309.3\cdot14.62\cdot10^{-6}} = 0.398\-[m^2V^{-1}s^{-1}]
+        \)\\
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.5\textwidth}
+    \begin{minipage}[t]{0.6\textwidth}
+        \hspace{-0.1\textwidth}
         \begin{tikzpicture}
             \begin{axis}[
                     width=1\textwidth, 
                     height=100mm,
-                    title={Šířka pásma při změně \(C_v\)},
-                    xlabel={\(f\-[Hz]\)},
-                    ylabel={\(K_u~[-]\)},
-                    xmin=0.3, xmax=2.2,
-                    ymin=0, ymax=450,
+                    title={ závislost pohyblivosti \(\mu\) na intenzitě el.pole \(E\)},
+                    xlabel={\(E\-[Vm^{-1}]\)},
+                    ylabel={\(\mu\-[m^2V^{-1}s^{-1}]\)},
+                    xmin=300, xmax=2200,
+                    ymin=0.025, ymax=0.4,
+                    xtick={0, 250, 500,..., 2000},
                     legend pos=north east,
                 ]
                 \addplot[
@@ -151,36 +174,77 @@ Intenzitu ele. pole můžeme spočítat podle vztahu \(E = \frac{U}{d} = \frac{\
                   mark=x,
                   ]
                   coordinates {
-                    (0.31	 , 398.0)
-                    (0.50	 , 247.7)
-                    (0.62	 , 194.0)
-                    (0.74	 , 160.8)
-                    (0.87	 , 136.4)
-                    (0.99	 , 117.8)
-                    (1.11	 , 103.4)
-                    (1.24	 ,  92.0)
-                    (1.36	 ,  83.1)
-                    (1.48	 ,  75.2)
-                    (1.61	 ,  68.6)
-                    (1.73	 ,  63.2)
-                    (1.86	 ,  58.8)
-                    (1.98	 ,  55.0)
-                    (2.10	 ,  50.8)
+                    ( 309.3	 , 0.398)
+                    ( 494.9	 , 0.248)
+                    ( 618.7	 , 0.194)
+                    ( 742.4	 , 0.161)
+                    ( 866.1	 , 0.136)
+                    ( 989.9	 , 0.118)
+                    (1113.6	 , 0.103)
+                    (1237.3	 , 0.092)
+                    (1361.1	 , 0.083)
+                    (1484.8	 , 0.075)
+                    (1608.5	 , 0.069)
+                    (1732.3	 , 0.063)
+                    (1856.0	 , 0.059)
+                    (1979.7	 , 0.055)
+                    (2103.4	 , 0.051)
                 };
-                \addlegendentry{\scriptsize \(C_v = 10\-[nF]\)}
+                \addlegendentry{\scriptsize \(\mu_{mer}\)}
+                \addplot[
+                        color=green,
+                    ]
+                    coordinates {
+
+                        ( 123.7333, 1.1234)
+                        ( 185.6000, 0.7020)
+                        ( 247.4667, 0.5099)
+                        ( 309.3333, 0.3999)
+                        ( 371.2000, 0.3286)
+                        ( 433.0667, 0.2787)
+                        ( 494.9333, 0.2419)
+                        ( 556.8000, 0.2135)
+                        ( 618.6667, 0.1909)
+                        ( 680.5333, 0.1726)
+                        ( 742.4000, 0.1575)
+                        ( 804.2667, 0.1447)
+                        ( 866.1333, 0.1338)
+                        ( 928.0000, 0.1244)
+                        ( 989.8667, 0.1161)
+                        (1051.7333, 0.1089)
+                        (1113.6000, 0.1025)
+                        (1175.4667, 0.0968)
+                        (1237.3333, 0.0916)
+                        (1299.2000, 0.0870)
+                        (1361.0667, 0.0827)
+                        (1422.9333, 0.0789)
+                        (1484.8000, 0.0754)
+                        (1546.6667, 0.0721)
+                        (1608.5333, 0.0692)
+                        (1670.4000, 0.0664)
+                        (1732.2667, 0.0638)
+                        (1794.1333, 0.0614)
+                        (1856.0000, 0.0592)
+                        (1917.8667, 0.0571)
+                        (1979.7333, 0.0552)
+                        (2041.6000, 0.0534)
+                        (2103.4667, 0.0517)
+                        (2165.3333, 0.0500)
+                        (2227.2000, 0.0485)
+                        (2289.0667, 0.0471)
+                        (2350.9333, 0.0457)
+                        (2412.8000, 0.0444)
+                        (2474.6667, 0.0432)
+                    };
+                \addlegendentry{\scriptsize aproximace \(\frac{117}{x-20}-0.0045\)}
             \end{axis}
         \end{tikzpicture}
     \end{minipage}
 \end{figure}
-Příklad výpočtu ele. pole \(E\):
-\\
-\(
-    E = \frac{\rho I}{S} = \frac{0.464\cdot5\cdot10^{-3}}{7.5\cdot10^{-6}} = 0.31\-[V/m]
-\)
-\\
-\(\mu \):\\
-\(
-    \mu = \frac{d}{E\cdot t_0} = \frac{1.8\cdot10^{-3}}{0.31\cdot14.62\cdot10^{-6}} = 398.0\-[m^2V^{-1}s^{-1}]
-\)\\
+
+\subsection{Závěr}
+Z měření plyne, že se stoupající intenzitou el.pole klesá pohyblivost minoritních nosičů.
+To odpovídá teorii, podle které se v tomto měření pohybujeme v oblasti 1 a 2, tedy v oblasti s nízkým a středním el.polem.
+
 
 \end{document}

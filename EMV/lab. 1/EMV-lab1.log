@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  13 OCT 2022 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  14 OCT 2022 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -863,30 +863,51 @@ Overfull \hbox (2.22166pt too wide) in paragraph at lines 80--92
 [][]  [] 
  []
 
-
-Overfull \hbox (10.17143pt too wide) in paragraph at lines 108--174
-[]  []
- []
-
+<pulzi_a_pad.png, id=11, 953.2413pt x 316.18124pt>
+File: pulzi_a_pad.png Graphic file (type png)
+<use pulzi_a_pad.png>
+Package pdftex.def Info: pulzi_a_pad.png  used on input line 110.
+(pdftex.def)             Requested size: 348.54472pt x 115.61023pt.
 [1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 175--185
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pulzi
+_a_pad.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 147--156
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--156
+
+ []
+
+
+Overfull \hbox (52.01703pt too wide) in paragraph at lines 120--243
+[][]  [] 
+ []
+
+
+Overfull \hbox (10.17143pt too wide) in paragraph at lines 114--243
+[]  []
  []
 
 [2] (./EMV-lab1.aux)
 Package rerunfilecheck Info: File `EMV-lab1.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: B04374D0BB284A4BE133FC8C10110EA1;79.
  ) 
 Here is how much of TeX's memory you used:
- 33693 strings out of 478268
- 830358 string characters out of 5846347
- 1208004 words of memory out of 5000000
- 51422 multiletter control sequences out of 15000+600000
+ 33768 strings out of 478268
+ 831784 string characters out of 5846347
+ 1207004 words of memory out of 5000000
+ 51493 multiletter control sequences out of 15000+600000
  474984 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,22n,94p,761b,2271s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,23n,94p,761b,2279s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -901,11 +922,12 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on EMV-lab1.pdf (2 pages, 176170 bytes).
+texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on EMV-lab1.pdf (2 pages, 487831 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
