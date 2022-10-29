@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+\definecolor{orange}{RGB}{ 251, 114, 032}
+\definecolor{fialova}{RGB}{ 255, 000, 255}
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+
+\begin{table}[H]
+    \centering
+    \caption{\label{tabulka_mereni} Naměřené a následný vypočtené výkony a chyb měření}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \(U_in\-[V]\) &	\(I\-[A]\) &	\(U\-[V]\) & \(P\-[W]\)             & \(\Delta_{pU}\-[V]\)    & \(\Delta_{pI}\-[A]\)  & \(\Delta_{pp}\-[W]\)  & \(\delta_{pp}\-[\%]\) \\ \hline
+        0	            & 0.00007	   &    0.001	   & \(4     \cdot10^{-8}\) & \(5\cdot10^{-4}\)       & \(6\cdot10^{-5}\)     & \(7\cdot10^{-8}\)     & \(2\cdot10^{+2}\)     \\ \hline
+        0.5	          & 0.03176	   &    0.323	   & \(1.026 \cdot10^{-2}\) & \(5\cdot10^{-4}\)       & \(8\cdot10^{-5}\)     & \(4\cdot10^{-5}\)     & \(4\cdot10^{-1}\)     \\ \hline
+        1	            & 0.06353	   &    0.648	   & \(4.115 \cdot10^{-2}\) & \(5\cdot10^{-4}\)       & \(9\cdot10^{-5}\)     & \(9\cdot10^{-5}\)     & \(2\cdot10^{-1}\)     \\ \hline
+        1.5	          & 0.0953	   &    0.971	   & \(9.25  \cdot10^{-2}\) & \(5\cdot10^{-4}\)       & \(1\cdot10^{-4}\)     & \(2\cdot10^{-4}\)     & \(2\cdot10^{-1}\)     \\ \hline
+        2	            & 0.1862	   &    1.899	   & 0.3536                 & \(6\cdot10^{-4}\)       & \(2\cdot10^{-4}\)     & \(4\cdot10^{-4}\)     & \(1\cdot10^{-1}\)     \\ \hline
+        2.5	          & 0.2327	   &    2.374	   & 0.5525                 & \(6\cdot10^{-4}\)       & \(2\cdot10^{-4}\)     & \(6\cdot10^{-4}\)     & \(1\cdot10^{-1}\)     \\ \hline
+        3  	          & 0.2793	   &    2.849	   & 0.7957                 & \(6\cdot10^{-4}\)       & \(2\cdot10^{-4}\)     & \(7\cdot10^{-4}\)     & \(9\cdot10^{-2}\)     \\ \hline
+        3.5	          & 0.3259	   &    3.323	   & 1.083                  & \(7\cdot10^{-4}\)       & \(2\cdot10^{-4}\)     & \(1\cdot10^{-3}\)     & \(9\cdot10^{-2}\)     \\ \hline
+        4	            & 0.3726	   &    3.798	   & 1.415                  & \(7\cdot10^{-4}\)       & \(2\cdot10^{-4}\)     & \(1\cdot10^{-3}\)     & \(8\cdot10^{-2}\)     \\ \hline
+        4.5	          & 0.4192	   &    4.273	   & 1.791                  & \(8\cdot10^{-4}\)       & \(3\cdot10^{-4}\)     & \(1\cdot10^{-3}\)     & \(8\cdot10^{-2}\)     \\ \hline
+        5	            & 0.4660	   &    4.747	   & 2.212                  & \(8\cdot10^{-4}\)       & \(3\cdot10^{-4}\)     & \(2\cdot10^{-3}\)     & \(8\cdot10^{-2}\)     \\ \hline
+        5.5	          & 0.5127	   &    5.222	   & 2.677                  & \(9\cdot10^{-4}\)       & \(3\cdot10^{-4}\)     & \(2\cdot10^{-3}\)     & \(8\cdot10^{-2}\)     \\ \hline
+        6	            & 0.5594	   &    5.697	   & 3.187                  & \(1\cdot10^{-3}\)       & \(3\cdot10^{-4}\)     & \(2\cdot10^{-3}\)     & \(8\cdot10^{-2}\)     \\ \hline
+    \end{tabular}
+\end{table}
+
+% \begin{table}[H]
+%     \scriptsize
+%     \caption{\label{tabulka_mereni} Naměřené }
+%     \hspace{-15mm}
+%     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+%         \hline
+%         - &	\multicolumn{10}{c|}{\(U\-[V]\)}                                                                               \\ \hline
+%         Agilent 34401A  & 0.43993 & 0.43018 & 0.42946 & 0.42961 & 0.43955 & 0.42941 & 0.42908 & 0.42973 & 0.42918 & 0.42937\\ \hline
+%         Keysight 34450A & 0.43094 & 0.43145 & 0.43063 & 0.43099 & 0.43071 & 0.43035 & 0.43088 & 0.43122 & 0.43044 & 0.43029\\ \hline
+%     \end{tabular}
+% \end{table}
+
+\begin{table}[H]
+    \caption{\label{tabulka_mereni} vypočtené a chyb}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \(U_A\)        & \(U_B\)        & \(U_C\)        & \(U_{roz}\)    \\ \hline
+        \(1\cdot10^1\) & \(8\cdot10^1\) & \(8\cdot10^1\) & \(2\cdot10^0\) \\ \hline
+        \(1\cdot10^1\) & \(8\cdot10^1\) & \(8\cdot10^1\) & \(2\cdot10^0\) \\ \hline
+    \end{tabular}
+\end{table}
+
+\end{document}

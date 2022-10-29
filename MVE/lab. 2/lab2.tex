@@ -213,7 +213,7 @@ Kde \(U_{rm}\) je amplituda rušivého signálu a~\(U_{ch}\) je chyba měření 
                 height=80mm,
             ]
             \addplot[
-                color=green,
+                color=red,
                 mark=x,
                 ]
                 coordinates {
@@ -276,9 +276,13 @@ Střední odchylku můžeme určit jako:
         \(
             R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9933}{1.0032-0.9933}\cdot 100*10^3 = 10.033\-[M\Omega]  
         \)
+        \\
+        \(
+            \delta_U = \frac{R_{vst}}{R_{vst-tab}}\cdot100 = \frac{10.033 - 10}{10.000}\cdot100 = 0.33\-[\%]
+        \)
     \end{minipage}
 \end{figure}
-Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10\-M\Omega \)\\odchylka našeho měření je tady \(33\-k\Omega\)
+Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10\-M\Omega \)\\odchylka našeho měření je tady \(33\-k\Omega\) neboli \(0.33\-[\%]\)
 
 \begin{figure}[H]
     \begin{minipage}[t]{0.3\textwidth}
@@ -294,6 +298,10 @@ Podle katalogového listu přístroje Agilent 34401A je jeho vstupní odpor \(10
         \vspace{10mm}
         \(
             R_{vst} = \frac{U_{vst}}{U_{n}-U_{vst}}\cdot R_n = \frac{0.9928}{1.0027-0.9928}\cdot 100*10^3 = 10.028\-[M\Omega]  
+        \)
+        \\
+        \(
+            \delta_U = \frac{R_{vst}}{R_{vst-tab}}\cdot100 = \frac{10.028 - 10}{10.000}\cdot100 = 0.28\-[\%]
         \)
     \end{minipage}
 \end{figure}
@@ -326,7 +334,7 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
         xlabel={\(f~[kHz]\)},
         ylabel={\(U_{mer}~[V]\)},
         xmin=1, xmax=500,
-        ymin=0.7, ymax=1.1,
+        ymin=-0.3, ymax=0.3,
         legend pos=south west,
     ]
     \addplot[
@@ -335,16 +343,16 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
         mark=x,
         ]
         coordinates {
-                ( 1   ,1.05932)
-                ( 2   ,1.0537)
-                ( 5   ,1.05556)
-                ( 10  ,1.05977)
-                ( 20  ,1.05920)
-                ( 50  ,1.05441)
-                ( 100 ,1.04235)
-                ( 200 ,1.0158)
-                ( 350 ,0.9250)
-                ( 500 ,0.71208)
+                ( 1   ,0.05932)
+                ( 2   ,0.0537)
+                ( 5   ,0.05556)
+                ( 10  ,0.05977)
+                ( 20  ,0.05920)
+                ( 50  ,0.05441)
+                ( 100 ,0.04235)
+                ( 200 ,0.0158)
+                ( 350 ,0.9250-1)
+                ( 500 ,0.71208-1)
             };
     \addlegendentry{\scriptsize Agilent 34401A}
     \addplot[
@@ -353,62 +361,61 @@ Pomocí generátoru jsme vytvářeli harmonický signál o~amplitudě \(1\-[V]\)
         mark=x,
         ]
         coordinates {
-                ( 1   ,1.0588)
-                ( 2   ,1.0589)
-                ( 5   ,1.0591)
-                ( 10  ,1.0592)
-                ( 20  ,1.0592)
-                ( 50  ,1.0576)
-                ( 100 ,1.0536)
-                ( 200 ,1.0464)
-                ( 350 ,1.0341)
-                ( 500 ,1.0186)
+                ( 1   ,0.0588)
+                ( 2   ,0.0589)
+                ( 5   ,0.0591)
+                ( 10  ,0.0592)
+                ( 20  ,0.0592)
+                ( 50  ,0.0576)
+                ( 100 ,0.0536)
+                ( 200 ,0.0464)
+                ( 350 ,0.0341)
+                ( 500 ,0.0186)
             };
     \addlegendentry{\scriptsize Keysight 34450A}
-    \addplot[
-        color=blue,
-        ]
-        coordinates {
-                ( 0.1,1)
-                ( 550,1)
-            };
-    \addlegendentry{\scriptsize Silent SDG 2042}
     \addplot[
         color=green,
         ]
         coordinates {
-                ( 1   ,1.05932)
-                ( 2   ,1.0537)
-                ( 5   ,1.05556)
-                ( 10  ,1.05977)
-                ( 20  ,1.05920)
-                ( 50  ,1.05441)
-                ( 100 ,1.04235)
-                ( 150 ,1.03)
-                ( 200 ,1.0158)
-                ( 245 ,0.995)
-                ( 300 ,0.96)
-                ( 350 ,0.9250)
-                ( 400 ,0.88)
-                ( 450 ,0.81)
-                ( 500 ,0.71208)
+                ( 1   ,0.05932)
+                ( 2   ,0.0537)
+                ( 5   ,0.05556)
+                ( 10  ,0.05977)
+                ( 20  ,0.05920)
+                ( 50  ,0.05441)
+                ( 100 ,0.04235)
+                ( 150 ,0.03)
+                ( 200 ,0.0158)
+                ( 245 ,0.995-1)
+                ( 300 ,0.96-1)
+                ( 350 ,0.9250-1)
+                ( 400 ,0.88-1)
+                ( 450 ,0.81-1)
+                ( 500 ,0.71208-1)
             };
     \addplot[
         color=red,
         ]
         coordinates {
-                ( 1   ,1.0588)
-                ( 2   ,1.0589)
-                ( 5   ,1.0591)
-                ( 10  ,1.0592)
-                ( 20  ,1.0592)
-                ( 50  ,1.0576)
-                ( 100 ,1.0536)
-                ( 200 ,1.0464)
-                ( 280 ,1.04)
-                ( 350 ,1.0341)
-                ( 430 ,1.026)
-                ( 500 ,1.0186)
+                ( 1   ,0.0588)
+                ( 2   ,0.0589)
+                ( 5   ,0.0591)
+                ( 10  ,0.0592)
+                ( 20  ,0.0592)
+                ( 50  ,0.0576)
+                ( 100 ,0.0536)
+                ( 200 ,0.0464)
+                ( 280 ,0.04)
+                ( 350 ,0.0341)
+                ( 430 ,0.026)
+                ( 500 ,0.0186)
+            };
+    \addplot[
+        color=black,
+        ]
+        coordinates {
+                ( 1   ,0)
+                ( 500 ,0)
             };
     \end{semilogxaxis}
 \end{tikzpicture}
@@ -452,7 +459,7 @@ Multimetrem Keysight 34450A jsme změřili nejprve obdélníkový (\(U_{pp} = 3\
                 legend pos=south west,
             ]
             \addplot[
-                color=green,
+                color=red,
                 ]
                 coordinates {
                         (0   ,-1.5)
@@ -500,7 +507,7 @@ Multimetrem Keysight 34450A jsme změřili nejprve obdélníkový (\(U_{pp} = 3\
                 legend pos=south west,
             ]
             \addplot[
-                color=green,
+                color=red,
                 ]
                 coordinates {
                         (00   ,-2.5)

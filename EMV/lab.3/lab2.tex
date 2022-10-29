@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+% \definecolor{fialova}{RGB}{ 255, 000, 255}
+\definecolor{color-si1}{RGB}{ 255, 000, 000}
+\definecolor{color-si2}{RGB}{ 251, 130, 032}
+
+\definecolor{color-ge1}{RGB}{ 000, 255, 000}
+\definecolor{color-ge2}{RGB}{ 032, 251, 160}
+
+\definecolor{color-inp1}{RGB}{ 000, 000, 255}
+\definecolor{color-inp2}{RGB}{ 160, 032, 251}
+
+\definecolor{color-geas1}{RGB}{ 225, 225, 000}
+\definecolor{color-geas2}{RGB}{ 225, 225, 100}
+
+\definecolor{sedak}{RGB}{ 100, 100, 100}
+
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+\input{Titulni_strana_protokolu.tex}
+
+\section*{Zadání}
+S pomocí grafické metody stanovte pro vybrané izolační materiály bod v jejich H-N diagramu
+pro který platí \((\omega \tau) = 1\), a na základě parametrů tohoto bodu odsimulujte pomocí programu
+Havriliak-Negami.bat hodnoty distribučních parametrů \(\alpha\) a \(\beta\).
+Vyhodnoťte, jak se liší simulovaný průběh od naměřeného a pokuste se na H-N diagramu najít
+bod pro který dojde k co nejlepší shodě mezi simulovaným a naměřeným průběhem. Zhodnoťte
+jak se od sebe liší graficky odečtený bod \((\omega \tau) = 1\) a bod nejlepší shody.
+Na základě hodnot \(\alpha\) a \(\beta\) pro bod nejlepší shody vypočtěte kmitočtovou závislost dielektrické
+konstanty \(\epsilon`\) a ztrátového čísla \(\epsilon``\) na kmitočtu (minimálně pro 20 hodnot) a sestrojte H-N
+diagram.
+
+\section*{Teoretický úvod}
+
+
+\newpage
+\subsection*{Podmínky měření}
+% \begin{tabular}{|c|c|c|}
+%     \hline
+%     Teplota \(25.1\-[^\circ C]\) & vzdušná vlhkost \(37.2\-[\%RH]\) & atm. tlak \(p = 102.6\-[hPa]\) \\ \hline
+% \end{tabular}
+
+\begin{figure}[H]
+    % \hfill
+    \begin{minipage}[t]{\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=\textwidth, 
+                height=0.6\textwidth,
+                title={chloprenový kaučuk},
+                xlabel={\(T\-[K]\)}, 
+                ylabel={\(W\-[eV]\)},
+                xmin=2.5, xmax=6.2,
+                ymin=0.0, ymax=0.7,
+                xtick={0,0.2,...,6.5},
+                ytick={0,0.1,...,1.5},
+                legend pos=north west,
+                ]
+                \addplot[
+                color=blue,
+                ]
+                coordinates {
+                    (6.10, 0.00)
+                    (5.85, 0.26)
+                    (5.66, 0.42)
+                    (5.51, 0.50)
+                    (5.33, 0.57)
+                    (5.24, 0.59)
+                    (5.10, 0.63)
+                    (4.94, 0.65)
+                    (4.75, 0.66)
+                    (4.52, 0.65)
+                    (4.22, 0.61)
+                    (3.85, 0.53)
+                    (3.65, 0.46)
+                    (3.46, 0.40)
+                    (3.36, 0.36)
+                    (3.12, 0.27)
+                    (2.91, 0.20)
+                    (2.80, 0.15)
+                    (2.63, 0.08)
+                    (2.53, 0.04)
+                };
+            \addplot[
+                    dotted,
+                    thick,
+                    color=black,
+                ]
+                coordinates {
+                    (2.43 , 0)
+                    (2.53 , 0.04)
+                    (4.8  , 1)
+                };
+            \addplot[
+                dotted,
+                thick,
+                color=black,
+                ]
+                coordinates {
+                    (2.4  , 0)
+                    (7    , 0.75)
+                };
+            \addplot[
+                    dotted,
+                    thick,
+                    color=black,
+                    mark=o
+                ]
+                coordinates {
+                    (5.496, 0)
+                    (5.496, 0.505)
+                };
+            \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+
+    \begin{minipage}[t]{\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{obrazky/kaucuk_vypoctene.png}
+    \end{minipage}
+\end{figure}
+
+
+\subsection*{Závěr}
+
+
+\end{document}

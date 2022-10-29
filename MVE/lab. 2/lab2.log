@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  14 OCT 2022 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.7)  14 OCT 2022 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,187 +895,192 @@ Overfull \hbox (2.22166pt too wide) in paragraph at lines 178--236
  []
 
 
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 265--280
+Overfull \hbox (2.22166pt too wide) in paragraph at lines 265--284
 [][]  [] 
  []
 
 [3]
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 284--299
+Overfull \hbox (2.22166pt too wide) in paragraph at lines 288--307
 [][]  [] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 308.
+(Font)              <8> on input line 316.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 308.
+(Font)              <6> on input line 316.
 
-Overfull \hbox (8.86305pt too wide) in paragraph at lines 307--315
+Overfull \hbox (8.86305pt too wide) in paragraph at lines 315--323
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--317
+Underfull \hbox (badness 10000) in paragraph at lines 311--325
 
  []
 
+
+Overfull \hbox (0.57364pt too wide) in paragraph at lines 421--424
+[][] \T1/cmr/m/n/10 Kat-
+ []
+
 [4]
-Overfull \hbox (52.00943pt too wide) in paragraph at lines 427--472
+Overfull \hbox (52.00943pt too wide) in paragraph at lines 434--479
 [][]  [] 
  []
 
 
-Overfull \hbox (52.00943pt too wide) in paragraph at lines 475--516
+Overfull \hbox (52.00943pt too wide) in paragraph at lines 482--523
 [][]  [] 
  []
 
 [5]
 
-LaTeX Warning: Command \v invalid in math mode on input line 521.
+LaTeX Warning: Command \v invalid in math mode on input line 528.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 521.
+LaTeX Warning: Command \v invalid in math mode on input line 528.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
 
-Overfull \hbox (39.22282pt too wide) in paragraph at lines 529--537
+Overfull \hbox (39.22282pt too wide) in paragraph at lines 536--544
 []  [] 
  []
 
 
-Overfull \hbox (35.23497pt too wide) in paragraph at lines 689--690
+Overfull \hbox (35.23497pt too wide) in paragraph at lines 696--697
 [][] 
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 694--695
+Underfull \hbox (badness 1688) in paragraph at lines 701--702
 []\T1/cmr/m/n/10 z grafu je vid¥t, ºe
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 694--695
+Underfull \hbox (badness 2828) in paragraph at lines 701--702
 \T1/cmr/m/n/10 k max-imál-nímu pot-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
 \T1/cmr/m/n/10 la£ení dochází p°i
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 694--695
+Underfull \hbox (badness 2189) in paragraph at lines 701--702
 \T1/cmr/m/n/10 coº odpovídá kat-a-l-o-
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 694--695
+Underfull \hbox (badness 6995) in paragraph at lines 701--702
 \T1/cmr/m/n/10 gové dob¥ in-te-grace
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
 \OT1/cmr/m/n/10 20\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 neboli dob¥
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--696
+Underfull \hbox (badness 10000) in paragraph at lines 548--703
 
  []
 
 
-Overfull \hbox (49.13707pt too wide) in paragraph at lines 704--718
+Overfull \hbox (49.13707pt too wide) in paragraph at lines 711--725
 []  [] 
  []
 
 
-Overfull \hbox (35.23497pt too wide) in paragraph at lines 927--928
+Overfull \hbox (35.23497pt too wide) in paragraph at lines 934--935
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 []\T1/cmr/m/n/10 z grafu je vid¥t,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 ºe k max-imál-nímu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 pot-la£ení dochází
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 p°i t°ech frekvenci
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 932--936
+Underfull \hbox (badness 2189) in paragraph at lines 939--943
 \T1/cmr/m/n/10 coº odpovídá kat-a-l-o-
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 932--936
+Underfull \hbox (badness 6995) in paragraph at lines 939--943
 \T1/cmr/m/n/10 gové dob¥ in-te-grace
  []
 
 
-Underfull \hbox (badness 4303) in paragraph at lines 932--936
+Underfull \hbox (badness 4303) in paragraph at lines 939--943
 \OT1/cmr/m/n/10 200\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr
 /m/n/10 ]$ \T1/cmr/m/n/10 neboli dob¥
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 932--936
+Underfull \hbox (badness 2285) in paragraph at lines 939--943
 \T1/cmr/m/n/10 de-seti pe-riod signálu
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \OT1/cmr/m/n/10 45\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 odpovídá
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 pe-ri-oda $\OT1/cmr/m/n/10 22\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2
 2\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 a v dob¥ $\OT1/cmr/m/n/10 200\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\O
 ML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 932--936
+Underfull \hbox (badness 2903) in paragraph at lines 939--943
 \T1/cmr/m/n/10 se tak zopakuje de-
  []
 
 
-Underfull \hbox (badness 5847) in paragraph at lines 932--936
+Underfull \hbox (badness 5847) in paragraph at lines 939--943
 \T1/cmr/m/n/10 v¥tkrát. Frekvenci
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 932--936
+Underfull \hbox (badness 1062) in paragraph at lines 939--943
 \OT1/cmr/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/
 m/n/10 ]$ \T1/cmr/m/n/10 pak odpovídá
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \T1/cmr/m/n/10 pe-ri-oda $\OT1/cmr/m/n/10 18\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1
 8\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ms\OT1/cmr/m/n/10 ]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--936
+Underfull \hbox (badness 10000) in paragraph at lines 939--943
 \OT1/cmr/m/n/10 45;\T1/cmr/m/n/10 - \OT1/cmr/m/n/10 50;\T1/cmr/m/n/10 - \OT1/cm
 r/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/m/n/10 
 ]$ \T1/cmr/m/n/10 a to
@@ -1083,18 +1088,18 @@ r/m/n/10 55\T1/cmr/m/n/10 -\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Hz\OT1/cmr/m/n/10
 
 [6] [7]
 
-LaTeX Warning: Command \v invalid in math mode on input line 955.
+LaTeX Warning: Command \v invalid in math mode on input line 962.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 955.
+LaTeX Warning: Command \v invalid in math mode on input line 962.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
 
-LaTeX Warning: Command \v invalid in math mode on input line 955.
+LaTeX Warning: Command \v invalid in math mode on input line 962.
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 955.
+LaTeX Warning: Command \v invalid in math mode on input line 962.
 
 Missing character: There is no ² in font cmr7!
 Missing character: There is no ² in font cmr7!
@@ -1106,10 +1111,10 @@ Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34001 strings out of 478268
- 835864 string characters out of 5846347
- 1250617 words of memory out of 5000000
- 51676 multiletter control sequences out of 15000+600000
+ 34007 strings out of 478268
+ 835994 string characters out of 5846347
+ 1250595 words of memory out of 5000000
+ 51682 multiletter control sequences out of 15000+600000
  477910 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,22n,94p,757b,2474s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1126,17 +1131,18 @@ exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texm
-f-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-di
-st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on lab2.pdf (8 pages, 360697 bytes).
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/te
+xmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2022/texm
+f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb>
+Output written on lab2.pdf (8 pages, 368475 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 206 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  49 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
