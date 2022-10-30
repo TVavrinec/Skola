@@ -5,6 +5,9 @@
 *.zip
 
 # LaTeX temporary files
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 *.aux
 *.log
 *.toc
