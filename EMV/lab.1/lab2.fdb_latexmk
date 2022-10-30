@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1667059855 "c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex" "lab2.pdf" "lab2" 1667059857
+["pdflatex"] 1667124223 "c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex" "lab2.pdf" "lab2" 1667124225
   "Titulni_strana_protokolu.tex" 1667044012 5285 b60f2285773f1254a73559db5bda28d1 ""
-  "c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex" 1667059854 4948 9d4d3d7262e6875bb2845fd89e5e9240 ""
+  "c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex" 1667124220 4948 9d4d3d7262e6875bb2845fd89e5e9240 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1666084066 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1666083742 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1666084340 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -207,10 +207,10 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1666087171 4635141 23220546ee3b05387077c1debfa3f0c7 ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1666087237 3058778 641f2b67a48ad67da46998c492bd3b48 ""
   "c:/texlive/2022/texmf.cnf" 1666087150 713 e69b156964470283e0530f5060668171 ""
-  "lab2.aux" 1667059857 554 3a9fad3b6f2576a50b1e2f7054735a66 "pdflatex"
+  "lab2.aux" 1667124225 554 3a9fad3b6f2576a50b1e2f7054735a66 "pdflatex"
   "lab2.out" 0 -1 0 "pdflatex"
-  "lab2.tex" 1667059854 4948 9d4d3d7262e6875bb2845fd89e5e9240 ""
-  "obrazky/kaucuk_vypoctene.png" 1667055455 4525 a2e61deff48b117156bc71f23aa7e7ab ""
+  "lab2.tex" 1667124220 4948 9d4d3d7262e6875bb2845fd89e5e9240 ""
+  "obrazky/kaucuk_vypoctene.png" 1667123937 8330 840b1e0dcbcfa1d5341718bd1fb28280 ""
   (generated)
   "lab2.aux"
   "lab2.log"
