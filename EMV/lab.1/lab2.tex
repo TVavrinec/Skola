@@ -11,6 +11,8 @@
 \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
 \usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
 
+\usepackage{blindtext}
+
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -52,6 +54,58 @@
 { tab.~ß\ref{#1}}
 
 
+% \documentclass{article}
+% \usepackage{graphicx}
+% \usepackage{wrapfig}
+% \usepackage{filecontents}
+% \usepackage{siunitx}
+% \usepackage[table]{xcolor}
+% \usepackage{float}
+% \usepackage{hyperref}
+% \usepackage{color} % balíček pro obarvování textů
+% \usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+% \hypersetup{
+%     colorlinks,
+%     linkcolor={red!50!black},
+%     citecolor={green!50!black},
+%     urlcolor={blue!80!black}
+% }
+% \definecolor{orange}{RGB}{ 251, 114, 032}
+% \definecolor{fialova}{RGB}{ 255, 000, 255} 
+
+% \usepackage{lmodern}
+% \usepackage{amssymb,amsmath}
+% \usepackage{ifxetex,ifluatex}
+% \usepackage{fixltx2e} % provides \textsubscript
+% \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+%   \usepackage[T1]{fontenc}
+%   \usepackage[utf8]{inputenc}
+% \else % if luatex or xelatex
+%   \ifxetex
+%     \usepackage{mathspec}
+%   \else
+%     \usepackage{fontspec}
+%   \fi
+%   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+% \fi
+
+
+
+
+
+
+% \usepackage{subfiles} % Best loaded last in the preamble
+
+% \usepackage{bookmark}
+% \usepackage{tikz}
+% \usetikzlibrary{patterns}
+
+% \usepgfplotslibrary{polar}
+% \usepgfplotslibrary{external}
+% \usepgfplotslibrary{fillbetween}
+
+
+
 \begin{document}
 \input{Titulni_strana_protokolu.tex}
 
@@ -63,14 +117,45 @@ Vyhodnoťte, jak se liší simulovaný průběh od naměřeného a pokuste se na
 bod pro který dojde k co nejlepší shodě mezi simulovaným a naměřeným průběhem. Zhodnoťte
 jak se od sebe liší graficky odečtený bod \((\omega \tau) = 1\) a bod nejlepší shody.
 Na základě hodnot \(\alpha\) a \(\beta\) pro bod nejlepší shody vypočtěte kmitočtovou závislost dielektrické
-konstanty \(\epsilon`\) a ztrátového čísla \(\epsilon``\) na kmitočtu (minimálně pro 20 hodnot) a sestrojte H-N
+konstanty \(\varepsilon`\) a ztrátového čísla \(\varepsilon``\) na kmitočtu (minimálně pro 20 hodnot) a sestrojte H-N
 diagram.
 
 \section*{Teoretický úvod}
+Za předpokladu jedné relaxační doby platí pro komplexní permitivitu dielektrika vztah \\
+\\
+\Large
+\(
+    \varepsilon^* = \varepsilon_\infty + \frac{\varepsilon_s - \varepsilon_\infty}{1 + j \omega \tau} 
+\)
+\\
+\\
+\normalsize
+Kde \(\varepsilon_s\) je statická relativní permitivita (při \(\omega = 0\)) \(\varepsilon_\infty\) je optická relativní permitivita (při \(\omega \rightarrow \infty \)) \(\tau\) je relaxační doba.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{obrazky/teorie1.png}
+\end{figure}
+Platí však jen pro některé dielektrika, a proto se postupně do vztahu přidaly další dva parametry (\(\alpha\) a \(\beta\))\\
+\\
+\Large
+\(
+    \varepsilon^* = \varepsilon_\infty + \frac{\varepsilon_s - \varepsilon_\infty}{\left[1 + (j \omega \tau)^{1-\alpha}\right]^{\beta}} 
+\)
+\\
+\\
+\normalsize
+Kde \(\alpha\) je distribuční parametr, který posouvá střed části kružnice ve vertikálním směru (pod osu) a \(\beta\) je činitel, který křivku deformuje, př. viz simulace.
+
+Na Havriliakově - Negamiho diagramu existuje bod, pro který platí \(\omega \tau = 1\) a lze ho určit graficky jak je znázorněno níže.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{obrazky/teorie2.png}
+\end{figure}
+Při znalosti kmitočtu pak lze určit \(\tau\) a následně i koeficienty \(\alpha\) a \(\beta\).
 
 
 \newpage
-\subsection*{Podmínky měření}
+\subsection*{Měření}
 % \begin{tabular}{|c|c|c|}
 %     \hline
 %     Teplota \(25.1\-[^\circ C]\) & vzdušná vlhkost \(37.2\-[\%RH]\) & atm. tlak \(p = 102.6\-[hPa]\) \\ \hline
@@ -88,7 +173,7 @@ diagram.
                 xlabel={\(T\-[K]\)}, 
                 ylabel={\(W\-[eV]\)},
                 xmin=2.5, xmax=6.2,
-                ymin=0.0, ymax=0.7,
+                ymin=0.0, ymax=1,
                 xtick={0,0.2,...,6.5},
                 ytick={0,0.1,...,1.5},
                 legend pos=north west,
@@ -150,15 +235,57 @@ diagram.
             \end{axis}
         \end{tikzpicture}
     \end{minipage}
-
+    
     \begin{minipage}[t]{\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{obrazky/kaucuk_vypoctene.png}
     \end{minipage}
 \end{figure}
 
+\begin{figure}
+    \begin{minipage}[t]{\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis}[
+                width=\textwidth, 
+                height=0.6\textwidth,
+                title={Závislost složek komplexní permitivity na kmitočtu},
+                xlabel={\(f\-[Hz]\)}, 
+                ylabel={\(\varepsilon\-[?]\)},
+                xmin=0.1, xmax=10^15,
+                % ymin=0.0, ymax=1,
+                % xtick={0,0.2,...,6.5},
+                % ytick={0,0.1,...,1.5},
+                legend pos=north east,
+                ]
+                \addplot[
+                    color=red,
+                    thick,
+                    domain=0.1:10^15,
+                    samples=500,
+                    %   color=red,
+                    %   mark=x,
+                    ]
+                    {2.53+(((((1.94*10^(-3)*x*2*3.14159)^(1-0.35))*sin(0.35*3.14159/2)^2)+(1+((1.94*10^(-3)*x*2*3.14159)^(1-0.35))*sin(0.35*3.14159/2))^2)^(-0.364/2))*(6.1-2.53)*cos(0.364*atan((((1.94*10^(-3)*x*2*3.14159)^(1-0.35))*cos(0.35*3.14159/2))/(((1+1.94*10^(-3)*x*2*3.14159)^(1-0.35))*sin(0.35*3.14159/2))))};
+                \addlegendentry{\scriptsize \(\varepsilon'\)}
+                \addplot[
+                    color=green,
+                    thick,
+                    domain=0.1:10^15,
+                    samples=500,
+                    %   color=red,
+                    %   mark=x,
+                    ]
+                    {(((((1.94*10^(-3)*x)^(1-0.35))*sin(0.35*3.14159/2)^2)+(1+((1.94*10^(-3)*x)^(1-0.35))*sin(0.35*3.14159/2))^2)^(-0.364/2))*(6.1-2.53)*sin(0.364*atan((((1.94*10^(-3)*x)^(1-0.35))*cos(0.35*3.14159/2))/(((1+1.94*10^(-3)*x)^(1-0.35))*sin(0.35*3.14159/2))))};
+                \addlegendentry{\scriptsize \(\varepsilon''\)}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+    \end{minipage}
+\end{figure}
+
 
 \subsection*{Závěr}
-
+Porovnáním simulace a grafické metody, ukázalo nepříliš dobrou shodu.
+To je však pravděpodobně zapříčiněno především špatným odhadem frekvence v bodě \(\omega \tau = 1\).
 
 \end{document}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.18)  30 OCT 2022 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.18)  3 NOV 2022 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex
-(c:/Users/Admin/Documents/github/Skola/EMV/lab.3/lab2.tex
+**c:/Users/Admin/Documents/github/Skola/EMV/lab.1/lab2.tex
+(c:/Users/Admin/Documents/github/Skola/EMV/lab.1/lab2.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -459,7 +459,30 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+))) (c:/texlive/2022/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (c:/texlive/2022/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count313
+\c@Blindtext=\count314
+\c@blind@countparstart=\count315
+\blind@countxx=\count316
+\blindtext@numBlindtext=\count317
+\blind@countyy=\count318
+\c@blindlist=\count319
+\c@blindlistlevel=\count320
+\c@blindlist@level=\count321
+\blind@listitem=\count322
+\c@blind@listcount=\count323
+\c@blind@levelcount=\count324
+\blind@mathformula=\count325
+\blind@Mathformula=\count326
+\c@blind@randomcount=\count327
+\c@blind@randommax=\count328
+\c@blind@pangramcount=\count329
+\c@blind@pangrammax=\count330
+) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -470,9 +493,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (c:/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count313
-\Gm@cntv=\count314
-\c@Gm@tempcnt=\count315
+\Gm@cnth=\count331
+\Gm@cntv=\count332
+\c@Gm@tempcnt=\count333
 \Gm@bindingoffset=\dimen277
 \Gm@wd@mp=\dimen278
 \Gm@odd@mp=\dimen279
@@ -483,45 +506,45 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen284
 \Gm@dimlist=\toks41
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 55.
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 109.
  (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count316
+\l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box75
 ) (./lab2.aux)
 \openout1 = `lab2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
+\scratchcounter=\count335
 \scratchdimen=\dimen285
 \scratchbox=\box76
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\nofMPsegments=\count336
+\nofMParguments=\count337
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count320
+\MPscratchCnt=\count338
 \MPscratchDim=\dimen286
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
 \everyMPtoPDFconversion=\toks43
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -531,8 +554,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (c:/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 55.
-Package hyperref Info: Link coloring ON on input line 55.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 109.
+Package hyperref Info: Link coloring ON on input line 109.
  (./lab2.out) (./lab2.out)
 \@outlinefile=\write4
 \openout4 = `lab2.out'.
@@ -540,7 +563,7 @@ Package hyperref Info: Link coloring ON on input line 55.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 55.
+ on input line 109.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -602,23 +625,60 @@ Missing character: There is no ° in font cmr12!
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 60.
+(Font)              <7> on input line 114.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 60.
- [2]
-Overfull \hbox (8.04915pt too wide) in paragraph at lines 151--152
+(Font)              <5> on input line 114.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 127.
+<obrazky/teorie1.png, id=18, 656.4525pt x 229.60782pt>
+File: obrazky/teorie1.png Graphic file (type png)
+<use obrazky/teorie1.png>
+Package pdftex.def Info: obrazky/teorie1.png  used on input line 136.
+(pdftex.def)             Requested size: 348.54472pt x 121.91228pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--148
+
+ []
+
+<obrazky/teorie2.png, id=20, 685.05937pt x 295.1025pt>
+File: obrazky/teorie2.png Graphic file (type png)
+<use obrazky/teorie2.png>
+Package pdftex.def Info: obrazky/teorie2.png  used on input line 152.
+(pdftex.def)             Requested size: 298.75696pt x 128.69725pt.
+[2 <./obrazky/teorie1.png> <./obrazky/teorie2.png>]
+Overfull \hbox (8.04915pt too wide) in paragraph at lines 236--237
  [][] 
  []
 
-<obrazky/kaucuk_vypoctene.png, id=28, 481.04718pt x 359.84438pt>
+<obrazky/kaucuk_vypoctene.png, id=37, 481.04718pt x 359.84438pt>
 File: obrazky/kaucuk_vypoctene.png Graphic file (type png)
 <use obrazky/kaucuk_vypoctene.png>
-Package pdftex.def Info: obrazky/kaucuk_vypoctene.png  used on input line 156.
+Package pdftex.def Info: obrazky/kaucuk_vypoctene.png  used on input line 241.
 (pdftex.def)             Requested size: 398.34009pt x 297.9844pt.
 
-Overfull \vbox (11.67674pt too high) has occurred while \output is active []
+Overfull \vbox (9.34428pt too high) has occurred while \output is active []
 
- [3 <./obrazky/kaucuk_vypoctene.png>] [4] (./lab2.aux)
+ [3 <./obrazky/kaucuk_vypoctene.png>]
+Overfull \hbox (10.90057pt too wide) in paragraph at lines 282--283
+ [][] 
+ []
+
+[4] (./lab2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -627,18 +687,18 @@ Package rerunfilecheck Info: File `lab2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33978 strings out of 475071
- 836013 string characters out of 5782907
- 1254795 words of memory out of 5000000
- 54878 multiletter control sequences out of 15000+600000
- 486680 words of font info for 52 fonts, out of 8000000 for 9000
+ 34338 strings out of 475071
+ 843097 string characters out of 5782907
+ 1436021 words of memory out of 5000000
+ 55229 multiletter control sequences out of 15000+600000
+ 488361 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,94p,748b,1994s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on lab2.pdf (4 pages, 173766 bytes).
+ 99i,21n,94p,748b,2192s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrb1728.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on lab2.pdf (4 pages, 364352 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
