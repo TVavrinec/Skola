@@ -50,6 +50,8 @@
 
 
 \begin{document}
+Tomáš Vavrinec \- \- \- 240893
+
 \section{Nízkofrekvenční zesilovače s OZ}
 \subsection*{Střídavý zesilovač s nesymetrickým napájením operačního zesilovače}
 \begin{figure}[H]
@@ -184,7 +186,7 @@
   \begin{minipage}[t]{\textwidth}
     \centering
     \includegraphics[width=\textwidth]{PC/ukol2/nula_vzstup.png}
-    Časový průběh se dvěmy vstupními signály lišící se vzájemným posunutými \(180^\circ\) \(U_{pp} = 10\-[V]\) \(f = 1\-[kHz]\).
+    Časový průběh se dvěma vstupními signály lišící se vzájemným posunutím \(180^\circ\) \(U_{pp} = 10\-[V]\) \(f = 1\-[kHz]\).
   \end{minipage}
 \end{figure}
 
@@ -200,7 +202,7 @@
   \begin{minipage}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{LAB/NewFile6.png}
-    Změřený časový průběh se dvěmy vstupními signály lišící se vzájemným posunutými \(180^\circ\) \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
+    Změřený časový průběh se dvěma vstupními signály lišící se vzájemným posunutím \(180^\circ\) \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
   \end{minipage}
 \end{figure}
 
@@ -215,7 +217,7 @@
   \begin{minipage}[t]{\textwidth}
     \centering
     \includegraphics[width=\textwidth]{PC/ukol3/transient4.png}
-    Časový průběh se dvěmy rozdílnými vstupními signály \\
+    Časový průběh se dvěma rozdílnými vstupními signály \\
     signál-1 \(U_{pp} = 10\-[V]\) \(f = 1\-[kHz]\) \\
     signál-2 \(U_{pp} = 1\-[V]\) \(f = 10\-[kHz]\).
   \end{minipage}
@@ -225,7 +227,7 @@
   \begin{minipage}[t]{\textwidth}
     \centering
     \includegraphics[width=\textwidth]{PC/ukol3/nula_vzstup.png}
-    Časový průběh se dvěmy identickými vstupními signály \(U_{pp} = 10\-[V]\) \(f = 1\-[kHz]\).
+    Časový průběh se dvěma identickými vstupními signály \(U_{pp} = 10\-[V]\) \(f = 1\-[kHz]\).
   \end{minipage}
 \end{figure}
 
@@ -233,34 +235,64 @@
   \begin{minipage}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{LAB/NewFile8.png}
-    Změřený časový průběh se dvěmy identickými vstupními signály \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
+    Změřený časový průběh se dvěma identickými vstupními signály \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.48\textwidth}
     \centering
     \includegraphics[width=\textwidth]{LAB/NewFile9.png}
-    Změřený časový průběh se dvěmy vstupními signály lišící se vzájemným posunutými \(180^\circ\) \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
+    Změřený časový průběh se dvěma vstupními signály lišící se vzájemným posunutím \(180^\circ\) \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
   \end{minipage}
 \end{figure}
 \begin{figure}[H]
   \begin{minipage}[t]{\textwidth}
     \centering
     \includegraphics[width=\textwidth]{LAB/NewFile9.png}
-    Časový průběh se dvěmy rozdílnými vstupními signály \\
+    Časový průběh se dvěma rozdílnými vstupními signály \\
     signál-1 \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\) \\
     signál-2 \(U_{pp} = 200\-[mV]\) \(f = 10\-[kHz]\).
   \end{minipage}
 \end{figure}
 
-\vspace{-3mm}
+\newpage
 \subsection{Závěr}
 
-Z prvního zapojení je vidět že se OZ dá použít i jen s jedním zdrojem napájení, při vytvoření referenčního napájení.
+Z prvního zapojení je vidět, že se OZ dá použít i jen s jedním zdrojem napájení, při vytvoření referenčního napájení.
 Pokud v dalším zapojení vadí takto vytvořená stejnosměrná složka, dá se vstup a výstup oddělit kapacitorem.
 
-Další zapojení ukazuje jak sečíst dva signály do jednoho.
-Poslední zapojení ukazuje jak od sebe dva signály odečíst.
-Měření i simulace ukazují co se stave s výstupním signálem když na vstup přivedeme dva stejné, různé a vzájemně opačné signály pro obě dvě zapojení.
+Další zapojení ukazuje, jak sečíst dva signály do jednoho.
+Poslední zapojení ukazuje, jak od sebe dva signály odečíst.
+Měření i simulace ukazují, co se stane s výstupním signálem, když na vstup přivedeme dva stejné, různé a vzájemně opačné signály pro obě dvě zapojení.
 
+Měření všech tří reálných zapojení, i jejich simulace, odpovídá teorii z numerických cvičení.
+U druhého zapojení je důležité si povšimnout, že vstupní signály sice sečte, ale výsledek následně invertuje, jak je vidět na následujícím obrázku.
+\begin{figure}[H]
+  \begin{minipage}[t]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{LAB/NewFile7.png}
+    Časový průběh se dvěma identickými vstupními signály \(U_{pp} = 2\-[V]\) \(f = 1\-[kHz]\).
+  \end{minipage}
+\end{figure}
+
+Z teorie také plyne, že jak sumační, tak diferenční zesilovač může krom prostého sčítání resp. odčítání signálu jednotlivé složky násobit.
+Tato funkce je v našich zapojeních ovlivněna všemi rezistory, z čehož také plynou nadstandardní požadavky na přesnost těchto rezistorů.
+
+Oproti tomu zapojení zesilovače s nesymetrickým napájením má vysoké požadavky na přesnost rezistoru \(R_1\) a \(R_2\) zatím co u \(R_3\) a \(R_4\) ne až tolik.
+Nepřesnost rezistoru \(R_3\) a \(R_4\) by způsobila různé saturační napětí v kladném a záporném směru, nikoliv však zkreslení signálu v okolí střední hodnoty.
+Proto na rezistory \(R_3\) a \(R_4\) nejsou tak vysoké požadavky jako \(R_1\) a \(R_2\).
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|} 
+    \hline
+    uzel \(n\)          & 1       & 2      & 3     & 4     & 5       & 6      \\ \hline
+    NC \(U_{nG}\-[V]\)  & 15      & 7.5    & 7.5   & 7.5   & 7.5     & 0      \\ \hline
+    PC \(U_{nG}\-[V]\)  & 15      & 7.499  & 7.499 & 7.499 & 7.499   & 0      \\ \hline
+    LC \(U_{nG}\-[V]\)  & 15.074  & 7.536  & 7.539 & 7.536 & 7.537   & 0      \\ \hline
+
+  \end{tabular}
+  \normalsize
+  \caption{Porovnání výsledku stejnosměrné analýzy z NC, PC a LC}
+\end{table}
 
 \end{document}
