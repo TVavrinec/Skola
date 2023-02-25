@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+% \definecolor{fialova}{RGB}{ 255, 000, 255}
+\definecolor{color-si1}{RGB}{ 255, 000, 000}
+\definecolor{color-si2}{RGB}{ 251, 130, 032}
+
+\definecolor{color-ge1}{RGB}{ 000, 255, 000}
+\definecolor{color-ge2}{RGB}{ 032, 251, 160}
+
+\definecolor{color-inp1}{RGB}{ 000, 000, 255}
+\definecolor{color-inp2}{RGB}{ 160, 032, 251}
+
+\definecolor{color-geas1}{RGB}{ 225, 225, 000}
+\definecolor{color-geas2}{RGB}{ 225, 225, 100}
+
+\definecolor{sedak}{RGB}{ 100, 100, 100}
+
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+\input{Titulni strana protokolu - laboratorni cviceni BPC-OZU.tex}
+
+
+
+
+\begin{figure}
+\section*{Zadání}
+U předložených setrvačníků zjistěte hodnotu výsledné práce \(W\), kterou je setrvačník schopen po získání kinetické energie dodat do zátěže.
+Vyneste do grafu rozběhové a brzdící křivky setrvačníku \(I = F (t)\), dále okamžité hodnoty výkonu setrvačníků \(P = F (t)\). 
+V grafu rozběhové křivky identifikujte ztráty způsobené konstrukcí zařízení. 
+Porovnejte velikosti výkonů dodaných setrvačníky vzhledem k odporové zátěži.
+Zjistěte velikost momentu hybnosti a kinetické energie akumulované setrvačníky. 
+Setrvačníky seřaďte dle množství akumulované energie. 
+Definujte, které parametry setrvačníku jsou k akumulaci energie nejdůležitější.
+Na základě hmotnosti a přiložené výkresové dokumentace setrvačníku zjistěte, z jakých materiálů jsou vyrobeny.
+Hmotnosti setrvačníků: \(m1 = 9,3 kg; m2 = 8,25 kg; m3 = 3,05 kg; m4 = 3,055 kg\)
+Hodnoty odporů zátěže: \(R1 = 1 Ω; R2 = 2,2 Ω; R3 = 4 Ω;\)
+
+\subsection{Teoretický úvod}
+
+
+
+\end{figure}
+
+
+\end{document}
