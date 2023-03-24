@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+\pgfplotsset{compat=1.10}
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+% \definecolor{fialova}{RGB}{ 255, 000, 255}
+\definecolor{color-si1}{RGB}{ 255, 000, 000}
+\definecolor{color-si2}{RGB}{ 251, 130, 032}
+
+\definecolor{color-ge1}{RGB}{ 000, 255, 000}
+\definecolor{color-ge2}{RGB}{ 032, 251, 160}
+
+\definecolor{color-inp1}{RGB}{ 000, 000, 255}
+\definecolor{color-inp2}{RGB}{ 160, 032, 251}
+
+\definecolor{color-geas1}{RGB}{ 225, 225, 000}
+\definecolor{color-geas2}{RGB}{ 225, 225, 100}
+
+\definecolor{sedak}{RGB}{ 100, 100, 100}
+
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+\input{Titulni strana protokolu - laboratorni cviceni BPC-OZU.tex}
+
+\begin{minipage}[t]{\textwidth}
+  \section*{Zadání}
+  Určete typ použitého Stirlingova motoru. 
+  Pomocí topného elementu zahřejte výměník tepla a sledujte napětí a proud generovaný Stirlingovým motorem, příkon a teplotu na výměníku při různých hodnotách proudu. 
+  Následně budou vypočteny výkony a účinnost pro jednotlivé příkony a bude sestaven graf výkonu motoru v závislosti na dosažené teplotě a příkonu.
+  V druhé části úlohy připojíte ke hřídeli elektromotor a přiložením napětí ji roztočíte a budete sledovat, jak Stirlingův motor funguje jako tepelné čerpadlo při různých způsobech otáčení.
+\end{minipage}
+
+
+\section{Měření}
+
+\subsection{úkol 1}
+\begin{minipage}[t]{\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      % axis y line*=left,
+      width=\textwidth, 
+      height=0.6\textwidth,
+      title={Závislost výstupního výkonu na vstupním},
+      xlabel={vstupní výkon \(P_{in}\-[W]\)},
+      ylabel={Účinnost \(\eta\-[\text{\textperthousand}]\)},
+      xmin=80, xmax=180,
+      ymin=0, ymax=0.02,
+      legend pos=north west
+      ]
+      \addplot[
+          % mark=x,
+          color=blue,
+        ]
+        coordinates {
+          (  82.6, 0.002)
+          (  91.9, 0.005)
+          ( 111.1, 0.012)
+          ( 129.6, 0.017)
+          ( 150.8, 0.016)
+          ( 175.0, 0.002)
+        };
+      % \addlegendentry{\(n\)}
+    \end{axis}
+  \end{tikzpicture}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      Proud do topného tělesa \(I_{in}\-[A]\)       & \(9,5\)           & \(10,1\)         & \(11\)             & \(12\)            & \(13\)            & \(14\)            \\ \hline
+      Napětí na topném tělese \(U_{in}\-[V]\)       & \(8,7\)           & \(9,1\)          & \(10,1\)           & \(10,8\)          & \(11,6\)          & \(12,5\)          \\ \hline
+      Generovaný proud \(I_{out}\-[mA]\)            & \(0,45\)          & \(0,475\)        & \(1,1\)            & \(1,45\)          & \(1,6\)           & \(0,8\)           \\ \hline
+      Generované napětí \(U\-[V]\)                  & \(0,4\)           & \(0,9\)          & \(1,2\)            & \(1,5\)           & \(1,5\)           & \(0,5\)           \\ \hline \hline
+      Příkon \(P_{in}\-[W]\)                        & \(82,6\)          & \(91,9\)         & \(111,1\)          & \(129,6\)         & \(150,8\)         & \(175\)           \\ \hline
+      Výkon \(P_{out}\-[mW]\)                       & \(0,18\)          & \(0,428\)        & \(1,32\)           & \(2,175\)         & \(2,4\)           & \(0,4\)           \\ \hline
+      Účinnost \(\eta\-[\text{\textperthousand}]\)  & \(2\cdot10{-3}\)  & \(5\cdot10{-3}\) & \(12\cdot10{-3}\)  & \(17\cdot10{-3}\) & \(16\cdot10{-3}\) & \(2\cdot10{-3}\)  \\ \hline
+    \end{tabular}
+    \caption{\label{tabulka_mereni} První úloha}
+  \end{table}
+\end{minipage}
+
+\newpage
+
+Příklady výpočtů: \\
+\\
+\large
+\(
+  P_{in} = I_{in} \cdot U_{in} = (9,5 \cdot 8,7)\-[W] = 82,6\-[W] \\ \\
+  P_{out} = I_{out} \cdot U_{out} = (0,45\cdot 10^{-3} \cdot 0,4)\-[W] = 0,18^{-3}\-[W] = 0,18\-[mW] \\ \\
+  \eta = \frac{P_{out}}{P_{in}} = \frac{0,18\cdot{-3}}{82,6} = 2,179\cdot10^{-6} = 2,179\cdot10{-3}\-[\text{\textperthousand}] \\ \\
+\)
+\large \\
+
+\vspace{-10mm}
+\subsection{úkol 2}
+\begin{minipage}[t]{\textwidth}
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+                                                        & \(80^\circ C\)  & \(40^\circ C\)  \\ \hline
+      Doba chladnutí bez napájení \([s]\)	              & \(510\)         & \(1140\)        \\ \hline
+      Doba chladnutí s napájením \(10\-[V]\) - \([s]\)  & \(476\)         & \(1032\)        \\ \hline
+    \end{tabular}
+    \caption{\label{tabulka_mereni-5v} Ochlazování motoru po zahřátí na \(300^\circ C\)}
+  \end{table}
+\end{minipage}
+Poslední měření jsme nemohli provést, protože při posledním zahřívání se vysunulo těsnění a motor tak nebyl schopen dalšího chodu.
+
+\subsection{Závěr}
+Měřený Stirlingův motor byla modifikace \(\alpha\)
+
+Námi naměřená účinnost Stirlingova motoru se blíží nule \\ (maximální měřená účinnost \(\eta = 16\cdot10{-3}\-[\text{\textperthousand}]\)).
+Tato účinnost je ale účinnost celého systému, kde Stirlingův motor není sám, pravděpodobně však byla jeho účinnost i tak extrémně malá.
+
+
+\end{document}

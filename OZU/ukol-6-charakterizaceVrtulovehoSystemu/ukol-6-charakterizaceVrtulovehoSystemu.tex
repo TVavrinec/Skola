@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+\pgfplotsset{compat=1.10}
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+% \definecolor{fialova}{RGB}{ 255, 000, 255}
+\definecolor{color-si1}{RGB}{ 255, 000, 000}
+\definecolor{color-si2}{RGB}{ 251, 130, 032}
+
+\definecolor{color-ge1}{RGB}{ 000, 255, 000}
+\definecolor{color-ge2}{RGB}{ 032, 251, 160}
+
+\definecolor{color-inp1}{RGB}{ 000, 000, 255}
+\definecolor{color-inp2}{RGB}{ 160, 032, 251}
+
+\definecolor{color-geas1}{RGB}{ 225, 225, 000}
+\definecolor{color-geas2}{RGB}{ 225, 225, 100}
+
+\definecolor{sedak}{RGB}{ 100, 100, 100}
+
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+\input{Titulni strana protokolu - laboratorni cviceni BPC-OZU.tex}
+
+\begin{minipage}[t]{\textwidth}
+  \section*{Zadání}
+  \begin{enumerate}
+    \item Sestavte graf závislosti \(v_{air} = F(U)\) a \(n_t = F(U)\).
+    \item Vypočtěte účinnost \(\eta\) zdroje větrné energie z dodaného příkonu do motorku a výstupní hustoty výkonu větru pro napájecí napětí \(U=6\-[V]\) a \(U=12\-[V]\) v ustáleném stavu. Účinnosti porovnejte.
+    \item Sestavte graf závislosti výstupního napětí generátoru na otáčkách genterátoru \(U_{out}=F(n_g)\) v semilogaritmických souřadnicích.
+    \item Vypočtěte počet pólových dvojic použitého stejnosměrného motoru pracující v generátorickém režimu.
+    \item Stanovte startovací rychlost větru \(v_{air}\) zkoumaného systému.
+  \end{enumerate}
+\end{minipage}
+
+
+\section{Měření}
+
+\subsection{úkol 1}
+\begin{minipage}[t]{\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis y line*=left,
+      width=\textwidth, 
+      height=0.6\textwidth,
+      title={Závislost rychlosti vzduch na otáčkách vrtule},
+      xlabel={\(U\-[V]\)},
+      ylabel={\(n\-[ot/min]\)},
+      xmin=0, xmax=12,
+      ymin=0, ymax=3200,
+      legend pos=north west
+      ]
+      \addplot[
+          % mark=x,
+          color=blue,
+        ]
+        coordinates {
+          (  0,    0)
+          (  1,  260)
+          (  2,  686)
+          (  3,  996)
+          (  4, 1332)
+          (  5, 1638)
+          (  6, 1902)
+          (  7, 2155)
+          (  8, 2390)
+          (  9, 2583)
+          ( 10, 2768)
+          ( 11, 2947)
+          ( 12, 3101)
+        };
+      \addlegendentry{\(n\)}
+      \end{axis}
+      \begin{axis}[
+            % colorbar,
+            width=\textwidth, 
+            height=0.6\textwidth,
+            axis x line=none,
+            axis y line*=right,
+            ylabel={\(V_{air}\-[ms^{-1}]\)},
+            xmin=0, xmax=12,
+            ymin=0, ymax=6,
+            legend style={at={(0.13,0.9)}}
+        ]
+        \addplot[
+          color=red,
+          % mark=*,
+          ]
+          coordinates {
+            (  0, 0.0)
+            (  1, 0.0)
+            (  2, 0.3)
+            (  3, 0.9)
+            (  4, 1.6)
+            (  5, 2.2)
+            (  6, 2.8)
+            (  7, 3.2)
+            (  8, 3.7)
+            (  9, 4.1)
+            ( 10, 4.7)
+            ( 11, 4.9)
+            ( 12, 5.2)
+          };
+        \addlegendentry{\(V_{air}\)}
+    \end{axis}
+  \end{tikzpicture}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      \(U\-[V]\)	            & \(0\)	& \(1\)   & \(2\)                 & \(3\)       & \(4\)	      & \(5\)     & \(6\)     & \(7\)     & \(8\)	    & \(9\)     & \(10\)    & \(11\)    & \(12\)    \\ \hline
+      \(V_{air}\-[ms^{-1}]\)  & \(0\)	& \(0\)   & \(0.3\)               & \(0.9\)     & \(1.6\)	    & \(2.2\)   & \(2.8\)   & \(3.2\)   & \(3.7\)	  & \(4.1\)   & \(4.7\)   & \(4.9\)   & \(5.2\)   \\ \hline
+      \(n\-[ot/min]\)	        & \(0\)	& \(260\) & \(686\)               & \(996\)     & \(1332\)    & \(1638\)  & \(1902\)  & \(2155\)  & \(2390\)  & \(2583\)  & \(2768\)  & \(2947\)  & \(3101\)  \\ \hline
+      \(I\-[mA]\)             &       &         &                       &             &             &           & \(340\)	  &           &           &           &           &           & \(750\)   \\ \hline \hline
+      \(P_V\-[W]\)            & \(0\) & \(0\)   & \(5.48\cdot10^{-4}\)  & \(0.0158\)  & \(0.0832\)  & \(0.216\) & \(0.446\) & \(0.666\) & \(1.029\) & \(1.401\) & \(2.110\) & \(2.391\) & \(2.857\) \\ \hline
+      \(P_{IN}\-[W]\)         &       &         &                       &             &             &           & \(2.040\) &           &           &           &           &           & \(9.0\)   \\ \hline
+      \(\eta\-[\%]\)          &       &         &                       &             &             &           & \(21.9\)  &           &           &           &           &           & \(31.7\)  \\ \hline
+    \end{tabular}
+    \caption{\label{tabulka_mereni} První úloha}
+  \end{table}
+\end{minipage}
+
+Příklady výpočtů: \\
+\\
+\large
+\(
+  P_V = \frac{1}{2} \rho v^3 r^2\pi = (\frac{1}{2} 1.29371 5.2^3)\-[Wm^{-2}] \cdot (0.1^2\pi)\-[m^2]= 2.857\-[W] \\ \\
+  P_{IN} = UI = (12 \cdot 750\cdot10^{-3})\-[W] = 9\-[W]  \\ \\
+  \eta = \frac{P_V}{P_{IN}} \cdot 100\% = \frac{9}{2.857} \cdot 100\% = 31.7\-[\%] 
+\)
+\normalsize \\
+
+\subsection{úkol 2}
+\begin{minipage}[t]{\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis y line*=left,
+        width=\textwidth, 
+        height=0.5\textwidth,
+        title={Závislost rychlosti vzduch na otáčkách vrtule},
+        xlabel={\(n_{gen}\-[ot/min]\)},
+        ylabel={\(U_{out_P-P}\-[V]\)},
+        xmin=0, xmax=2000,
+        ymin=0, ymax=4,
+        legend pos=north west
+      ]
+      \addplot[
+        mark=x,
+        color=blue
+      ]
+      coordinates {
+        (   50, 1.060)
+        (  167, 1.175)
+        (  303, 1.560)
+        (  518, 1.713)
+        ( 1691, 2.625)
+        ( 1919, 3.350)
+      };
+      \addlegendentry{\(U_{out_P-P}\)}
+    \end{axis}
+    \begin{axis}[
+        % colorbar,
+        width=\textwidth, 
+        height=0.5\textwidth,
+        axis x line=none,
+        axis y line*=right,
+        ylabel={\(V_{air}\-[ms^{-1}]\)},
+        xmin=0, xmax=2000,
+        ymin=0, ymax=6,
+        legend style={at={(0.13,0.9)}}
+      ]
+      \addplot[
+        color=red,
+        mark=x,
+        ]
+        coordinates {
+          (   50, 3.2)
+          (  167, 3.7)
+          (  303, 4.1)
+          (  518, 4.7)
+          ( 1691, 4.9)
+          ( 1919, 5.2)
+        };
+      \addlegendentry{\(V_{air}\)}
+    \end{axis}
+  \end{tikzpicture}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+      \hline
+      \(U\-[V]\)	                & \(7\)     & \(8\)	     & \(9\)    & \(10\)    & \(11\)     & \(12\)     \\ \hline
+      \(U_{out_P-P}\-[V]\)        & \(1.06\)  & \(1.175\)  & \(1.56\) & \(1.713\) & \(2.625\)  & \(3.35\)   \\ \hline
+      \(n_{primar}\-[ot/min]\)    & \(2155\)  & \(2390\)   & \(2583\) & \(2768\)  & \(2947\)   & \(3101\)   \\ \hline
+      \(n_{gen}\-[ot/min]\)       & \(50\)    & \(167\)    & \(303\)  & \(518\)   & \(1691\)   & \(1919\)   \\ \hline
+      \(V_{air}\-[ms^{-1}]\)      & \(3.2\)   & \(3.7\)	   & \(4.1\)  & \(4.7\)   & \(4.9\)    & \(5.2\)    \\ \hline
+      \(f_{puls}\-[Hz]\)          & \(4.13\)  & \(16.949\) & \(28.9\) & \(56.18\) & \(149.25\) & \(187.27\) \\ \hline
+    \end{tabular}
+    \caption{\label{tabulka_mereni} První úloha}
+  \end{table}
+\end{minipage}
+Příklady výpočtů: \\
+\\
+\large
+\(
+  p = \frac{f_{puls-i}\cdot 60}{n_{gen-i}} = \frac{187.27 \cdot 60}{1919} = 5.855 => \) generátor má šest pólů 
+%\)
+\normalsize \\
+
+\subsection{Závěr}
+Podle našeho měření má generátor šest pólů.
+Startovací rychlost větru určuji na \(4.8\-[ms^{-1}]\), protože kolem této hodnoty prudce rostou otáčky generátoru.
+
+
+
+\end{document}

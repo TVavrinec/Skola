@@ -1,0 +1,529 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{filecontents}
+\usepackage{siunitx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage{color} % balíček pro obarvování textů
+\usepackage{xcolor}  % zapne možnost používání barev, mj. pro \definecolor
+\usepackage{pgfplots} % http://www.chiark.greenend.org.uk/doc/texlive-doc/latex/pgfplots/pgfplots.pdf
+
+\usepackage{multirow}
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[total={175mm,230mm}, top=23mm, left=20mm, includefoot]{geometry}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={green!50!black},
+    urlcolor={blue!80!black}
+}
+% \definecolor{fialova}{RGB}{ 255, 000, 255}
+\definecolor{color-si1}{RGB}{ 255, 000, 000}
+\definecolor{color-si2}{RGB}{ 251, 130, 032}
+
+\definecolor{color-ge1}{RGB}{ 000, 255, 000}
+\definecolor{color-ge2}{RGB}{ 032, 251, 160}
+
+\definecolor{color-inp1}{RGB}{ 000, 000, 255}
+\definecolor{color-inp2}{RGB}{ 160, 032, 251}
+
+\definecolor{color-geas1}{RGB}{ 225, 225, 000}
+\definecolor{color-geas2}{RGB}{ 225, 225, 100}
+
+\definecolor{sedak}{RGB}{ 100, 100, 100}
+
+
+\newcommand \obr[1]
+{ obr.~\ref{#1}}
+
+\newcommand \tab[1]
+{ tab.~ß\ref{#1}}
+
+
+\begin{document}
+% \input{Titulni strana protokolu - laboratorni cviceni BPC-OZU.tex}
+
+\subsection*{Tranzistorový zesilovač se společným emitorem}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.55\textwidth}
+    \vspace{10mm}
+    \includegraphics[width=\textwidth]{sim/ukol1/sch.png}
+    \caption{Schema zapojení bez poruchy}
+    \label{fig:sch-se}
+  \end{minipage}
+  \hfil
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{table}[H]
+      \centering
+      \vspace{-10mm}
+      \begin{tabular}{|c|c|c|c|}
+      \hline
+                                                &               & simulace                  & měření                    \\ \hline  
+      \multirow{3}{*}{bez poruchy}              &	\(U_C\-[V]\)  & \(6.12\)                  & \(4.89\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(1.34\)                  & \(1.38\)                  \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(0.56\)                  & \(0.75\)                  \\ \hline
+      \multirow{3}{*}{rozpojení na \(R_{B2}\)}  &	\(U_C\-[V]\)  & \(1.45\)                  & \(1.44\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(2.19\)                  & \(2.09\)                  \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(1.39\)                  & \(1.41\)                  \\ \hline
+      \multirow{3}{*}{rozpojení na \(R_{E}\)}   &	\(U_C\-[V]\)  & \(10.00\)                 & \(10.15\)                 \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(1.37\)                  & \(1.39\)                  \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(4.98\)                  & \(1.05\)                  \\ \hline
+      \multirow{3}{*}{rozpojení na \(R_{C}\)}   &	\(U_C\-[V]\)  & \(0.10\)                  & \(0.10\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(1.37\)                  & \(1.39\)                  \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(4.98\)                  & \(1.05\)                  \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \multirow{2}{*}{\(1.88\)} & \multirow{2}{*}{\(1.78\)} \\ \cline{2-2} 
+                                                & \(U_B\-[V]\)  &                           &                           \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(1.09\)                  & \(1.14\)                  \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \(10.00\)                 & \(10.15\)                 \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \multirow{2}{*}{\(0.18\)} & \multirow{2}{*}{\(0.18\)} \\ \cline{2-2}
+                                                & \(U_E\-[V]\)  &                           &                           \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \multirow{2}{*}{\(1.26\)} & \multirow{2}{*}{\(1.27\)} \\ \cline{2-2}
+                                                & \(U_E\-[V]\)  &                           &                           \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(1.37\)                  & \(1.39\)                  \\ \hline
+      \end{tabular}
+      \caption{\label{pracovni_bod} pracovní bod pro zapojení }
+    \end{table}
+  \end{minipage}
+\end{figure}
+
+Zesilovač má zesílením zhruba \(-6\), což je vidět na simulovaném průběhu bez poruch \obr{fig:sch-se-bezPoruch}.
+Při reálném měřený dosahoval zesilovač výrazně menšího zesílení než v simulaci.
+
+
+Při rozpojení na \(R_2\) zesilovač ztrácí schopnost zesilovat napětí.
+V kladné půlvlně napětí prochází jen skrz PN přechod báze kolektor, zesílení je tím pádem kladné a menší než 1.
+Záporná půlvlna začne tranzistor přivírat a napětí se tak začíná zesilovat se záporným zesílením lehce vetším než 1.
+Simulace viz \obr{fig:sch-se-p1}
+Měřený průběh se chová úplně jinak, zesílení není nikdy záporné.
+
+
+Při rozpojení na \(R_3\) zesilovač úplně ztrácí schopnost zesilovat napětí.
+Simulace viz \obr{fig:sch-se-p2}.
+Emitor není pro nízké frekvence připojený k zemi, čímž se změní pracovní bod a na přechodu BC tak není pro funkci dostatečné napětí.
+Změna napětí na bázi tak prakticky nedokáže tranzistor řídit a na výstupu se tak vstup projevuje teprve při velké amplitudě a se zesílením menším než 1.
+Měřený průběh odpovídá simulaci, stejnosměrný posun výstupního napětí je jen nedokončený přechodový jev (nabitý kondenzátor \(C_1\)).
+
+
+Při rozpojení na \(R_5\) je stejnosměrné napětí na kolektoru nulové a ani při působení vstupního střídavého napětí tak nemůže klesnout níž.
+Simulace viz \obr{fig:sch-se-p3}.
+Záporná půlvlna je tak oříznuta a kladná prochází jen přes přechod BC.
+Na měřeném průběhu se saturace neprojevila.
+
+
+Při zkratu mezi bází a kolektorem je vstup připojen na výstup přímo přes \(C_3\) a \(C_1\).
+Simulace viz \obr{fig:sch-se-p4}.
+Jak v simulaci tak v reálném měření se vstup a výstup prakticky rovnají.
+
+
+Při zkratu mezi bází a emitorem je tranzistor trvale zavřený a na výstup se tak vstupní střídavé napětí může dostat jen skrz přechod BC.
+Simulace viz \obr{fig:sch-se-p5}.
+Měřený napěťový průběh neodpovídá simulaci, napěťové zesílení je ale kladné a menší než jedna.
+Pravděpodobně také zásadně vzrostl výstupní odpor.
+
+Při zkratu mezi kolektorem a emitorem je tranzistor úplně vyřazen z provozu a napětí na bázi se tak nemá jak dostat na výstup.
+Simulace viz \obr{fig:sch-se-p6}.
+Měřený průběh odpovídá simulaci.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/bezPoruch.png}
+  \caption{Simulace zapojení bez poruchy}
+  \label{fig:sch-se-bezPoruch}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile1.png}
+  \caption{Měření zapojení bez poruchy}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/porucha1.png}
+  \caption{Simulace rozpojení na odporu \(R_2\) neboli \(R_{B2}\)}
+  \label{fig:sch-se-p1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile2.png}
+  \caption{Měření rozpojení na odporu \(R_2\) neboli \(R_{B2}\)}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/porucha2.png}
+  \caption{Simulace rozpojení na odporu \(R_3\) neboli \(R_{E}\)}
+  \label{fig:sch-se-p2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile3.png}
+  \caption{Měření rozpojení na odporu \(R_3\) neboli \(R_{E}\)}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/rozpojeni_na_RC.png}
+  \caption{Simulace rozpojení na odporu \(R_5\)}
+  \label{fig:sch-se-p3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile4.png}
+  \caption{Měření rozpojení na odporu \(R_5\)}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/porucha4.png}
+  \caption{Simulace zkratu mezi bází a kolektorem}
+  \label{fig:sch-se-p4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile5.png}
+  \caption{Měření zkratu mezi bází a kolektorem}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/porucha5.png}
+  \caption{Simulace zkratu mezi bází a emitorem}
+  \label{fig:sch-se-p5}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile4.png}
+  \caption{Měření zkratu mezi bází a emitorem}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol1/porucha6.png}
+  \caption{Simulace zkratu mezi bází a emitorem}
+  \label{fig:sch-se-p6}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile7.png}
+  \caption{Měření zkratu mezi bází a emitorem}
+  \label{fig:m-sch-se-p1}
+\end{figure}
+
+% ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+% ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\subsection*{Tranzistorový zesilovač se společným kolektorem}
+
+\begin{figure}[H]
+  \begin{minipage}[t]{0.55\textwidth}
+    \vspace{10mm}
+    \includegraphics[width=\textwidth]{sim/ukol2/sch.png}
+    \caption{Schéma zapojení bez poruchy}
+    \label{fig:sch-se}
+  \end{minipage}
+  \hfil
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{table}[H]
+      \centering
+      \vspace{-10mm}
+      \begin{tabular}{|c|c|c|c|}
+      \hline
+                                                &               & SC simulace                & SC měření                  \\ \hline  
+      \multirow{3}{*}{bez poruchy}              &	\(U_C\-[V]\)  & \(10.00\)                  & \(10.15\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(4.69\)                   & \(4.56\)                   \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(4.00\)                   & \(4.47\)                   \\ \hline
+      \multirow{3}{*}{rozpojení na \(R_{B2}\)}  &	\(U_C\-[V]\)  & \(10.00\)                  & \(10.15\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(7.09\)                   & \(4.11\)                   \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(6.38\)                   & \(4.45\)                   \\ \hline
+      \multirow{3}{*}{rozpojení na \(R_{E}\)}   &	\(U_C\-[V]\)  & \(10.00\)                  & \(10.16\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(5.71\)                   & \(4.54\)                   \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(5.68\)                   & \(4.12\)                   \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \multirow{2}{*}{\(10.00\)} & \multirow{2}{*}{\(10.15\)} \\ \cline{2-2} 
+                                                & \(U_B\-[V]\)  &                            &                            \\ \cline{2-4}
+                                                & \(U_E\-[V]\)  & \(9.27\)                   & \(9.45\)                   \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \(10.00\)                  & \(10.15\)                  \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \multirow{2}{*}{\(0.20\)}  & \multirow{2}{*}{\(0.20\)}  \\ \cline{2-2}
+                                                & \(U_E\-[V]\)  &                            &                            \\ \hline
+      \multirow{3}{*}{zkrat báze kolektor}      &	\(U_C\-[V]\)  & \multirow{2}{*}{\(10.00\)} & \multirow{2}{*}{\(10.15\)} \\ \cline{2-2}
+                                                & \(U_E\-[V]\)  &                            &                            \\ \cline{2-4}
+                                                & \(U_B\-[V]\)  & \(5.71\)                   & \(4.74\)                   \\ \hline
+      \end{tabular}
+      \caption{\label{pracovni_bod} pracovní bod pro zapojení }
+    \end{table}
+  \end{minipage}
+\end{figure}
+
+Zesilovač má zesílením lehce menší \(1\), což je vidět na simulovaném průběhu bez poruch \obr{fig:sch-sc-bezPoruch} i na měřeném průběhu.
+
+Při rozpojení na \(R_2\) neboli \(R_{B2}\) se posouvají mezní napětí a saturace v záporné půlvlně tak nastává mnohem dřív než v kladné půlvlně.
+Simulace viz \obr{fig:sch-sc-p2}.
+Až na stejnosměrný posun se simulace a měření shodují.
+
+Při rozpojení na \(R_3\) neboli \(R_E\) zásadně vzrůstá výstupní odpor a výstup proto nemůžeme zatížit bez zkreslení.
+V simulaci \obr{fig:sch-sc-p3} je proto použit odpor \(R_4 = 100\-[k]\), aby se vysoký výstupní odpor projevil.
+Měření ukazuje trochu jinak zkreslený signál, jinak ale simulace odpovídá.
+
+
+Zkrat mezi bází a kolektorem má za následek trvalé otevření tranzistoru a na výstup se tak vstupní napětí nemá jak dostat. 
+Simulace viz \obr{fig:sch-sc-p4}.
+Simulace a měření se shodují.
+
+
+Zkrat mezi bází a emitorem má za následek růst výstupního odporu, neboli vyřazení proudového zesílení zesilovače.
+Simulace viz \obr{fig:sch-sc-p5}
+
+
+Zkrat mezi kolektorem a emitorem vyřazuje tranzistor z provozu a na výstup se tak napětí ze vstupu nedostává.
+Simulace viz \obr{fig:sch-sc-p6}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/bezPoruch.png}
+  \caption{Simulace zapojení bez poruchy}
+  \label{fig:sch-sc-bezPoruch}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile8.png}
+  \caption{Měření zapojení bez poruchy}
+  \label{fig:m-sch-sc-bezPoruch}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/porucha1.png}
+  \caption{Simulace rozpojení na odporu \(R_2\) neboli \(R_{B2}\)}
+  \label{fig:sch-sc-p2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile9.png}
+  \caption{Měření rozpojení na odporu \(R_2\) neboli \(R_{B2}\)}
+  \label{fig:m-sch-sc-p2}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/porucha2-seZatezi100k.png}
+  \caption{Simulace rozpojení na odporu \(R_3\) neboli \(R_{E}\)}
+  \label{fig:sch-sc-p3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile10.png}
+  \caption{Měření rozpojení na odporu \(R_3\) neboli \(R_{E}\)}
+  \label{fig:m-sch-sc-p3}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/porucha3.png}
+  \caption{Simulace zkratu mezi bází a kolektorem}
+  \label{fig:sch-sc-p4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile13.png}
+  \caption{Měření zkratu mezi bází a kolektorem}
+  \label{fig:m-sch-sc-p4}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/porucha4.png}
+  \caption{Simulace zkratu mezi bází a emitorem}
+  \label{fig:sch-sc-p5}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile2.png}
+  \caption{Měření zkratu mezi bází a emitorem}
+  \label{fig:m-sch-sc-p5}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{sim/ukol2/porucha5.png}
+  \caption{Simulace zkratu mezi kolektorem a emitorem}
+  \label{fig:sch-sc-p6}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{mereni/NewFolder1/NewFile14.png}
+  \caption{Měření zkratu mezi kolektorem a emitorem}
+  \label{fig:m-sch-sc-p6}
+\end{figure}
+
+% ---------------------------------------------------------------------------------
+
+
+
+% \\ \\
+
+% \subsection*{Měření kapacity \(C\)}
+% Kapacitu kondenzátoru lze změřit pomocí měření průběhu jeho napětí při jeho vybíjení známým proudem.
+% Pro jednoduchost tedy použijeme zdroj konstantního proudu o hodnotě \(I = 1\-[A]\) a následně na změřeném průběhu vybereme lineární část vybíjení (tedy tu kde se kondenzátor skutečně vybíjel požadovaným proudem).
+% Kapacitu kondenzátoru můžeme následně určit jako:
+% \\ \\
+% \Large
+% \(
+%   C = \frac{t\cdot \Delta U}{I}
+% \)
+% \normalsize
+% \\ \\
+
+% \begin{figure}[H]
+%   \begin{minipage}[t]{\textwidth}
+%     \subsubsection*{Naše měření}
+%     Pro všechny kondenzátory byl vybíjecí proud \(I = 1\-[A]\)
+%     \begin{table}[H]
+%       % \vspace{-75mm}
+%       \centering
+%       \begin{tabular}{|c|c|c||c|c|}
+%         \hline
+%                     &	\(\Delta U\-[V]\)  & \(t\-[s]\)   & \(C\-[F]\)  & katalogová hodnota \(C\)  \\ \hline
+%           Maxwell   & 1.00               & 9.48         & 9.48        & \(8 \leq C \leq 10\)      \\ \hline
+%           Eaton     & 1.00               & 8.36         & 8.36        & \(9 \leq C \leq 13\)      \\ \hline
+%           Nichicon  & 1.00               & 8.4          & 8.4         & \(8 \leq C \leq 12\)      \\ \hline
+%       \end{tabular}
+%       \caption{\label{C} Změřené, vypočtené a výrobcem určené hodnoty k úkolu 2}
+%     \end{table}
+%     Příklad výpočtu:
+%     \\ \\
+%     \Large
+%     \(
+%       C = \frac{t\cdot \Delta U}{I} = \frac{9.48 \cdot 1}{1}\-[F]=9.48\-[\Omega]
+%     \)
+%     \normalsize
+%     \\ \\
+%     Z našeho měření kapacity plyne, že kapacita kondenzátorů je v toleranci určené výrobcem u kondenzátorů Maxwell a Nichicon, zatím co kondenzátor Eaton pravděpodobně vlivem stáří svojí kapacitu snížil pod úroveň výrobcem určeného intervalu.  
+%   \end{minipage}
+% \end{figure}
+
+% \subsection*{Měření paralelního odporu \(R_P\)}
+% Paralelní odpor způsobuje vybíjení kondenzátoru proudem \(I_L\).
+% Hodnotu \(I_L\) můžeme určit z poklesu napětí na odporu, ze kterého není odebírán žádný proud za čas \(t\).
+% \(I_L\) tak můžeme určit jako:
+% \\ \\
+% \Large
+% \(
+%   I_L = \frac{C\cdot \Delta U}{t}
+% \)
+% \normalsize
+% \\ \\
+
+% \begin{figure}[H]
+%   \begin{minipage}[t]{\textwidth}
+%     \subsubsection*{Naše měření}
+%     Každý z kondenzátorů byl nabit na \(U_{AMP} = 2.2\-[V]\) a ponechán v nepřipojeném stavu po dobu 15 minut
+%     \begin{table}[H]
+%       % \vspace{-75mm}
+%       \centering
+%       \begin{tabular}{|c|c|c||c|c|}
+%       \hline
+%                   &	\(U\-[V]\) & \(I_L \-[mA]\) & katalogová hodnota \(I_L\-[mA]\)  \\ \hline
+%         Maxwell   & 2.144      & 0.590          & 0.030                             \\ \hline
+%         Eaton     & 2.067      & 1.235          & 0.023                             \\ \hline
+%         Nichicon  & 2.072      & 1.195          & 5                                 \\ \hline
+%       \end{tabular}
+%       \caption{\label{U_AMP} Změřené, vypočtené a výrobcem určené hodnoty k úkolu 3}
+%     \end{table}
+%     Příklad výpočtu:
+%     \\ \\
+%     \Large
+%     \(
+%       I_L = \frac{C\cdot \Delta U}{t} = \frac{9.48\cdot 0.56}{15\cdot 60}\-[A]=0.0005899\-[A] = 0.5899\-[mA]
+%     \)
+%     \normalsize
+%     \\ \\
+%     Z našeho měření plyne, že jen kondenzátor Nichicon má hodnotu \(I_L\) v toleranci určené výrobcem zatím co u kondenzátorů Maxwell a Eaton jsme naměřili svodový proud řádově vyšší.
+%     Vzhledem k velké odchylce od katalogové hodnoty je pravděpodobné, že došlo k chybě měření.  
+%   \end{minipage}
+% \end{figure}
+
+% \subsection*{Závěr}
+
+% \begin{figure}[H]
+%   \begin{minipage}[t]{\textwidth}
+%     \begin{table}[H]
+%       \vspace{-10mm}
+%       \centering
+%       \begin{tabular}{|c|c|c|c|}
+%         \hline
+%                     & \(R_{ESR}\-[m\Omega]\) & \(C\-[F]\) & \(I_L \-[mA]\) \\ \hline
+%           Maxwell   & 159.5                  & 9.48       & 0.590          \\ \hline
+%           Eaton     & 156.9                  & 8.36       & 1.235          \\ \hline
+%           Nichicon  & 162.2                  & 8.4        & 1.195          \\ \hline
+%       \end{tabular}
+%       \caption{\label{Vysledky} Výsledky měření}
+%     \end{table}
+%     \vspace{-10mm}
+%   \end{minipage}
+% \end{figure}
+
+% \subsection*{Měření \(R_{ESR}\)}
+% Naše měření bylo buď zatíženo podstatnou chybou metody nebo je skutečný odpor kondenzátorů \(R_{ESR}\) velmi výrazně nad limity stanovenými výrobcem. 
+% \subsection*{Měření kapacity \(C\)}
+% Z našeho měření kapacity plyne, že kapacita kondenzátorů je v toleranci určené výrobcem u kondenzátorů Maxwell a Nichicon, zatím co kondenzátor Eaton pravděpodobně vlivem stáří svojí kapacitu snížil pod úroveň výrobcem určeného intervalu.
+% \subsection*{Měření paralelního odporu \(R_P\)}
+% Z našeho měření plyne že jen kondenzátor Nichicon má hodnotu \(I_L\) v toleranci určené výrobcem zatím co u kondenzátorů Maxwell a Eaton jsme naměřili svodový proud řádově vyšší.
+% Vzhledem k velké odchylce od katalogové hodnoty je pravděpodobné, že došlo k chybě měření.
+
+\end{document}
