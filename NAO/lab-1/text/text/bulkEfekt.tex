@@ -1,0 +1,100 @@
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \begin{circuitikz}[scale=1, transform shape] 
+            \draw
+              % MOSFET transistor with labels for drain (D), gate (G), source (S), and bulk (B)
+              (0,0) node[nmos, bulk] (mos) {}
+              (mos.drain) node[left] {M1}
+            
+              % Gate voltage source VGS
+              (mos.gate) to[short, -] ++(-2,0) -- ++(0,-0.8) to[voltage source, l^=$V_{GS}$] ++(0,-1.2) node[ground] {}
+              
+              % Drain voltage source VDS (vertical)
+              (mos.drain) to[short, -] ++(0,1) -- ++(2,0) -- ++(0,-1) to[voltage source, l^=$V_{DS} $] ++(0,-2) -- (2,-2) node[ground] {}
+              
+              % Source connected to ground, aligned with VGS ground
+              (mos.source) to[short, -] (0,-1) to[voltage source, l_=$V_{BS} $] (0,-2) -- (0, -2) node[ground] {}
+              
+              % Bulk (body) connection to ground
+              (mos.bulk) to[short, -] (1, 0) -- (1,-2)  node[ground] {}
+            ;
+        \end{circuitikz}
+
+        \vspace{5mm}
+        \centering{(NMOS)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \begin{circuitikz}[scale=1, transform shape] 
+            \draw
+              % MOSFET transistor with labels for drain (D), gate (G), source (S), and bulk (B)
+              (0,0) node[pmos, bulk] (mos) {}
+              (mos.drain) node[left] {M1}
+            
+              % Gate voltage source VGS
+              (mos.gate) to[short, -] (-2,0) to[voltage source, l^=$V_{GS}$] (-2,2) -- ++(2,0) node[circle,fill,inner sep=1pt] (myNode) {}
+              
+              % Drain voltage source VDS (vertical)
+              (mos.source) to[short, -] (0,0.5) to[voltage source, l^=$V_{SB} $] (0,1.5) -- (0,2) -- ++(1,0) node[circle,fill,inner sep=1pt] (myNode) {}
+            %   (mos.source) to[short, -] (0,2) -- ++(2,0) -- ++(0,-1) to[voltage source, l^=$V_{DS} $] ++(0,-2) -- (2,-1.5) -- (0,-1.5) -- (mos.drain)
+              
+              % Source connected to ground, aligned with VGS ground
+              %   (mos.source) to[short, -] (0,-1.5) node[ground] {}
+              
+              % Bulk (body) connection to ground
+            %   (mos.bulk) to[short, -] (1, 0) -- (1,2)  node[circle,fill,inner sep=1pt] (myNode) {}
+              (mos.bulk) to[short, -] (1, 0) -- ++(0,2) node[circle,fill,inner sep=1pt] (myNode) {} -- ++(1,0) -- ++(0,-1) to[voltage source, l^=$V_{DS} $] ++(0,-2) -- (2,-1.5) -- (0,-1.5) -- (mos.drain)
+
+              (2,2)  to[short, *-o] ++(1,0) node[above, right]{$V_{CC}$}
+            ;
+        \end{circuitikz}
+
+        \vspace{5mm} 
+        \centering{(PMOS)}
+    \end{minipage}
+    \caption{\label{cod:cod_NP_WL_const} Zapojení pro určení závislosti \(U_{TH}\) na napětí bulku pro tranzistor NMOS a PMOS}
+\end{figure}
+
+\begin{lstlisting}[language=Spice, caption={Kod simulace pro určení závislosti \(U_{TH}\) na napětí bulku}]
+.lib cmos018.txt
+.STEP VSB 0 1 1m
+.DC VGS 0 2 1m
+.MEAS DC UTH FIND V(VG) WHEN Id(M1)=500n
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel={Napětí \(V_{SB}\),\(V_{BS}\) [mV]},
+            ylabel={Prahové napětí \(U_{TH}\) [V]},
+            grid=major,
+            width=0.8\linewidth,
+            height=0.4\linewidth,
+            legend pos=north west
+            % xmin=0, xmax=0.5,
+            % ymin=0, ymax=2
+        ]
+        \addplot table [
+            x=VSB, 
+            y=UTH, 
+            col sep=comma,
+            mark=none
+        ] {data/bulkEfektNMOS.csv};
+        \addlegendentry{NMOS}
+        \addplot table [
+            x=VSB, 
+            y=UTH, 
+            col sep=comma,
+            mark=none
+        ] {data/bulkEfektPMOS.csv};
+        \addlegendentry{PMOS}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Závislost \(U_{TH}\) na napětí bulku}
+    \label{fig:bulkEfekt}
+\end{figure}
+Z grafu jsou odstraněni hodnoty \(U_{TH}\) při vysokém napětí \(V_{SB}\) res \(V_{BS}\), protože v simulaci vycházeli nulové.
+Z grafu je patrné, že \(U_{TH}\) je pro napětí \(V_{SB}\) res \(V_{BS}\) menší než \(0.8 [V]\), závislé zhruba lineárně.
+
+\input{text/table/bulkEfekt.tex}

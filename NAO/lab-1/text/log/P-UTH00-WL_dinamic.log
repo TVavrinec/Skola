@@ -1,0 +1,43 @@
+LTspice 24.0.9 for Windows
+Circuit: * C:\Users\TVavrinec\Documents\skola\NAO\lab-1\sim\Draft2P.asc
+Start Time: Tue Feb 27 20:04:21 2024
+solver = Normal
+Maximum thread count: 16
+
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+
+.step n=1
+
+.step n=2
+
+.step n=3
+
+.step n=4
+
+.step n=5
+
+.step n=6
+
+.step n=7
+
+.step n=8
+tnom = 27
+temp = 27
+method = modified trap
+.step n=9
+
+Measurement: uth
+  step	v(vg)	at
+     1	1.39248	0.407517
+     2	1.34555	0.454446
+     3	1.34245	0.457553
+     4	1.35694	0.443062
+     5	1.3566	0.443399
+     6	1.36777	0.432227
+     7	1.37471	0.425288
+     8	1.37652	0.423483
+     9	1.37684	0.423156
+
+Total elapsed time: 0.500 seconds.
+
