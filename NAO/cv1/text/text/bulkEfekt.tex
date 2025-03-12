@@ -1,0 +1,74 @@
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \begin{circuitikz}[scale=1, transform shape] 
+            \draw
+                % MOSFET transistor with labels for drain (D), gate (G), source (S), and bulk (B)
+                (0,0) node[nmos, bulk] (mos) {}
+                (mos.drain) node[left] {M1}
+                
+                % Gate voltage source VGS
+                (mos.gate) to[short, -] ++(-2,0) -- ++(0,0) to[voltage source, l^=$V_{GS}$] ++(0,-1.5) -- ++(2.99,0) node[circle,fill,inner sep=1pt] (myNode) {}
+                
+                % Drain voltage source VDS (vertical)
+                (mos.drain) to[short, -] ++(0,1) -- ++(2,0) -- ++(0,-0.5) to[voltage source, l^=$V_{DS} $] ++(0,-2) -- ++(0,-0.78) -- ++(-2,0) {}
+                
+                % Source connected to ground, aligned with VGS ground
+                (mos.source) to[short, -] (0,-2.3) to[voltage source, l_=$V_{BS} $] (0,-2) -- (0, -3) node[ground] {}
+                
+                % Bulk (body) connection to ground
+                (mos.bulk) to[short, -] (1, 0) -- ++(0,-0.5)  node[ground] {}
+            ;
+        \end{circuitikz}
+
+        \vspace{5mm}
+        \centering{(NMOS)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \begin{circuitikz}[scale=1, transform shape] 
+            \draw
+                % MOSFET transistor with labels for drain (D), gate (G), source (S), and bulk (B)
+                (0,-1) node[pmos, bulk] (mos) {}
+                (mos.drain) node[left] {M1}
+                
+                % Gate voltage source VGS
+                (mos.gate) to[short, -] (-2,-1) to[voltage source, l^=$V_{GS}$] (-2,0) -- ++(2,0) node[circle,fill,inner sep=1pt] (myNode) {}
+
+                (0,0) -- ++(2,0) to[voltage source, l^=$V_{DS} $] ++(0,-1.5) -- ++(0,-0.5) -- (1,-2) -* (0,-2) node[circle,fill,inner sep=1pt] (myNode) {}
+
+
+                % Drain voltage source VDS (vertical)
+                (mos.source) to[short, -] (0,0.5) to[voltage source, l^=$V_{SB} $] (0,1.5) -- (0,2) -- ++(1,0) -- ++(0,-3) -- (1,-1) -- (mos.bulk) {}
+                %   (mos.source) to[short, -] (0,2) -- ++(2,0) -- ++(0,-1) to[voltage source, l^=$V_{DS} $] ++(0,-2) -- (2,-1.5) -- (0,-1.5) -- (mos.drain)
+                
+                % Source connected to ground, aligned with VGS ground
+                (mos.drain) to[short, -] (0,-2.6) node[ground] {}
+
+                %   (2,2)  to[short, *-o] ++(1,0) node[above, right]{$V_{CC}$}
+            ;
+        \end{circuitikz}
+
+        \vspace{5mm} 
+        \centering{(PMOS)}
+    \end{minipage}
+    \caption{\label{cod:cod_NP_WL_const} Zapojení pro určení závislosti \(U_{TH}\) na napětí bulku pro tranzistor NMOS a PMOS}
+\end{figure}
+
+\begin{lstlisting}[language=Spice, caption={Kod simulace pro určení závislosti \(U_{TH}\) na napětí bulku, pro NMOS}]
+    .lib modely/cmos018.txt
+    .STEP VSB 0 1 10m
+    .DC VGS 0 1 1m
+    .MEAS DC UTH FIND 'V(VG)-V(SB)' WHEN Id(M1)=500n    ; Pro NMOS
+    .MEAS DC UTH FIND '1.8-V(VG)' WHEN Is(M1)=500n      ; Pro PMOS
+\end{lstlisting}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height=0.3\textheight]{text/img/NP-bulkEfekt.png}
+    \caption{\label{fig:graf_NP_KP} Závislost proudu tranzistorem NMOS i PMOS na napětí \(V_{GS}\)}
+\end{figure}
+
+Z grafu je patrné, že \(U_{TH}\) je na napětí \(U_{SB}\) závislé zhruba lineárně.
+
+\input{text/table/bulkEfekt.tex}

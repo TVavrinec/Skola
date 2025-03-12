@@ -1,0 +1,20 @@
+* C:\Users\tomto\Documents\skola\NAO\cv1\P2-mos.asc
+Vgs N001 VG 0.5
+VDS N001 0 1.8
+M1 0 VG N001 N001 pch l='Ltab' w='Wtab'
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\tomto\AppData\Local\LTspice\lib\cmp\standard.mos
+* .lib modely/cmos018.txt
+* .PARAM Wtab = table(n, 1,0.9u, 2,1.5u, 3,2.5u, 4,4u, 5,5u, 6,10u, 7,15u, 8,25u, 9,50u)
+* .PARAM Ltab = table(n, 1,0.18u, 2,0.3u, 3,0.5u, 4,0.8u, 5,1u, 6,2u, 7,3u, 8,5u, 9,10u)
+* .dc VGS 0 1 1m
+* .STEP param n 1 9 1
+* .MEAS DC VTH FIND '1.8-V(VG)' WHEN Is(m1)=1e-7*{Wtab/Ltab}
+.lib modely/cmos018.txt
+.STEP param ltab list 0.18u, 0.3u, 0.5u, 0.8u, 1u, 2u, 3u, 5u, 10u
+.param wtab = 5*ltab
+.DC VGS 0.1 0.6 1m
+.MEAS DC UTH FIND '1.8-V(VG)' WHEN Is(M1)=1e-7*{Wtab/Ltab}
+.backanno
+.end

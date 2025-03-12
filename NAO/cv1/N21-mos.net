@@ -1,0 +1,15 @@
+* C:\Users\tomto\Documents\skola\NAO\cv1\N21-mos.asc
+M1 N001 VG 0 0 nch l='Ltab' w='Wtab'
+Vgs VG 0 0.5
+VDS N001 0 1.8
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\tomto\AppData\Local\LTspice\lib\cmp\standard.mos
+.lib modely/cmos018.txt
+.param Wtab=table(n, 1,0.22u, 2,1u, 3,2u, 4,2u, 5,5u, 6,5u, 7,10u, 8,10u, 9,40u)
+.param Ltab=table(n, 1,0.18u, 2,0.5u, 3,0.5u, 4,1u, 5,1u, 6,2u, 7,5u, 8,10u, 9,10u)
+.step param n 1 9 1
+.meas DC UTH FIND V(VG) WHEN Id(M1)=1e-7*Wtab/Ltab
+.dc VGS 0 1 1m
+.backanno
+.end

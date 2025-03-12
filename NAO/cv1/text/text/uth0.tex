@@ -1,0 +1,101 @@
+
+\subsubsection{Prahové napětí \(U_{TH}\) při konstantním poměru \(W/L = 5\)}
+\begin{lstlisting}[language=Spice, caption={Použitý kod simulace při konstantním poměru \(W/L = 5\) pro NMOS}]
+    .lib modely/cmos018.txt
+    .STEP param ltab ltab 0.18u, 0.3u, 0.5u, 0.8u, 1u, 2u, 3u, 5u, 10u
+    .param wtab = 5*ltab
+    .DC VGS 0.1 0.6 1m
+    .MEAS DC UTH FIND V(VG) WHEN Id(M1)=1e-7*{Wtab/Ltab}      ; Pro NMOS
+    .MEAS DC UTH FIND '1.8-V(VG)' WHEN Is(M1)=1e-7*{Wtab/Ltab}; Pro PMOS
+\end{lstlisting}
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            \(L [\mu m]\) & \(U_{TH} [V]\)  \\ \hline
+            0.18          & 0.387049	    \\ \hline
+            0.3	          & 0.41657	        \\ \hline
+            0.5	          & 0.407158	    \\ \hline
+            0.8	          & 0.387258	    \\ \hline
+            1	          & 0.379089	    \\ \hline
+            2	          & 0.363292	    \\ \hline
+            3	          & 0.35885	        \\ \hline
+            5	          & 0.355575	    \\ \hline
+            10	          & 0.352901	    \\ \hline
+        \end{tabular}
+        \caption{(NMOS)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \begin{tabular}{|l|l|}
+            \hline
+            \(L [\mu m]\) & \(U_{TH}\)   \\ \hline
+            0.18          & 0.450782	 \\ \hline
+            0.3	          & 0.449915	 \\ \hline
+            0.5	          & 0.446555	 \\ \hline
+            0.8	          & 0.439249	 \\ \hline
+            1	          & 0.435497	 \\ \hline
+            2	          & 0.426509	 \\ \hline
+            3	          & 0.423538	 \\ \hline
+            5	          & 0.421494	 \\ \hline
+            10	          & 0.420673	 \\ \hline
+        \end{tabular}
+        \caption{(PMOS)}
+    \end{minipage}
+    \caption{\label{fig:tab_UTH_const} Simulované \(U_{TH}\) při konstantním poměru \(W/L = 5\) pro NMOS i PMOS}
+\end{figure}
+
+\newpage
+
+\subsubsection{Prahové napětí \(U_{TH}\) při různém poměru \(W/L\)}
+\begin{lstlisting}[language=Spice, caption={Použitý kod simulace při různém poměru \(W/L\) pro NMOS}]
+    .lib modely/cmos018.txt
+    .param Wtab=table(n, 1,0.22u, 2,1u, 3,2u, 4,2u, 5,5u, 6,5u, 7,10u, 8,10u, 9,40u)
+    .param Ltab=table(n, 1,0.18u, 2,0.5u, 3,0.5u, 4,1u, 5,1u, 6,2u, 7,5u, 8,10u, 9,10u)
+    .step param n 1 9 1
+    .meas DC UTH FIND V(VG) WHEN Id(M1)=1e-7*Wtab/Ltab      ; Pro NMOS
+    .meas DC UTH FIND '1.5-V(VG)' WHEN Is(M1)=1e-7*Wtab/Ltab; Pro PMOS
+    .dc VGS 0 1 1m
+\end{lstlisting}
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \begin{tabular}{|l|l|l|}
+            \hline
+            \(L [\mu m]\) & \(W [\mu m]\)   & \(U_{TH} [V]\)    \\ \hline
+            0.18          & 0.22            & 0.397662	        \\ \hline
+            0.5	          & 1               & 0.435475          \\ \hline
+            0.5	          & 2               & 0.406836	        \\ \hline
+            1	          & 2               & 0.409012	        \\ \hline
+            1	          & 5               & 0.369573	        \\ \hline
+            2	          & 5               & 0.383619	        \\ \hline
+            5	          & 10              & 0.385731          \\ \hline
+            10	          & 10              & 0.414982	        \\ \hline
+            10	          & 40              & 0.352903	        \\ \hline
+        \end{tabular}
+        \caption{(NMOS)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \begin{tabular}{|l|l|l|}
+            \hline
+            \(L [\mu m]\) & \(W [\mu m]\)   & \(U_{TH} [V]\)    \\ \hline
+            0.18          & 0.22            & 0.450451	        \\ \hline
+            0.5	          & 1               & 0.478466          \\ \hline
+            0.5	          & 2               & 0.445964	        \\ \hline
+            1	          & 2               & 0.471502	        \\ \hline
+            1	          & 5               & 0.424565	        \\ \hline
+            2	          & 5               & 0.451127	        \\ \hline
+            5	          & 10              & 0.458776          \\ \hline
+            10	          & 10              & 0.50177	        \\ \hline
+            10	          & 40              & 0.420697	        \\ \hline
+        \end{tabular}
+        \caption{(PMOS)}
+    \end{minipage}
+    \caption{\label{fig:tab_UTH}  Simulované \(U_{TH}\) při při promněnném poměru \(W/L\) pro NMOS i PMOS}
+\end{figure}
