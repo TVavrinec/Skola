@@ -1,0 +1,18 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\tomto\Documents\skola\Skola\NAO\cv2\1_KPZ.asc
+Start Time: Wed Mar 12 14:09:57 2025
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+Total elapsed time: 0.133 seconds.
+
