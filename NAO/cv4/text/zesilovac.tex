@@ -1,0 +1,179 @@
+\documentclass{protokol}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+
+
+%====== Units =====
+\usepackage{amssymb}
+\usepackage{siunitx}
+\sisetup{inter-unit-product =\ensuremath{\cdot}}
+\sisetup{group-digits = integer}
+\sisetup{output-decimal-marker = {,}}
+\sisetup{exponent-product = \ensuremath{\cdot}}
+\sisetup{separate-uncertainty}
+\sisetup{tight-spacing = false}
+%\sisetup{scientific-notation = true}
+%\sisetup{round-mode=places,round-precision=4}
+%\sisetup{evaluate-expression}
+
+
+%====== Grafy =====
+\usepackage{pgfplots}
+\pgfplotsset{width=0.8\linewidth, compat=1.17}
+\def\plotcscale{0.8}
+\usepackage{pgfplotstable}
+\usepackage[figurename=Obr.]{caption} % figure caption rename
+
+\usepackage[siunitx]{circuitikz} % obvody
+% \ctikzset{bipoles/length=1cm}
+
+%====== Rovnice align block ======
+\usepackage{amsmath}
+\setlength{\jot}{10pt} % rozestup mezi řádky
+
+\graphicspath{ {./img/} }
+
+%====== Code blocks ======
+\usepackage{listings}
+
+\usepackage[most]{tcolorbox}
+\newtcbox{\inlinecode}{on line, boxsep=0pt, left=2pt, right=2pt, top=2pt, bottom=2pt, colframe=gray, boxrule=0.5pt, arc=1pt, auto outer arc, before upper={\vphantom{dlg}}, tcbox raise base} % vytvoření inline boxu pro kód
+
+\lstdefinelanguage{Spice}{
+    alsoletter={.},  % Přidává tečku jako součást slov
+    morekeywords={.lib, .STEP, .param, .MEAS, FIND, WHEN, END, VALUE, R, C, L, K, .SUBCKT, .ENDS, .MODEL, .INCLUDE, .AC, .DC, .TRAN, .PRINT, .PLOT, .PROBE, .WIDTH, .OPTIONS, .NODESET, .IC},
+    keywordstyle=\color{blue}\bfseries,
+    sensitive=false, % klíčová slova nejsou citlivá na velikost písmen
+    morecomment=[l]{;}, % komentáře začínají hvězdičkou
+    morestring=[b]", % řetězce uzavřené do uvozovek
+}
+
+\lstset{
+  language=Spice,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  rulecolor=\color{black},
+  title=\lstname,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{green},
+  stringstyle=\color{red},
+  showstringspaces=false
+}
+
+%====== Vyplňte údaje ======
+\jmeno{Tomáš Vavrinec}
+\kod{240893}
+\rocnik{}
+\obor{MET}
+\skupina{}
+\spolupracoval{--}
+
+\merenodne{--}
+\odevzdanodne{--}
+\nazev{2. Zdroje referenčních proudů a napětí}
+\cislo{3} %měřené úlohy
+
+\predmet{Návrh analogových integrovaných obvodů}
+\ustav{Ústav mikroelektroniky}
+\skola{FEKT VUT v~Brně}
+
+\def\para{x+0}
+\def\parb{\para-80}
+
+
+%citace 
+\usepackage[backend=biber, style=iso-numeric, sortlocale=cs_CZ, autolang=other, language=czech]{biblatex}
+\addbibresource{bibliography.bib}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+% hyperlinky
+\usepackage[colorlinks]{hyperref}
+
+% odstavce
+\usepackage{parskip}
+
+% Bloky kódu
+\usepackage{xcolor}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+\lstset{
+	inputencoding=utf8,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {č}{{\v{c}}}1 {ď}{{\v{d}}}1 {é}{{\'e}}1 {ě}{{\v{e}}}1 
+           {í}{{\'i}}1 {ň}{{\v{n}}}1 {ó}{{\'o}}1 {ř}{{\v{r}}}1 {š}{{\v{s}}}1 
+           {ť}{{\v{t}}}1 {ú}{{\'u}}1 {ů}{{\r{u}}}1 {ý}{{\'y}}1 {ž}{{\v{z}}}1 
+           {Á}{{\'A}}1 {Č}{{\v{C}}}1 {Ď}{{\v{D}}}1 {É}{{\'E}}1 {Ě}{{\v{E}}}1 
+           {Í}{{\'I}}1 {Ň}{{\v{N}}}1 {Ó}{{\'O}}1 {Ř}{{\v{R}}}1 {Š}{{\v{S}}}1 
+           {Ť}{{\v{T}}}1 {Ú}{{\'U}}1 {Ů}{{\r{U}}}1 {Ý}{{\'Y}}1 {Ž}{{\v{Z}}}1,
+	style=mystyle
+	}
+
+% Číslování
+\pagenumbering{arabic}
+
+
+
+% =========================================
+% =============== DOKUMENT ================
+% =========================================
+\begin{document}
+	%====== Vygenerování tabulky ======
+	\maketitle
+
+\section*{ZADÁNÍ ÚLOHY}
+  \input{text/zadani.tex}
+\setcounter{section}{0}
+
+\newpage
+\section{Vypracování}
+  \subsection{Zesilovač s odporovou zátěží} 
+  \input{text/odpor.tex}
+
+  \newpage
+  \clearpage
+
+  \subsection{Zesilovač s aktivní zátěží} 
+  \input{text/akt.tex}
+  % \newpage
+  % \clearpage
+  % \subsection{Napěťová reference s proudovým zdrojem} 
+  % \input{text/LNR.tex}
+  % \newpage
+
+\section{Závěr}
+  \input{text/zaver.tex}
+
+% \clearpage
+% \section*{Reference}
+% \printbibliography[heading=none]
+
+\end{document}

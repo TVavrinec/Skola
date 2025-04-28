@@ -1,0 +1,46 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\tomto\Documents\skola\Skola\NAO\cv3\1_IREF.asc
+Start Time: Mon Mar 24 13:30:17 2025
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- BSIM3 MOSFETS ---
+Name:        m3          m1          m2          m4          m6
+Model:       nch         nch         pch         pch         pch
+Id:        9.85e-06    9.78e-06   -9.78e-06   -9.85e-06   -4.95e-05
+Vgs:       7.25e-01    5.75e-01   -5.88e-01   -5.88e-01   -5.88e-01
+Vds:       6.36e-01    1.30e+00   -4.99e-01   -5.88e-01   -6.00e-01
+Vbs:      -5.75e-01    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Vth:       5.44e-01    3.80e-01   -4.05e-01   -4.04e-01   -4.04e-01
+Vdsat:     1.59e-01    1.52e-01   -1.56e-01   -1.56e-01   -1.57e-01
+Gm:        1.06e-04    1.04e-04    9.92e-05    9.98e-05    5.01e-04
+Gds:       2.08e-07    4.54e-07    8.41e-07    8.24e-07    4.12e-06
+Gmb        2.43e-05    1.48e-04    3.14e-05    3.16e-05    1.60e-04
+Cbd:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgsov:     3.50e-15    3.50e-15    1.37e-14    1.37e-14    6.85e-14
+Cgdov:     3.48e-15    3.48e-15    1.38e-14    1.38e-14    6.88e-14
+Cgbov:     1.98e-18    1.98e-18    1.96e-18    1.96e-18    1.96e-18
+dQgdVgb:   7.33e-14    7.51e-14    2.95e-13    2.94e-13    1.47e-12
+dQgdVdb:  -3.51e-15   -3.35e-15   -1.34e-14   -1.33e-14   -6.66e-14
+dQgdVsb:  -6.60e-14   -1.23e-13   -2.69e-13   -2.69e-13   -1.34e-12
+dQddVgb:  -3.11e-14   -3.10e-14   -1.23e-13   -1.23e-13   -6.16e-13
+dQddVdb:   3.50e-15    3.40e-15    1.36e-14    1.35e-14    6.77e-14
+dQddVsb:   3.44e-14    6.87e-14    1.45e-13    1.45e-13    7.26e-13
+dQbdVgb:  -1.12e-14   -1.30e-14   -4.80e-14   -4.81e-14   -2.39e-13
+dQbdVdb:  -1.76e-17    1.87e-17   -8.58e-17   -1.30e-17   -2.80e-17
+dQbdVsb:  -6.26e-15   -1.76e-14   -3.54e-14   -3.53e-14   -1.79e-13
+
+
+Total elapsed time: 0.199 seconds.
+

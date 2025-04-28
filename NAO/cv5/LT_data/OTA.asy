@@ -1,0 +1,34 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -48 32 -48 -32
+LINE Normal 48 0 -48 32
+LINE Normal -48 -32 48 0
+LINE Normal 0 -32 0 -16
+LINE Normal 0 32 0 16
+LINE Normal -64 -16 -48 -16
+LINE Normal -64 16 -48 16
+LINE Normal 64 0 48 0
+LINE Normal -27 -16 -40 -16
+LINE Normal -33 -10 -33 -23
+LINE Normal -27 16 -39 16
+LINE Normal 22 -32 8 -32
+LINE Normal 15 -26 15 -39
+LINE Normal 22 31 9 31
+PIN -64 16 NONE 8
+PINATTR PinName INN
+PINATTR SpiceOrder 1
+PIN -64 -16 NONE 8
+PINATTR PinName INP
+PINATTR SpiceOrder 2
+PIN 64 0 NONE 8
+PINATTR PinName OUT
+PINATTR SpiceOrder 3
+PIN 0 -32 NONE 8
+PINATTR PinName UCC
+PINATTR SpiceOrder 4
+PIN 0 32 NONE 8
+PINATTR PinName USS
+PINATTR SpiceOrder 5
+PIN 48 -16 NONE 8
+PINATTR PinName test
+PINATTR SpiceOrder 6

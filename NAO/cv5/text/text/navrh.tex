@@ -1,0 +1,106 @@
+Jako první určíme proud \(I_d\), to uděláme dvěma způsoby, podle požadovaného \(SR\) a podle požadovaného \(GBW\) a vybereme ten větší.
+
+Podle \(SR\)
+\begin{center}
+    \large
+    \(
+        I_d = SR \cdot C_L = 10 \cdot 10^{6} \cdot 10 \cdot 10^{-12} = 100 [\mu A]
+    \)
+\end{center}
+
+Podle \(GBW\) 
+\begin{center}
+    \large
+    \(
+        I_d = GBW \cdot U_{OV} \cdot \pi \cdot C_L = 10 \cdot 10^{6} \cdot 0.2 \cdot \pi \cdot 10\cdot 10^{-12} =  62.8 [\mu A]
+    \)
+\end{center}
+
+Proud tedy bude \(I_{dM6} = 100 [\mu A]\) 
+
+Dále můžeme určit rozměry tranzistorů \(M_6\) a \(M_7\), k čemuž budeme muset zvolit napětí \(U_{OV}\), která sme s ohledem na pracovní rozsah už v minulém kroku zvolili jako\(U_{OV} = 0.2 [V]\).
+Délku tranzistoru \(L\) zvolím s ohledem na parametr \(\lambda\) \(L = 2 [\mu m]\).
+
+\begin{center}
+    \large
+    \(
+        W_{M6} = L \cdot \frac{2 \cdot I_d}{KP_N \cdot U_{OV}^2} = 2\mu \cdot \frac{2 \cdot 100\mu}{200\mu 0.2^2} = 50 [\mu m]
+    \)
+\end{center}
+
+\begin{center}
+    \large
+    \(
+        W_{M7} = L \cdot \frac{2 \cdot I_d}{KP_P \cdot U_{OV}^2} = 2\mu \cdot \frac{2 \cdot 100\mu}{50\mu 0.2^2} = 200 [\mu m]
+    \)
+\end{center}
+
+Dále můžeme určit proud diferenčním stupněm jako desetinu destinu proudu výstupním stupněm, tedy \(I_{dM} = 10 [\mu A]\) z čehož můžeme určit rozměry tranzistorů \(M1\) až \(M_5\)
+
+\begin{center}
+    \large
+    \(
+        W_{M1,2} = L \cdot \frac{2 \cdot I_d}{KP_N \cdot U_{OV}^2} = 2\mu \cdot \frac{2 \cdot 10\mu}{200\mu 0.2^2} = 5 [\mu m]
+    \)
+\end{center}
+
+\begin{center}
+    \large
+    \(
+        W_{M4,5} = L \cdot \frac{2 \cdot I_d}{KP_P \cdot U_{OV}^2} = 2\mu \cdot \frac{2 \cdot 10\mu}{50\mu 0.2^2} = 20 [\mu m]
+    \)
+\end{center}
+
+Proud tranzistorem \(M_3\) je součtem proudu \(I_{dM1}\) a \(I_{dM2}\) a tedy \(I_{dM3} = 20 [\mu A]\) jeho šířka tedy bude dvojnásobná \(W_{M3} = 10 [\mu A]\)
+Tranzistor \(M_8\) zvolíme stejný jako tranzistor \(M_3\), tedy \(L=2 [\mu m] W=10[\mu m]\) a zbývá určit jen rezistor \(R_1\) jako:
+
+\begin{center}
+    \Large
+    \(
+        R_1 = \frac{U_{CC}-(U_{OV}+U_{TH})}{I_{dM3}} = \frac{1.8 - (0.2+0.4)}{20 \cdot 10^{-6}} = 60 [k\Omega]
+    \)
+\end{center}
+
+\vspace{10mm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{text/img/Res-sch.png}
+    \caption{\label{fig:res-sch} Schéma zesilovače}
+\end{figure}
+
+\vspace{10mm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{text/img/Res-AC-graf.png}
+    \caption{\label{fig:res-AC} {\bf .AC} analýza zesilovače}
+\end{figure}
+Zesílení mi vychází o necelý decibel menší než dle zadání, zkusil jsem tedy lehce zvětšit zatěžovací odpor na hodnotu \(R_1 = 102.48 [k\Omega]\) a obdržel jsem průběh \ref{fig:res-AC-102.48k}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{text/img/Res-AC-graf-102.48k.png}
+    \caption{\label{fig:res-AC-102.48k} {\bf .AC} analýza zesilovače se zvětšeným zatěžovacím odporem na \(R_1 = 102.48 [k\Omega]\)}
+\end{figure}
+
+\vspace{10mm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{text/img/Res-trans-graf.png}
+    \caption{\label{fig:res-SR} {\bf .trans} analýza s vyznačenými body pro určení SR}
+\end{figure}
+
+Z průběhu \ref{fig:res-SR} určíme SR jako:
+\begin{center}
+    \Large
+    \(
+        SR_{rise} = \frac{\Delta U}{\Delta t} = \frac{U_2 - U_1}{t_2 - t_1} = \frac{1.677 - 0.196}{126n - 81n} = 32.9 [V/\mu s]
+    \)
+
+    \(
+        SR_{fell} = \frac{\Delta U}{\Delta t} = \frac{U_1 - U_2}{t_2 - t_1} = \frac{1.618 - 0.174}{2752n - 2344n} = 3.5 [V/\mu s]
+    \)
+\end{center}
+
+Sestupná hrana je pomalejší, než by dle zadání měla být, což je způsobeno předpokladem lineárního vybíjení kondenzátoru \(C_1\), zatím co je exponenciální, jak je vidět na průběhu \ref{fig:res-SR}
+
+\(GBW\) je větší, než bylo požadováno, protože proud tranzistorem jsme stanovili vyšší, abychom splnili \(SR\).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  12 MAR 2025 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  13 MAR 2025 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1118,7 +1118,7 @@ Overfull \hbox (5.5982pt too wide) in paragraph at lines 151--151
  []
 
 (text/zadani.tex
-<text/img/zadani.png, id=55, 1156.32pt x 706.89093pt>
+<text/img/zadani.png, id=59, 1156.32pt x 706.89093pt>
 File: text/img/zadani.png Graphic file (type png)
 <use text/img/zadani.png>
 Package pdftex.def Info: text/img/zadani.png  used on input line 7.
@@ -1135,12 +1135,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/tomto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./text/img/zadani.png>] (text/KPZ.tex
-<text/img/KPZ-op-sch.png, id=76, 1151.05031pt x 697.8572pt>
+<text/img/KPZ-op-sch.png, id=80, 1151.05031pt x 697.8572pt>
 File: text/img/KPZ-op-sch.png Graphic file (type png)
 <use text/img/KPZ-op-sch.png>
 Package pdftex.def Info: text/img/KPZ-op-sch.png  used on input line 43.
 (pdftex.def)             Requested size: 435.3242pt x 263.92133pt.
-<text/img/KPZ-op-OL.png, id=77, 407.27156pt x 314.67563pt>
+<text/img/KPZ-op-OL.png, id=81, 407.27156pt x 314.67563pt>
 File: text/img/KPZ-op-OL.png Graphic file (type png)
 <use text/img/KPZ-op-OL.png>
 Package pdftex.def Info: text/img/KPZ-op-OL.png  used on input line 49.
@@ -1152,7 +1152,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 [2 <./text/img/KPZ-op-sch.png>]
-<text/img/KPZ-dc-graf.png, id=91, 335.00156pt x 277.78781pt>
+<text/img/KPZ-dc-graf.png, id=95, 335.00156pt x 277.78781pt>
 File: text/img/KPZ-dc-graf.png Graphic file (type png)
 <use text/img/KPZ-dc-graf.png>
 Package pdftex.def Info: text/img/KPZ-dc-graf.png  used on input line 57.
@@ -1161,7 +1161,7 @@ Package pdftex.def Info: text/img/KPZ-dc-graf.png  used on input line 57.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<text/img/KPZ-dc-graf-detail.png, id=92, 466.74374pt x 232.61906pt>
+<text/img/KPZ-dc-graf-detail.png, id=96, 466.74374pt x 232.61906pt>
 File: text/img/KPZ-dc-graf-detail.png Graphic file (type png)
 <use text/img/KPZ-dc-graf-detail.png>
 Package pdftex.def Info: text/img/KPZ-dc-graf-detail.png  used on input line 63.
@@ -1174,12 +1174,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [3 <./text/img/KPZ-op-OL.png>]
 
 [4 <./text/img/KPZ-dc-graf.png> <./text/img/KPZ-dc-graf-detail.png>] (text/WPZ.tex
-<text/img/WPZ-op-OL.png, id=108, 277.78781pt x 314.67563pt>
+<text/img/WPZ-op-OL.png, id=112, 277.78781pt x 314.67563pt>
 File: text/img/WPZ-op-OL.png Graphic file (type png)
 <use text/img/WPZ-op-OL.png>
 Package pdftex.def Info: text/img/WPZ-op-OL.png  used on input line 52.
 (pdftex.def)             Requested size: 290.22105pt x 328.76262pt.
-<text/img/WPZ-op-sch.png, id=109, 1297.84875pt x 679.03688pt>
+<text/img/WPZ-op-sch.png, id=113, 1297.84875pt x 679.03688pt>
 File: text/img/WPZ-op-sch.png Graphic file (type png)
 <use text/img/WPZ-op-sch.png>
 Package pdftex.def Info: text/img/WPZ-op-sch.png  used on input line 58.
@@ -1188,7 +1188,7 @@ Package pdftex.def Info: text/img/WPZ-op-sch.png  used on input line 58.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<text/img/WPZ-dc-graf.png, id=110, 465.99094pt x 289.83281pt>
+<text/img/WPZ-dc-graf.png, id=114, 465.99094pt x 289.83281pt>
 File: text/img/WPZ-dc-graf.png Graphic file (type png)
 <use text/img/WPZ-dc-graf.png>
 Package pdftex.def Info: text/img/WPZ-dc-graf.png  used on input line 64.
@@ -1202,29 +1202,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  <./text/img/WPZ-op-OL.png>])
 
-[6 <./text/img/WPZ-op-sch.png> <./text/img/WPZ-dc-graf.png>] (zrcadla.aux)
+[6 <./text/img/WPZ-op-sch.png> <./text/img/WPZ-dc-graf.png>] (text/zaver.tex)
+
+[7] (zrcadla.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
 Package rerunfilecheck Info: File `zrcadla.out' has not changed.
-(rerunfilecheck)             Checksum: FE0367FC7DEA6396AC33BC049AF1D5F0;494.
+(rerunfilecheck)             Checksum: C65BFC82C1FF1463180F4301B7A0E92F;573.
 Package logreq Info: Writing requests to 'zrcadla.run.xml'.
 \openout1 = `zrcadla.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69366 strings out of 473577
- 1756047 string characters out of 5726301
- 2928511 words of memory out of 5000000
- 91758 multiletter control sequences out of 15000+600000
- 568425 words of font info for 76 fonts, out of 8000000 for 9000
+ 69387 strings out of 473577
+ 1756437 string characters out of 5726301
+ 2928603 words of memory out of 5000000
+ 91771 multiletter control sequences out of 15000+600000
+ 569046 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,12n,96p,799b,1696s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\tomto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on zrcadla.pdf (6 pages, 355534 bytes).
+ 86i,13n,96p,799b,1696s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\tomto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on zrcadla.pdf (7 pages, 366813 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 

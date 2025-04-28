@@ -1,0 +1,15 @@
+(používejte: UTH0 = 0,4 V, KPn = 200 µA/V2, KPp = 50 µA/V2)
+
+\begin{enumerate}
+    \item Navrhněte jednoduchý zesilovač s tranzistorem PMOS s odporovou zátěží s těmito parametry: 
+    zesílení na nízkých kmitočtech \(AU0 \geqq  20 [dB]\), šířka pásma jednotkového zisku \(GBW \geqq 6 [MHz]\), rychlost přeběhu \(SR \geqq 5 [V/\mu s]\). Předpokládaná zátěž na výstupu obvodu je \(CL = 2 [pF]\). Postupně:    
+    \begin{enumerate}
+        \item vypočítejte parametry všech součástek v obvodu (\textcolor{red}{P - výpočty ve formátu obecná rovnice, dosazení, výsledek}).
+        \item proveďte analýzu {\bf .AC}- zobrazte si proud zesilovačem, napětí na hradle PMOS a ve výstupním uzlu  (\textcolor{red}{P2 – schéma se zvýrazněnými U/I}). Ve výstupním grafu označte popisem \(AU0\), \(GBW\) a \(fp0\) {\textcolor{red}{P3 - popsaný graf}} . Pozn. najeďte kurzorem na požadované místo a stisknete „l“ („{\it el}“) pro označení.
+        \item Vytvořte nové schéma pro simulaci SR. Nastavte vhodně vstupní pulzní zdroj a spusťte časovou analýzu ({\bf .tran 5u}). Zobrazte graf, kde bude zobrazena jedna perioda vstupního a výstupního signálu a označeny body pro odečet SR. 
+        (\textcolor{red}{P4 - schéma + graf}). Z odsimulovaných hodnot vypočítejte SR (\textcolor{red}{P5 – rovnice s výpočtem SR})
+    \end{enumerate}
+    \item Nahraďte odporovou zátěž v obvodu z bodu 1) aktivní zátěží včetně nastavení jejího pracovního bodu (tj. celkem dva NMOS + R). 
+    Zjistěte, jak se změnily sledované parametry z bodu 1) ({\bf AU0, GBW, CL}). (\textcolor{red}{P6 - výpočty aktivní zátěže ve formátu obecná rovnice, dosazení, výsledek, P7 - popsaný graf s \(AU0\), \(GBW\) a \(fp0\), P8 - popsaný graf \(SR\)})
+    \item Porovnejte v tabulce sledované parametry obvodu obou variant - bod 1) a 2) (\textcolor{red}{P9 – tabulka}) 
+\end{enumerate}
