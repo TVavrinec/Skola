@@ -1,0 +1,48 @@
+\section{Zadání}
+Změřte útlum optického multimodového kabelu pro vlnové délky \(1300\) a \(850~nm\). Měřte jednotlivé úseky kabelu pomocí kabelových vláknových spojek a na
+závěr odvoďte ze změřených hodnot jednotkový útlum vlákna a spojky. 
+
+\section{Měření}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{REF}     & \textbf{dBm} \\ \hline
+        $\lambda = 850$  & -22.35       \\ \hline
+        $\lambda = 1300$ & -34.39       \\ \hline
+    \end{tabular}
+    \caption{Referenční přenášený výkon}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        1 & 2 & 3 & 4 \\ \hline
+        5 & 6 & 7 & 8 \\ \hline
+    \end{tabular}
+    \caption{Označení vývodů}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{kabel}  & \multicolumn{2}{c|}{\textbf{Přenos [dB]}}                 \\ \hline
+                        & $\lambda = 850$                   & $\lambda = 1300$      \\ \hline
+        1               & -9.74                             & -3.28                 \\ \hline
+        2               & -9.18                             & -0.50                 \\ \hline
+        3               & -9.11                             & -0.46                 \\ \hline
+        4               & -8.99                             & -0.43                 \\ \hline
+        5               & -9.57                             & -0.28                 \\ \hline
+        6               & -10.41                            & -2.16                 \\ \hline
+        7               & -54.62                            & -46.94                \\ \hline
+        8               & -23.10                            & -14.23                \\ \hline
+        Průměr          & -16.84	                        & -8.758                \\ \hline
+        Průměr 2        & -11.443 	                        & -3.303                \\ \hline
+    \end{tabular}
+    \caption{Útlumy různých kabelů při dvou vlnových délkách (po odečtení reference)}
+\end{table}
+Předpokládám, že kabel \(7\) měl nějaký problém a proto jsem přidal i řádek {\it průměr 2}, ze kterého jsem kabel 7 vyřadil.
+

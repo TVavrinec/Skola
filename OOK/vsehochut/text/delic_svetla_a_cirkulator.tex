@@ -1,0 +1,41 @@
+\section{Zadání}
+
+\begin{enumerate}
+    \item Zjistěte dělící poměr vláknového děliče světla (splitteru).
+    \item Ověřte funkci vláknového cirkulátoru. Přiřaďte jednotlivým číslům (portům) cirkulátoru barvy optických vláken z obr. 2 dle měřeného cirkulátoru. 
+\end{enumerate}
+
+\section{Měření}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        & \multicolumn{3}{c|}{útlum \([dB]\)} \\ \hline
+        dělička                      & 1    & 2   & 3   \\ \hline
+        vstup $\rightarrow$ výstup1  & 13.3 & 5.1 & 5.9 \\ \hline
+        vstup $\rightarrow$ výstup2  & 2.53 & 4.7 & 5.5 \\ \hline
+        výstup 2 $\rightarrow$ vstup & 3.1  & 5.2 & 6   \\ \hline
+        výstup 1 $\rightarrow$ vstup & 13.4 & 5.4 & 5.1 \\ \hline
+    \end{tabular}
+    \caption{Útlumy v jednotlivých směrech přenosu vláknového děliče světla}
+\end{table}
+
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|}
+    \hline
+        směr přenosu      & útlum \([dB]\) \\ \hline
+        C $\rightarrow$ B & 23.1           \\ \hline
+        C $\rightarrow$ M & 5.5            \\ \hline
+        B $\rightarrow$ C & v úrovni šumu  \\ \hline
+        B $\rightarrow$ M & 25             \\ \hline
+        M $\rightarrow$ C & 27.1           \\ \hline
+        M $\rightarrow$ B & 5.3            \\ \hline
+    \end{tabular}
+    \caption{Útlumy mezi jednotlivými vývody cirkulátoru \label{tab-circuator}}
+\end{table}
+
+Z tabulky \ref{tab-circuator} mi vyplývá, že port {\bf C} je port {\bf 1}, port {\bf M} je port {\bf 2} a port {\bf B} je port {\bf 3}
