@@ -1,13 +1,17 @@
-Porovnání obou verzí zesilovače.
-
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|c|c|c|}
-        \hline
-        \textbf{Typ zátěže} & \textbf{Zesílení \(A_{U0} [-]\)} & \textbf{Rychlost přeběhu  \(SR_{fell} [V/\mu s]\)} & \textbf{šířka pásma \(GBW [MHz]\)} \\ \hline
-        Odporová            & 19                               & 3.5                                                & 8.43                               \\ \hline
-        Aktivní             & 38                               & 5.0                                                & 8.12                               \\ \hline
-    \end{tabular}
-    \caption{Porovnání obou typů zátěže}
-    \label{tab:zrcadla}
+    \caption{Požadované parametry}
+    \begin{tabular}{|c|c|c|c|} \hline
+        \textbf{parametr}                       & \textbf{hodnota}                      & \textbf{Vypočítané} & \textbf{Simulace}                               \\ \hline
+        zesílení ($A_{u0}$)                     & $\geq 60\ \mathrm{dB}$                & \(80.3 [dB]\)       & \(78 [dB]\)                                     \\ \hline
+        šířka pásma ($GBW$)                     & $\geq 10\ \mathrm{MHz}$               & \(47.8 [MHz]\)      & \(10.2 [MHz]\)                                  \\ \hline
+        fázová rezerva ($PM$)                   & $\geq 60^\circ$                       & $60^\circ$          & \(31^\circ\)                                    \\ \hline
+        amplitudová rezerva ($AM$)              & -- dB                                 & Nepočítá se         & \(-9.12 [dB]\)                                  \\ \hline
+        rychlost přeběhu ($SR$)*                & $\geq 10\ \mathrm{V}/\mu\mathrm{s}$   & \(30 [V/\mu s]\)    & \(8.42 [V/\mu s]\) resp.  \(13.8 [V/\mu s]\)    \\ \hline
+        systematický ofset ($U_{\mathrm{OFF}}$) & $\leq 500\ \mu\mathrm{V}$             & $0$                 & \(12 [\mu V]\)                                  \\ \hline
+        spotřeba ($P_{\mathrm{diss}}$)          & -- mW                                 & \(684 [\mu W]\)     & \(700 [\mu W]\)                                 \\ \hline
+        vstupní napěťový rozsah ($ICMR$)        & -- V                                  & \(0.2 -> 1 [V]\)    & \(0 -> 1.749 [V]\)                              \\ \hline
+        výstupní napěťový rozsah ($OVS$)        & -- V                                  & \(0.2 -> 1.6 [V]\)  & \(0.01 -> 1.78 [V]\)                            \\ \hline
+    \end{tabular} 
+    \\\vspace{1mm}
 \end{table}

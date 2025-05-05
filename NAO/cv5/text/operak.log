@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  28 APR 2025 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  4 MAY 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1012,7 +1012,11 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count495
 \@quotereset=\count496
-No file operak.aux.
+(operak.aux
+
+LaTeX Warning: Label `fig:res-sch' multiply defined.
+
+)
 \openout1 = `operak.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
@@ -1033,7 +1037,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
-(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count497
 \scratchdimen=\dimen327
@@ -1088,6 +1092,7 @@ No file operak.bbl.
 Package biblatex Info: Reference section=0 on input line 148.
 Package biblatex Info: Reference segment=0 on input line 148.
 Package hyperref Info: Link coloring ON on input line 148.
+(operak.out) (operak.out)
 \@outlinefile=\write5
 \openout5 = `operak.out'.
 
@@ -1125,7 +1130,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<text/img/zadani.png, id=42, 492.03825pt x 275.8305pt>
+<text/img/zadani.png, id=54, 492.03825pt x 275.8305pt>
 File: text/img/zadani.png Graphic file (type png)
 <use text/img/zadani.png>
 Package pdftex.def Info: text/img/zadani.png  used on input line 41.
@@ -1135,138 +1140,149 @@ Package pdftex.def Info: text/img/zadani.png  used on input line 41.
 [1
 
 {C:/Users/tomto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./text/img/zadani.png>] (text/navrh.tex
-
-LaTeX Warning: File `text/img/Res-sch.png' not found on input line 67.
-
-
-text/navrh.tex:67: Package pdftex.def Error: File `text/img/Res-sch.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.67 ...width=0.6\textwidth]{text/img/Res-sch.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<text/img/Shrnuti_sschematem.png, id=74, 1404.74812pt x 858.20625pt>
+File: text/img/Shrnuti_sschematem.png Graphic file (type png)
+<use text/img/Shrnuti_sschematem.png>
+Package pdftex.def Info: text/img/Shrnuti_sschematem.png  used on input line 76.
+(pdftex.def)             Requested size: 483.69685pt x 295.5053pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: File `text/img/Res-AC-graf.png' not found on input line 74.
 
-
-text/navrh.tex:74: Package pdftex.def Error: File `text/img/Res-AC-graf.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 ...h=0.8\textwidth]{text/img/Res-AC-graf.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[2]
+<text/img/OP-sch.png, id=83, 1097.2995pt x 669.702pt>
+File: text/img/OP-sch.png Graphic file (type png)
+<use text/img/OP-sch.png>
+Package pdftex.def Info: text/img/OP-sch.png  used on input line 148.
+(pdftex.def)             Requested size: 483.69685pt x 295.21138pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:res-AC-102.48k' on page 2 undefined on input line 77.
-
-
-LaTeX Warning: File `text/img/Res-AC-graf-102.48k.png' not found on input line 81.
-
-
-text/navrh.tex:81: Package pdftex.def Error: File `text/img/Res-AC-graf-102.48k.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.81 ...xtwidth]{text/img/Res-AC-graf-102.48k.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (25.7014pt too wide) in paragraph at lines 153--182
+[]  [] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<text/img/AC-charakteristika.png, id=84, 779.7933pt x 526.8483pt>
+File: text/img/AC-charakteristika.png Graphic file (type png)
+<use text/img/AC-charakteristika.png>
+Package pdftex.def Info: text/img/AC-charakteristika.png  used on input line 188.
+(pdftex.def)             Requested size: 483.69685pt x 326.79532pt.
 
-LaTeX Warning: File `text/img/Res-trans-graf.png' not found on input line 88.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-text/navrh.tex:88: Package pdftex.def Error: File `text/img/Res-trans-graf.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88 ....9\textwidth]{text/img/Res-trans-graf.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<text/img/TRANS-charakteristika.png, id=87, 1003.75pt x 602.25pt>
+File: text/img/TRANS-charakteristika.png Graphic file (type png)
+<use text/img/TRANS-charakteristika.png>
+Package pdftex.def Info: text/img/TRANS-charakteristika.png  used on input line 214.
+(pdftex.def)             Requested size: 483.69685pt x 290.2254pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `fig:res-SR' on page 2 undefined on input line 92.
+
+[3 <./text/img/Shrnuti_sschematem.png>]
+<text/img/DC-sch.png, id=99, 1006.962pt x 399.29175pt>
+File: text/img/DC-sch.png Graphic file (type png)
+<use text/img/DC-sch.png>
+Package pdftex.def Info: text/img/DC-sch.png  used on input line 239.
+(pdftex.def)             Requested size: 483.69685pt x 191.80408pt.
 
 
-LaTeX Warning: Reference `fig:res-SR' on page 2 undefined on input line 104.
+[4 <./text/img/OP-sch.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<text/img/DC-charakteristika.png, id=110, 874.467pt x 503.7219pt>
+File: text/img/DC-charakteristika.png Graphic file (type png)
+<use text/img/DC-charakteristika.png>
+Package pdftex.def Info: text/img/DC-charakteristika.png  used on input line 245.
+(pdftex.def)             Requested size: 483.69685pt x 278.63124pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<text/img/DC-korekcni.png, id=111, 922.8879pt x 526.1256pt>
+File: text/img/DC-korekcni.png Graphic file (type png)
+<use text/img/DC-korekcni.png>
+Package pdftex.def Info: text/img/DC-korekcni.png  used on input line 251.
+(pdftex.def)             Requested size: 483.69685pt x 275.74641pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<text/img/DC2-sch.png, id=114, 1438.173pt x 617.30624pt>
+File: text/img/DC2-sch.png Graphic file (type png)
+<use text/img/DC2-sch.png>
+Package pdftex.def Info: text/img/DC2-sch.png  used on input line 258.
+(pdftex.def)             Requested size: 483.69685pt x 207.61128pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<text/img/DC2-charakteristika.png, id=115, 800.0289pt x 489.2679pt>
+File: text/img/DC2-charakteristika.png Graphic file (type png)
+<use text/img/DC2-charakteristika.png>
+Package pdftex.def Info: text/img/DC2-charakteristika.png  used on input line 264.
+(pdftex.def)             Requested size: 483.69685pt x 295.81761pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<text/img/DC2-korekcni.png, id=116, 805.0878pt x 549.252pt>
+File: text/img/DC2-korekcni.png Graphic file (type png)
+<use text/img/DC2-korekcni.png>
+Package pdftex.def Info: text/img/DC2-korekcni.png  used on input line 270.
+(pdftex.def)             Requested size: 483.69685pt x 329.99792pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 
-[2]
+[5 <./text/img/AC-charakteristika.png> <./text/img/TRANS-charakteristika.png (PNG copy)>]
 
-[3]
+[6 <./text/img/DC-sch.png> <./text/img/DC-charakteristika.png>]
 
-[4]
+[7 <./text/img/DC-korekcni.png> <./text/img/DC2-sch.png>]
 
-[5]
+[8 <./text/img/DC2-charakteristika.png> <./text/img/DC2-korekcni.png>] (text/zaver.tex
+Overfull \hbox (8.63083pt too wide) in paragraph at lines 4--16
+ [][] 
+ []
 
-[6] (operak.aux)
+)
+
+[9
+
+] (operak.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `operak.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `operak.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C5E725DCA58B0D59CE01360C984F6D36;325.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                operak
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `operak.out' has not changed.
+(rerunfilecheck)             Checksum: 5FFB4E6F01AB53353F113A586891A613;399.
 Package logreq Info: Writing requests to 'operak.run.xml'.
 \openout1 = `operak.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69410 strings out of 473577
- 1758262 string characters out of 5726301
- 2932819 words of memory out of 5000000
- 91819 multiletter control sequences out of 15000+600000
- 568557 words of font info for 77 fonts, out of 8000000 for 9000
+ 69400 strings out of 473577
+ 1757058 string characters out of 5726301
+ 2942733 words of memory out of 5000000
+ 91786 multiletter control sequences out of 15000+600000
+ 569342 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,12n,96p,798b,1698s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on operak.pdf (6 pages, 208848 bytes).
+ 86i,12n,96p,798b,1696s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on operak.pdf (9 pages, 756360 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

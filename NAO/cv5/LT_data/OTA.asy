@@ -29,6 +29,3 @@ PINATTR SpiceOrder 4
 PIN 0 32 NONE 8
 PINATTR PinName USS
 PINATTR SpiceOrder 5
-PIN 48 -16 NONE 8
-PINATTR PinName test
-PINATTR SpiceOrder 6

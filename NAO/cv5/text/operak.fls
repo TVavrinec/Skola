@@ -429,6 +429,9 @@ INPUT C:\Program Files\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\parskip\parskip.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\parskip\parskip.sty
+INPUT .\operak.aux
+INPUT .\operak.aux
+INPUT operak.aux
 OUTPUT operak.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -444,6 +447,12 @@ INPUT C:\Program Files\MiKTeX\tex\latex\biblatex-iso690\czech-iso.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\czech.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\czech.lbx
 OUTPUT operak.bcf
+INPUT .\operak.out
+INPUT .\operak.out
+INPUT operak.out
+INPUT operak.out
+INPUT .\operak.out
+INPUT .\operak.out
 OUTPUT operak.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
@@ -504,15 +513,94 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\Shrnuti_sschematem.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT .\text\img\OP-sch.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\AC-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\TRANS-charakteristika.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-sch.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-charakteristika.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC-korekcni.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-sch.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-charakteristika.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\img\DC2-korekcni.png
+INPUT .\text\zaver.tex
+INPUT .\text\zaver.tex
+INPUT text\zaver.tex
 INPUT operak.aux
 INPUT .\operak.out
 INPUT .\operak.out
+INPUT operak.run.xml
 OUTPUT operak.run.xml
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
@@ -527,13 +615,15 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb

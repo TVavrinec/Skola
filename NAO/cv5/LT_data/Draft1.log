@@ -1,0 +1,13 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\tomto\Documents\skola\Skola\NAO\cv5\LT_data\Draft1.asc
+Start Time: Fri May  2 13:47:55 2025
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+Warning: Pd = 0 is less than W.
+Warning: Ps = 0 is less than W.
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 0.292 seconds.
+

@@ -1,0 +1,54 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the file
+file_path = './gen/simDC2.txt'
+data = pd.read_csv(file_path, sep="\t")
+
+# Check the first few rows of the data
+data.head()
+
+# Plotting the graph
+plt.figure(figsize=(10, 6))
+plt.plot(data['vin'], 1.8-data['V(n003)'], label='$1.8-U_{IN}$', color='b', linestyle='--', marker='')
+plt.plot(data['vin'], data['V(out)'], label='$U_{OUT}$', color='r', linestyle='-', marker='')
+
+# Adding labels and title
+plt.xlabel('$U_{IN}$', fontsize = 20)
+plt.ylabel('$U_{OUT}$', fontsize = 20)
+plt.legend()
+plt.legend(fontsize=20) 
+
+# Nastavení velikosti písma pro čísla os (tick labels)
+plt.tick_params(axis='x', labelsize=20)  # Změna velikosti písma pro čísla na ose X
+plt.tick_params(axis='y', labelsize=20)  # Změna velikosti písma pro čísla na ose Y
+
+plt.scatter(0, 1.7798821, color='red',  marker='x', s = 100)
+label_red = f'1.780 V'
+plt.text(0.1, 1.75, label_red, fontsize=20, color='red')
+
+plt.scatter(1.8, 0.010204523, color='green',  marker='x', s = 100)
+label_red = f'10.2 mV'
+plt.text(1.43, -0.02, label_red, fontsize=20, color='green')
+
+
+# Show the plot
+plt.grid(True)
+plt.show()
+
+
+
+
+plt.plot(data['vin'], data['V(out)']+data['V(n003)'], label='$U_{IN}$', color='g', linestyle='-', marker='')
+
+# Adding labels and title
+plt.xlabel('$U_{IN}$', fontsize = 20)
+plt.ylabel('$U_{OUT}$', fontsize = 20)
+
+# Nastavení velikosti písma pro čísla os (tick labels)
+plt.tick_params(axis='x', labelsize=20)  # Změna velikosti písma pro čísla na ose X
+plt.tick_params(axis='y', labelsize=20)  # Změna velikosti písma pro čísla na ose Y
+
+# Show the plot
+plt.grid(True)
+plt.show()
